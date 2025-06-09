@@ -9,6 +9,7 @@ import project1 from '@/assets/_next/project1.png';
 import project2 from '@/assets/_next/project2.png';
 import project3 from '@/assets/_next/project3.png';
 import project4 from '@/assets/_next/project4.png';
+import Link from "next/link";
 
 export default function Portfolio() {
 
@@ -24,7 +25,6 @@ export default function Portfolio() {
             </Head>
 
                 <div className="main-content w-100">
-                    <div>
                         <section className="pt-120 pb-120 mt-10 mt-lg-0">
                             <div>
                                 <div className="pb-60 br-bottom-n3">
@@ -145,11 +145,11 @@ export default function Portfolio() {
                                                                             href="#">gsap</a><a
                                                                             className="n5-color fs-nine px-2 px-md-4 py-1 py-md-2 brn3 rounded-pill fw-medium"
                                                                             href="#">Web Development</a></div>
-                                                                        <a className="project-title fs-five fw-semibold n5-color mt-3 mt-md-5 d-block"
-                                                                           href="portfolio_details.html">Crypto Website
-                                                                            Development for DeFi X</a></div>
-                                                                    <a className="project-link d-flex align-items-center justify-content-center flex-shrink-0"
-                                                                       href="portfolio_details.html"><i
+                                                                        <Link className="project-title fs-five fw-semibold n5-color mt-3 mt-md-5 d-block"
+                                                                           href="/portfolioDetail">Crypto Website
+                                                                            Development for DeFi X</Link></div>
+                                                                    <Link className="project-link d-flex align-items-center justify-content-center flex-shrink-0"
+                                                                       href="/portfolioDetail"><i
                                                                         className="n5-color">
                                                                         <svg stroke="currentColor" fill="currentColor"
                                                                              strokeWidth="0" viewBox="0 0 256 256"
@@ -159,12 +159,12 @@ export default function Portfolio() {
                                                                             <path
                                                                                 d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"></path>
                                                                         </svg>
-                                                                    </i></a></div>
+                                                                    </i></Link></div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div className="col-xl-6">
-                                                        <div 
+                                                        <div
                                                         >
                                                             <div className="project-card"><a className="thumb d-block"
                                                                                              href="portfolio_details.html">
@@ -226,7 +226,7 @@ export default function Portfolio() {
                                                         </div>
                                                     </div>
                                                     <div className="col-xl-6">
-                                                        <div 
+                                                        <div
                                                         >
                                                             <div className="project-card"><a className="thumb d-block"
                                                                                              href="portfolio_details.html">
@@ -288,7 +288,7 @@ export default function Portfolio() {
                                                         </div>
                                                     </div>
                                                     <div className="col-xl-6">
-                                                        <div 
+                                                        <div
                                                         >
                                                             <div className="project-card"><a className="thumb d-block"
                                                                                              href="portfolio_details.html">
@@ -349,7 +349,7 @@ export default function Portfolio() {
                                                         </div>
                                                     </div>
                                                     <div className="col-xl-6">
-                                                        <div 
+                                                        <div
                                                         >
                                                             <div className="project-card"><a className="thumb d-block"
                                                                                              href="portfolio_details.html">
@@ -391,11 +391,11 @@ export default function Portfolio() {
                                                                             href="#">gsap</a><a
                                                                             className="n5-color fs-nine px-2 px-md-4 py-1 py-md-2 brn3 rounded-pill fw-medium"
                                                                             href="#">Web Development</a></div>
-                                                                        <a className="project-title fs-five fw-semibold n5-color mt-3 mt-md-5 d-block"
-                                                                           href="portfolio_details.html">Crypto Website
-                                                                            Development for DeFi X</a></div>
-                                                                    <a className="project-link d-flex align-items-center justify-content-center flex-shrink-0"
-                                                                       href="portfolio_details.html"><i
+                                                                        <Link className="project-title fs-five fw-semibold n5-color mt-3 mt-md-5 d-block"
+                                                                           href="/portfolioDetail">Crypto Website
+                                                                            Development for DeFi X</Link></div>
+                                                                    <Link className="project-link d-flex align-items-center justify-content-center flex-shrink-0"
+                                                                       href="/portfolioDetail"><i
                                                                         className="n5-color">
                                                                         <svg stroke="currentColor" fill="currentColor"
                                                                              strokeWidth="0" viewBox="0 0 256 256"
@@ -405,12 +405,12 @@ export default function Portfolio() {
                                                                             <path
                                                                                 d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"></path>
                                                                         </svg>
-                                                                    </i></a></div>
+                                                                    </i></Link></div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div className="col-xl-6">
-                                                        <div 
+                                                        <div
                                                         >
                                                             <div className="project-card"><a className="thumb d-block"
                                                                                              href="portfolio_details.html">
@@ -472,7 +472,7 @@ export default function Portfolio() {
                                                         </div>
                                                     </div>
                                                     <div className="col-xl-6">
-                                                        <div 
+                                                        <div
                                                         >
                                                             <div className="project-card"><a className="thumb d-block"
                                                                                              href="portfolio_details.html">
@@ -534,7 +534,7 @@ export default function Portfolio() {
                                                         </div>
                                                     </div>
                                                     <div className="col-xl-6">
-                                                        <div 
+                                                        <div
                                                         >
                                                             <div className="project-card"><a className="thumb d-block"
                                                                                              href="portfolio_details.html">
@@ -666,17 +666,8 @@ export default function Portfolio() {
                                 </div>
                             </div>
                         </section>
-                        <footer
-                            className="container d-flex flex-wrap gap-3 gap-md-6 justify-content-center justify-content-sm-between align-items-center pb-4 pb-md-8 text-center mb-16 mb-lg-0">
-                    <span className="fs-eight fw-medium n5-color order-sm-2">Designed by <a
-                        className="fs-eight fw-medium n5-color"
-                        href="https://themeforest.net/user/uiaxis">UIAXIS</a></span><span
-                            className="fs-eight fw-medium n5-color order-sm-1">Copyright © 2024 <a
-                            className="fs-eight fw-medium n5-color"
-                            href="index.html">Portfolify</a>. All Rights Reserved.</span></footer>
-                    </div>
-                </div>
 
+                    </div>
         </>
     );
 }

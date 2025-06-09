@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  devIndicators: {
+    buildActivity: false,
+  },
+  reactStrictMode: false, // Optional: can help in some error spam
 };
 
 export default nextConfig;

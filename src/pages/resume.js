@@ -12,10 +12,9 @@ export default function Resume() {
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <title>Umer Resume</title>
                 <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="11x15"/>
-                <meta name="next-size-adjust"/>
             </Head>
             <div className="main-content w-100">
-                <div>
+
                     <section className="pt-120 pb-120 mt-10 mt-lg-0">
                         <div >
                             <div className="pb-60 br-bottom-n3">
@@ -354,14 +353,8 @@ export default function Resume() {
                             </div>
                         </div>
                     </section>
-                    <footer class="container d-flex flex-wrap gap-3 gap-md-6 justify-content-center justify-content-sm-between align-items-center pb-4 pb-md-8 text-center mb-16 mb-lg-0">
-                    <span class="fs-eight fw-medium n5-color order-sm-2">Designed by<a
-                        class="fs-eight fw-medium n5-color"
-                        href="https://themeforest.net/user/uiaxis">UIAXIS</a></span><span
-                        class="fs-eight fw-medium n5-color order-sm-1">Copyright © 2024<a
-                        class="fs-eight fw-medium n5-color"
-                        href="index.html">Portfolify</a>. All Rights Reserved.</span></footer>
-                </div>
+
+
             </div>
         </>
 );

@@ -890,14 +890,6 @@ export default function Home() {
                                     </div>
                                 </div>
                             </section>
-                            <footer
-                                className="container d-flex flex-wrap gap-3 gap-md-6 justify-content-center justify-content-sm-between align-items-center pb-4 pb-md-8 text-center mb-16 mb-lg-0">
-                        <span className="fs-eight fw-medium n5-color order-sm-2">Designed by <a
-                            className="fs-eight fw-medium n5-color"
-                            href="https://themeforest.net/user/uiaxis">UIAXIS</a></span><span
-                                className="fs-eight fw-medium n5-color order-sm-1">Copyright © 2024 <a
-                                className="fs-eight fw-medium n5-color"
-                                href="index.html">Portfolify</a>. All Rights Reserved.</span></footer>
                         </div>
                     </main>
                 </div>
