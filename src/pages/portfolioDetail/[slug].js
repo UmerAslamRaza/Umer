@@ -12,11 +12,16 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 import {Navigation} from 'swiper/modules';
 import Link from "next/link";
 import useResponsiveSizeForSwiper from "@/hooks/useResponsiveSizeForSwiper";
+import useResponsiveDescription from "@/hooks/useResponsiveDescription";
+import Markdown from 'markdown-to-jsx';
 
 export default function PortfolioDetail() {
     const {query} = useRouter();
     const project = query?.data ? JSON.parse(query.data) : null;
     const { width, height } = useResponsiveSizeForSwiper();
+    const { width: widthDescription, height: heightDescription } = useResponsiveDescription();
+
+
 
     return (
 
@@ -36,7 +41,7 @@ export default function PortfolioDetail() {
                                 <div className="page-heading"><h3
                                     className="page-title fs-onefw-semibold n5-color mb-2 mb-md-3 text-center">Project Title:
                                     {project?.title}</h3>
-                                    <p className="fs-seven n5-color mb-4 mb-md-8 text-center">{project?.projectSummary}</p><Link
+                                    <p className="fs-seven n5-color mb-4 mb-md-8 text-center"><Markdown>{project?.projectSummary}</Markdown></p><Link
                                         className="w-max p-btn bg1-color fw-medium n11-color px-3 px-md-6 py-2 py-md-4 rounded-pill d-flex align-items-center gap-2 mx-auto"
                                         href="/contact">
                                         <svg fill="currentColor" height="1em" stroke="currentColor"
@@ -63,14 +68,8 @@ export default function PortfolioDetail() {
                                                     </span>
                                                 </div>
                                                 <div><span
-                                                    className="n4-color fs-eight fw-medium d-block">Client:</span><span
-                                                    className="n5-color fs-six fw-medium">Dev X</span></div>
-                                                <div><span
-                                                    className="n4-color fs-eight fw-medium d-block">Services</span><span
-                                                    className="n5-color fs-six fw-medium">Web Development</span></div>
-                                                <div><span
                                                     className="n4-color fs-eight fw-medium d-block">Technologies</span><span
-                                                    className="n5-color fs-six fw-medium">React JS</span></div>
+                                                    className="n5-color fs-six fw-medium">{project?.techStack?.join(", ")}</span></div>
                                             </div>
                                         </div>
                                     </div>
@@ -118,182 +117,43 @@ export default function PortfolioDetail() {
                                                     ))}
                                                 </Swiper>
                                             </div>
-                                            <div className="my-8 my-md-15" data-aos="fade-up"><p
-                                                className="text-seven n4-color">
-                                                Short description of the client and project requirements. Lorem ipsum
-                                                dolor
-                                                sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
-                                                dolor.
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-                                                ligula eget dolor.</p>
-                                                <h3 className="fs-five n5-color fw-semibold mt-5 mt-md-10 mb-2 mb-md-4">Project
-                                                    Requirements</h3>
-                                                <ul>
-                                                    <li className="n4-color fs-seven mb-2 mb-md-3">Requirement lorem
-                                                        ipsum dolor
-                                                        sit amet, consectetuer adipiscing elit.
-                                                    </li>
-                                                    <li className="n4-color fs-seven mb-2 mb-md-3">Requirement donec
-                                                        pede justo,
-                                                        fringilla vel, aliquet nec.
-                                                    </li>
-                                                    <li className="n4-color fs-seven mb-2 mb-md-3">Requirement phasellus
-                                                        ullamcorper ipsum rutrum nunc.
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div className="mb-8 mb-md-15" data-aos="fade-up"><h2
-                                                className="fs-one fw-semibold n5-color mb-2 mb-md-4">Project
-                                                Overview</h2>
-                                                <p className="text-seven n4-color">Lorem ipsum dolor sit amet,
-                                                    consectetuer
-                                                    adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-                                                    sociis natoque penatibus et magnis dis parturient montes, nascetur
-                                                    ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-                                                    pretium
-                                                    quis, sem. Nulla consequat massa quis enim. Donec pede justo,
-                                                    fringilla
-                                                    vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
-                                                    imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
-                                                    mollis
-                                                    pretium. Integer tincidunt. Cras dapibus.</p></div>
                                         </div>
                                         <div>
-                                            <div className="mb-8 mb-md-15" data-aos="fade-up"><h2
-                                                className="fs-two fw-semibold n5-color mb-2 mb-md-4">The Challenge</h2>
-                                                <p className="text-seven n4-color">Lorem ipsum dolor sit amet,
-                                                    consectetuer
-                                                    adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-                                                    sociis natoque penatibus et magnis dis parturient montes, nascetur
-                                                    ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-                                                    pretium
-                                                    quis, sem. Nulla consequat massa quis enim. Donec pede justo,
-                                                    fringilla
-                                                    vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
-                                                    imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
-                                                    mollis
-                                                    pretium. Integer tincidunt. Cras dapibus.</p></div>
-                                            <div className="mb-8 mb-md-15" data-aos="fade-up"><h2
-                                                className="fs-two fw-semibold n5-color mb-2 mb-md-4">The Approach &amp;
-                                                Solution</h2>
-                                                <p className="text-seven n4-color mb-5 mb-md-10">Lorem ipsum dolor sit
-                                                    amet,
-                                                    consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                                                    Aenean
-                                                    massa. Cum sociis natoque penatibus et magnis dis parturient montes,
-                                                    nascetur ridiculus mus. Donec quam felis, ultricies nec,
-                                                    pellentesque
-                                                    eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede
-                                                    justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim
-                                                    justo,
-                                                    rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis
-                                                    eu
-                                                    pede mollis pretium. Integer tincidunt. Cras dapibus.</p>
-                                                <div className="row g-3 g-md-6">
-                                                    <div className="col-sm-6 overflow-hidden">
-                                                        <Image
-                                                            alt="project"
-                                                            loading="lazy"
-                                                            width={620}
-                                                            height={357}
-                                                            decoding="async"
-                                                            className="w-100 object-fit-cover portfolio-details-img"
-                                                            style={{color: 'transparent'}}
-                                                            src={project2}
-                                                        />
+                                            {project?.sections?.map((section, index) => (
+                                                <div key={index} className="mb-8 mb-md-15" data-aos="fade-up">
+                                                    <h2 className="fs-two fw-semibold n5-color mb-2 mb-md-4">{section.heading}</h2>
+                                                    <p className="text-seven n4-color mb-5 mb-md-10" style={{ whiteSpace: 'pre-line' }}>
 
-                                                    </div>
-                                                    <div className="col-sm-6 overflow-hidden">
+                                                        <Markdown>{section.description}</Markdown>
+                                                    </p>
 
-                                                        <Image
-                                                            alt="project"
-                                                            loading="lazy"
-                                                            width={620}
-                                                            height={357}
-                                                            decoding="async"
-                                                            className="w-100 object-fit-cover portfolio-details-img"
-                                                            style={{color: 'transparent'}}
-                                                            src={project3}
-                                                        />
-
-                                                    </div>
-
+                                                    {section.images?.length > 0 && (
+                                                        <div className="row g-3 g-md-6">
+                                                            {section.images.map((imgSrc, imgIndex) => (
+                                                                <div className="col-sm-6 overflow-hidden" key={imgIndex}>
+                                                                    <Image
+                                                                        src={imgSrc}
+                                                                        alt={`project-section-${index + 1}-image-${imgIndex + 1}`}
+                                                                        width={widthDescription}
+                                                                        height={heightDescription}
+                                                                        loading="lazy"
+                                                                        decoding="async"
+                                                                        className="w-100 object-fit-cover portfolio-details-img"
+                                                                        style={{
+                                                                            width: `${widthDescription}px`,
+                                                                            height: `${heightDescription}px`,
+                                                                            backgroundColor: "#f5f5f5",
+                                                                            color: "transparent"
+                                                                        }}
+                                                                    />
+                                                                </div>
+                                                            ))}
+                                                        </div>
+                                                    )}
                                                 </div>
-                                                <p className="text-seven n4-color mt-5 mt-md-10">Short description of
-                                                    the client
-                                                    and project requirements. Lorem ipsum dolor sit amet, consectetuer
-                                                    adipiscing elit. Aenean commodo ligula eget dolor. Lorem ipsum dolor
-                                                    sit
-                                                    amet, consectetuer adipiscing elit. Aenean commodo ligula eget
-                                                    dolor.</p></div>
+                                            ))}
+
                                         </div>
-                                        <div>
-                                            <div className="mb-8 mb-md-15" data-aos="fade-up"><h2
-                                                className="fs-two fw-semibold n5-color mb-2 mb-md-4">The Results</h2>
-                                                <div className="row g-3 g-md-5">
-                                                    <div className="col-sm-6 col-xl-4 col-xxl-3">
-                                                        <div className="bgn2-color brn4 p-3 p-md-5"><span
-                                                            className="p1-color fs-six fw-medium mb-2 d-block">Efficiency</span>
-                                                            <div className="d-flex align-items-end gap-1 mb-2 mb-md-3">
-                                                                <h4
-                                                                    className="fs-three n5-color fw-semibold">20%</h4>
-                                                                <span
-                                                                    className="fs-six n4-color fw-medium">up</span>
-                                                            </div>
-                                                            <p className="fs-eight n4-color">Metric description lorem
-                                                                ipsum
-                                                                dolor sit amet.</p></div>
-                                                    </div>
-                                                    <div className="col-sm-6 col-xl-4 col-xxl-3">
-                                                        <div className="bgn2-color brn4 p-3 p-md-5"><span
-                                                            className="p1-color fs-six fw-medium mb-2 d-block">Customer Happy</span>
-                                                            <div className="d-flex align-items-end gap-1 mb-2 mb-md-3">
-                                                                <h4
-                                                                    className="fs-three n5-color fw-semibold">14%</h4>
-                                                                <span
-                                                                    className="fs-six n4-color fw-medium">up</span>
-                                                            </div>
-                                                            <p className="fs-eight n4-color">Metric description lorem
-                                                                ipsum
-                                                                dolor sit amet.</p></div>
-                                                    </div>
-                                                    <div className="col-sm-6 col-xl-4 col-xxl-3">
-                                                        <div className="bgn2-color brn4 p-3 p-md-5"><span
-                                                            className="p1-color fs-six fw-medium mb-2 d-block">Sales Generated</span>
-                                                            <div className="d-flex align-items-end gap-1 mb-2 mb-md-3">
-                                                                <h4
-                                                                    className="fs-three n5-color fw-semibold">$130K</h4>
-                                                            </div>
-                                                            <p className="fs-eight n4-color">Metric description lorem
-                                                                ipsum
-                                                                dolor sit amet.</p></div>
-                                                    </div>
-                                                    <div className="col-sm-6 col-xl-4 col-xxl-3">
-                                                        <div className="bgn2-color brn4 p-3 p-md-5"><span
-                                                            className="p1-color fs-six fw-medium mb-2 d-block">Overall Cost</span>
-                                                            <div className="d-flex align-items-end gap-1 mb-2 mb-md-3">
-                                                                <h4
-                                                                    className="fs-three n5-color fw-semibold">20%</h4>
-                                                                <span
-                                                                    className="fs-six n4-color fw-medium">down</span>
-                                                            </div>
-                                                            <p className="fs-eight n4-color">Metric description lorem
-                                                                ipsum
-                                                                dolor sit amet.</p></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <p className="text-seven n4-color" data-aos="fade-up">Lorem ipsum dolor sit
-                                                amet,
-                                                consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
-                                                massa. Cum sociis natoque penatibus et magnis dis parturient montes,
-                                                nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
-                                                eu,
-                                                pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo,
-                                                fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus
-                                                ut,
-                                                imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis
-                                                pretium. Integer tincidunt. Cras dapibus.</p></div>
                                     </div>
                                 </div>
                             </div>
@@ -309,15 +169,15 @@ export default function PortfolioDetail() {
                                         <p className="fs-seven n11-color">I am available for freelance projects. Hire me
                                             and get
                                             your project done.</p></div>
-                                    <a className="p-btn bg1-color fw-medium n11-color px-3 px-md-6 py-2 py-md-4 rounded-pill d-flex align-items-center gap-2 h-100"
-                                       href="contact.html">
+                                    <Link className="p-btn bg1-color fw-medium n11-color px-3 px-md-6 py-2 py-md-4 rounded-pill d-flex align-items-center gap-2 h-100"
+                                       href="/contact">
                                         <svg fill="currentColor" height="1em" stroke="currentColor"
                                              strokeWidth="0" viewBox="0 0 256 256" width="1em"
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
                                         </svg>
-                                        Let’s get in touch</a></div>
+                                        Let’s get in touch</Link></div>
                             </div>
                         </section>
                     </section>

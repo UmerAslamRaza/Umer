@@ -218,7 +218,6 @@ const ProjectGalleries = {
     ],
 
     SpringringAdminWeb: [
-        "/images/SpringringAdminWeb/User Profile",
         "/images/SpringringAdminWeb/User Profile/Edit - Student & One Parent - Groups Dropdown.png",
         "/images/SpringringAdminWeb/User Profile/Edit - Admin.png",
         "/images/SpringringAdminWeb/Dashboard.png",
