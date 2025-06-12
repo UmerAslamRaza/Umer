@@ -54,15 +54,6 @@ export default function PortfolioDetail() {
                                                 <div><span
                                                     className="n4-color fs-eight fw-medium d-block">Technologies</span><span
                                                     className="n5-color fs-six fw-medium">React JS</span></div>
-                                                <div><span className="n4-color fs-eight fw-medium d-block">Website</span><a
-                                                    className="n5-color fs-six fw-medium d-flex align-items-center gap-2"
-                                                    href="#">Live preview
-                                                    <svg fill="currentColor" height="1em" stroke="currentColor"
-                                                         strokeWidth="0" viewBox="0 0 256 256" width="1em"
-                                                         xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
-                                                    </svg>
-                                                </a></div>
                                             </div>
                                         </div>
                                     </div>
@@ -78,7 +69,6 @@ export default function PortfolioDetail() {
                                                                 width={620}
                                                                 height={357}
                                                                 decoding="async"
-                                                                className="w-100 p-2"
                                                                 style={{color: 'transparent'}}
                                                                 className="w-100 portfolio-details-img"
                                                                 src={project1}

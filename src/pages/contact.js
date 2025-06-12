@@ -1,8 +1,35 @@
 'use client';
 import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
 import React from 'react';
+import {useState} from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Contact() {
+    const [formStatus, setFormStatus] = useState("");
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const data = new FormData(form);
+
+        const response = await fetch("https://formspree.io/f/mdkzeydq", {
+            method: "POST",
+            body: data,
+            headers: {
+                Accept: "application/json",
+            },
+        });
+
+        if (response.ok) {
+            // Show success message on the same page
+            toast.success("Message sent Successfully!");
+            form.reset();
+        } else {
+            toast.error("Something went wrong, Please try to submit again.");
+        }
+    };
 
     return (
 
@@ -19,46 +46,21 @@ export default function Contact() {
                             <div className="pb-60 br-bottom-n3">
                                 <div className="page-heading"><h3
                                     className="page-title fs-onefw-semibold n5-color mb-2 mb-md-3 text-center">Contact</h3>
-                                    <p className="fs-seven n5-color mb-4 mb-md-8 text-center">Interested in hiring me for your
-                                        project or just want to say hi? You can fill in the contact form below or send me an
-                                        email to<a className="p1-color" href="#"> evans@yourwebsite.com</a>
-                                        .Want to get connected? Follow me on the social channels below.</p>
-                                    <div className="d-flex flex-wrap justify-content-center gap-2 align-items-center mt-4"><a
-                                        className="social-icon" href="#"><i className="p1-color">
-                                        <svg stroke="currentColor" fill="currentColor" strokeWidth="0"
-                                             viewBox="0 0 256 256" height="1em" width="1em"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"></path>
-                                        </svg>
-                                    </i></a><a className="social-icon" href="#"><i className="p1-color">
-                                        <svg stroke="currentColor" fill="currentColor" strokeWidth="0"
-                                             viewBox="0 0 256 256" height="1em" width="1em"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"></path>
-                                        </svg>
-                                    </i></a><a className="social-icon" href="#"><i className=" p1-color">
-                                        <svg stroke="currentColor" fill="currentColor" strokeWidth="0"
-                                             viewBox="0 0 256 256" height="1em" width="1em"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M214.75,211.71l-62.6-98.38,61.77-67.95a8,8,0,0,0-11.84-10.76L143.24,99.34,102.75,35.71A8,8,0,0,0,96,32H48a8,8,0,0,0-6.75,12.3l62.6,98.37-61.77,68a8,8,0,1,0,11.84,10.76l58.84-64.72,40.49,63.63A8,8,0,0,0,160,224h48a8,8,0,0,0,6.75-12.29ZM164.39,208,62.57,48h29L193.43,208Z"></path>
-                                        </svg>
-                                    </i></a><a className="social-icon" href="#"><i className="p1-color">
+                                    <p className="fs-seven n5-color mb-4 mb-md-8 text-center">Have an idea? Let’s bring it to life.
+                                        If you're looking for a passionate developer to help with your next project or you just want to chat I’m only a message away.
+                                        Use the form below or email me directly at <a className="p1-color" href="mailto:umeraslamraza1@gmail.com"> umeraslamraza1@gmail.com</a>. </p>
+                                    <div className="d-flex flex-wrap justify-content-center gap-2 align-items-center mt-4">
+                                        <a className="social-icon" href="https://www.linkedin.com/in/umer-aslam-raza-/" target="_blank" rel="noopener noreferrer"><i className="p1-color">
                                         <svg stroke="currentColor" fill="currentColor" strokeWidth="0"
                                              viewBox="0 0 256 256" height="1em" width="1em"
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"></path>
                                         </svg>
-                                    </i></a><a className="social-icon" href="#"><i className="p1-color">
+                                    </i></a><a className="social-icon" href="https://github.com/UmerAslamRaza" target="_blank" rel="noopener noreferrer"><i className="p1-color">
                                         <svg stroke="currentColor" fill="currentColor" strokeWidth="0"
                                              viewBox="0 0 256 256" height="1em" width="1em"
                                              xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M216,152.09V216a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V152.09a8,8,0,0,1,16,0V208H200V152.09a8,8,0,0,1,16,0Zm-128,32h80a8,8,0,1,0,0-16H88a8,8,0,1,0,0,16Zm4.88-53,77.27,20.68a7.89,7.89,0,0,0,2.08.28,8,8,0,0,0,2.07-15.71L97,115.61A8,8,0,1,0,92.88,131Zm18.45-49.93,69.28,40a8,8,0,0,0,10.93-2.93,8,8,0,0,0-2.93-10.91L119.33,67.27a8,8,0,1,0-8,13.84Zm87.33,13A8,8,0,1,0,210,82.84l-56.57-56.5a8,8,0,0,0-11.32,11.3Z"></path>
-                                        </svg>
-                                    </i></a><a className="social-icon" href="#"><i className="p1-color">
-                                        <svg stroke="currentColor" fill="currentColor" strokeWidth="0"
-                                             viewBox="0 0 256 256" height="1em" width="1em"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M164.44,121.34l-48-32A8,8,0,0,0,104,96v64a8,8,0,0,0,12.44,6.66l48-32a8,8,0,0,0,0-13.32ZM120,145.05V111l25.58,17ZM234.33,69.52a24,24,0,0,0-14.49-16.4C185.56,39.88,131,40,128,40s-57.56-.12-91.84,13.12a24,24,0,0,0-14.49,16.4C19.08,79.5,16,97.74,16,128s3.08,48.5,5.67,58.48a24,24,0,0,0,14.49,16.41C69,215.56,120.4,216,127.34,216h1.32c6.94,0,58.37-.44,91.18-13.11a24,24,0,0,0,14.49-16.41c2.59-10,5.67-28.22,5.67-58.48S236.92,79.5,234.33,69.52Zm-15.49,113a8,8,0,0,1-4.77,5.49c-31.65,12.22-85.48,12-86,12H128c-.54,0-54.33.2-86-12a8,8,0,0,1-4.77-5.49C34.8,173.39,32,156.57,32,128s2.8-45.39,5.16-54.47A8,8,0,0,1,41.93,68c30.52-11.79,81.66-12,85.85-12h.27c.54,0,54.38-.18,86,12a8,8,0,0,1,4.77,5.49C221.2,82.61,224,99.43,224,128S221.2,173.39,218.84,182.47Z"></path>
+                                            <path d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28A8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24A8,8,0,0,0,69.07,28a59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"></path>
                                         </svg>
                                     </i></a></div>
                                 </div>
@@ -70,9 +72,7 @@ export default function Contact() {
                                     <div className="d-flex align-items-center gap-2">
                                         <div className="title-line"></div>
                                         <h2 className="display-four n5-color fw-semibold">Contact Details</h2></div>
-                                    <p className="fs-seven n4-color mt-2 mt-md-4">If you are going to use a passage of Lorem
-                                        Ipsum, you need to be sure there isn&#x27;t anything embarrassing hidden in the
-                                        middle of text.</p></div>
+                                    <p className="fs-seven n4-color mt-2 mt-md-4">Feel free to reach out I’m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p></div>
                             </div>
                             <div >
                                 <div className="d-flex flex-wrap gap-3 gap-md-6 align-items-center justify-content-between mt-8 mt-md-15">
@@ -85,7 +85,7 @@ export default function Contact() {
                                         </svg>
                                     </i>
                                         <div><span className="n5-color fs-five fw-semibold d-block mb-1 mb-sm-2">Phone</span><a
-                                            className="n4-color fs-nine" href="tel:+6494461709">+123-456-7890</a></div>
+                                            className="n4-color fs-nine" href="tel:+923216029389">+92 3216029389</a></div>
                                     </div>
                                     <div className="d-flex gap-3 align-items-center p-3 p-md-5 br1-left"><i
                                         className="p1-color fs-one">
@@ -96,7 +96,7 @@ export default function Contact() {
                                         </svg>
                                     </i>
                                         <div><span className="n5-color fs-five fw-semibold d-block mb-1 mb-sm-2">Location</span><span
-                                            className="n4-color fs-nine">123 Example Street, City, Country</span></div>
+                                            className="n4-color fs-nine">House no 46, GreenHomes, Sargodha, Pakistan</span></div>
                                     </div>
                                     <div className="d-flex gap-3 align-items-center p-3 p-md-5 br1-left"><i
                                         className="ph ph-envelope-open p1-color fs-one">
@@ -107,7 +107,7 @@ export default function Contact() {
                                         </svg>
                                     </i>
                                         <div><span className="n5-color fs-five fw-semibold d-block mb-1 mb-sm-2">Email</span><a
-                                            className="n4-color fs-nine" href="mailto:someone@example.com">yourmail@domain.com</a>
+                                            className="n4-color fs-nine" href="mailto:umeraslamraza1@gmail.com">umeraslamraza1@gmail.com</a>
                                         </div>
                                     </div>
                                 </div>
@@ -126,39 +126,76 @@ export default function Contact() {
                                         middle of text.</p></div>
                             </div>
                             <div >
-                                <form className="mt-8 mt-md-15 p-3 p-sm-5 p-md-10 rounded-5 brn4">
+                                <form
+                                    className="mt-8 mt-md-15 p-3 p-sm-5 p-md-10 rounded-5 brn4"
+                                    onSubmit={handleSubmit}
+                                >
+                                    <input type="hidden" name="_redirect" value="https://yourdomain.com/thank-you" />
                                     <div className="d-flex flex-wrap flex-md-nowrap gap-3 gap-md-6 mb-3 mb-md-6">
-                                        <div className="d-flex align-items-center gap-2  py-2 py-md-4 rounded-2 brn4 w-100"><i
-                                            className="ph ph-octagon p1-color fs-six mb-1"></i><input
-                                            className="n5-color border-0" placeholder="Your Name*" type="text" id="name"
-                                            required=""/></div>
-                                        <div className="d-flex align-items-center gap-2  py-2 py-md-4 rounded-2 brn4 w-100"><i
-                                            className="ph ph-envelope p1-color fs-six mb-1"></i><input
-                                            className="n5-color border-0" placeholder="Email address*" type="email"
-                                            id="email" required=""/></div>
+                                        <div className="d-flex align-items-center gap-2 py-2 py-md-4 rounded-2 brn4 w-100">
+                                            <i className="ph ph-octagon p1-color fs-six mb-1"></i>
+                                            <input
+                                                className="n5-color border-0"
+                                                placeholder="Your Name*"
+                                                type="text"
+                                                id="name"
+                                                name="name"
+                                                required
+                                            />
+                                        </div>
+                                        <div className="d-flex align-items-center gap-2 py-2 py-md-4 rounded-2 brn4 w-100">
+                                            <i className="ph ph-envelope p1-color fs-six mb-1"></i>
+                                            <input
+                                                className="n5-color border-0"
+                                                placeholder="Email address*"
+                                                type="email"
+                                                id="email"
+                                                name="email"
+                                                required
+                                            />
+                                        </div>
                                     </div>
+
                                     <div className="d-flex flex-wrap flex-md-nowrap gap-3 gap-md-6">
-                                        <div className="d-flex align-items-center gap-2 py-2 py-md-4 rounded-2 brn4 w-100"><i
-                                            className="ph ph-device-mobile-camera p1-color fs-six mb-1"></i><input
-                                            className="n5-color border-0" placeholder="Phone*" type="number" id="phone"
-                                            required=""/></div>
-                                        <div className="d-flex align-items-center gap-2 py-2 py-md-4 rounded-2 brn4 w-100"><i
-                                            className="ph ph-map-pin p1-color fs-six mb-1"></i><input
-                                            className="n5-color border-0" placeholder="Location*" type="text" id="location"
-                                            required=""/></div>
+                                        <div className="d-flex align-items-center gap-2 py-2 py-md-4 rounded-2 brn4 w-100">
+                                            <i className="ph ph-device-mobile-camera p1-color fs-six mb-1"></i>
+                                            <input
+                                                className="n5-color border-0"
+                                                placeholder="Phone*"
+                                                type="tel"
+                                                id="phone"
+                                                name="phone"
+                                                required
+                                            />
+                                        </div>
+                                        <div className="d-flex align-items-center gap-2 py-2 py-md-4 rounded-2 brn4 w-100">
+                                            <i className="ph ph-map-pin p1-color fs-six mb-1"></i>
+                                            <input
+                                                className="n5-color border-0"
+                                                placeholder="Location*"
+                                                type="text"
+                                                id="location"
+                                                name="location"
+                                                required
+                                            />
+                                        </div>
                                     </div>
-                                    <div className="mt-3 mt-md-6"><textarea
-                                        className="n5-color px-2 px-md-3 py-2 py-md-4 rounded-2 brn4 w-100 h-120"
-                                        placeholder="Your Message:" id="message"></textarea></div>
-                                    <div className="d-flex gap-2 align-items-center mt-3 mt-md-5"><input id="check"
-                                                                                                     type="checkbox"
-                                                                                                     className="cursor-pointer"/><label
-                                        htmlFor="check" className="n4-color fs-nine cursor-pointer">Save my name, email, and
-                                        website in this browser for the next time.</label></div>
-                                    <button className="p-btn bg1-color fw-medium n11-color px-3 px-md-6 py-2 py-md-4 rounded-pill mt-5 mt-md-10">
+
+                                    <div className="mt-3 mt-md-6">
+                                        <textarea
+                                            className="n5-color px-2 px-md-3 py-2 py-md-4 rounded-2 brn4 w-100 h-120"
+                                            placeholder="Your Message:"
+                                            id="message"
+                                            name="message"
+                                            required
+                                        ></textarea>
+                                    </div>
+
+                                    <button className="p-btn bg1-color fw-medium n11-color px-3 px-md-6 py-2 py-md-4 rounded-pill mt-5 mt-md-10" type="submit">
                                         Send Message
                                     </button>
                                 </form>
+                                <ToastContainer position="top-right" autoClose={3000} />
                             </div>
                         </div>
                     </section>

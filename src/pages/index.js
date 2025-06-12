@@ -1,30 +1,41 @@
 'use client';
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import React from 'react';
 import userPic from '@/assets/_next/user.jpg';
-import jsIcon from '@/assets/_next/js.png';
+import laravelIcon from '@/assets/_next/laravel.svg';
 import resumeIcon from '@/assets/_next/resume-icon.png';
-import angularIcon from '@/assets/_next/angular.png';
 import reactIcon from '@/assets/_next/react.png';
 import vueIcon from '@/assets/_next/vue.png';
-import nodeIcon from '@/assets/_next/node.png';
-import pythonIcon from '@/assets/_next/python.png';
+
+import tailwindIcon from '@/assets/_next/tailwind-css.svg';
+import bootstrapIcon from '@/assets/_next/bootstrap.svg';
+import vuetifyIcon from '@/assets/_next/vuetify.svg';
+import javascriptIcon from '@/assets/_next/javascript-js.svg';
+import typescriptIcon from '@/assets/_next/typescript.svg';
+import jqueryIcon from '@/assets/_next/jquery-plain-wordmark.svg';
+import reduxIcon from '@/assets/_next/redux-original.svg';
+import vuexIcon from '@/assets/_next/vue-dot-js.svg';
+import gitIcon from '@/assets/_next/github.svg';
+import postmanIcon from '@/assets/_next/postman.svg';
+import firebaseIcon from '@/assets/_next/file-type-firebase.svg';
+import miroIcon from '@/assets/_next/miro.svg';
+import basecampIcon from '@/assets/_next/basecamp.svg';
+import jiraIcon from '@/assets/_next/jira.svg';
+
 import phpIcon from '@/assets/_next/php.png';
-import npmIcon from '@/assets/_next/npm.png';
-import gulpIcon from '@/assets/_next/gulp.png';
 import htmlIcon from '@/assets/_next/html.png';
 import cssIcon from '@/assets/_next/css.png';
 
-import project1 from '@/assets/_next/project1.png';
-import project2 from '@/assets/_next/project2.png';
-import project3 from '@/assets/_next/project3.png';
-import project4 from '@/assets/_next/project4.png';
 import buyer1 from '@/assets/_next/buyer1.png';
+import projects from '@/enums/projects';
+import useResponsiveHeight from '@/hooks/useResponsiveHeight';
 
 
 export default function Home() {
-
+    const featuredProjects = projects.filter(project => project.featured);
+    const height = useResponsiveHeight();
     return (
 
         <>
@@ -42,33 +53,45 @@ export default function Home() {
                             <section className="pt-120 pb-60 br-bottom-n3  mt-10 mt-lg-0">
                                 <div className="container">
                                     <div
-                                        className="d-flex flex-wrap gap-9 gap-md-12 align-items-center justify-content-between">
-                                        <div className="banner-content"><span
-                                            className="n5-color fs-five">HI, I&#x27;M A FREELANCER</span>
+                                        className="d-flex flex-wrap gap-3 gap-md-12 align-items-center justify-content-between">
+                                        <div className="section-heading">
+                                            <span
+                                            className="n5-color fs-five">Hi, I&#x27;M A Full Stack
+                                            </span>
                                             <h2 className="typing-text display-one p1-color mt-2 mb-3">
                                                 <span>Developer</span>
                                             </h2>
-                                            <p className="fs-seven n5-color">I&#x27;m a software engineer
-                                                specializing in scalable
-                                                web apps. Explore my<a className="p1-color"
-                                                                       href="blog.html"> blog</a>,<a
-                                                    className="p1-color" href="portfolio.html"> project portfolio
-                                                </a>and <a className="p1-color" href="resume.html">online
-                                                    resume</a>.</p>
+                                            <p className="fs-seven n4-color mt-2 mt-md-4">
+                                                I help businesses and individuals turn ideas into fast, functional, and modern web or mobile apps. Whether it's a portfolio site, an e-commerce platform, or a custom dashboard I build solutions that are scalable, user-friendly, and tailored to your needs.
+                                                With hands-on experience in both frontend and backend technologies like React, Node.js, and MongoDB, I ensure smooth performance and a seamless user experience.
+                                                <br/>
+                                            </p>
+                                                <ul className="fs-seven n4-color mt-2 mt-md-4">
+                                                    <li>Need a quick MVP?</li>
+                                                    <li>Looking to revamp your current site?</li>
+                                                    <li>Want a developer who communicates well and meets deadlines?</li>
+                                                </ul>
+                                                <br/>
+                                            <p className="fs-seven n4-color mt-2 mt-md-4">
+                                                Let’s talk, I’m currently available for freelance or full-time roles and would love to hear what you're working on. Explore my
+                                                <Link className="p1-color" href="/portfolio"> project portfolio </Link>and
+                                                <Link className="p1-color" href="/resume"> online resume</Link>.
+                                            </p>
+
                                             <div
                                                 className="d-flex flex-wrap align-itmes-center gap-3 gap-md-6 mt-4 mt-md-8">
-                                                <a
-                                                    className="p-btn n11-color bg1-color fw-medium n1-color px-3 px-md-6 py-2 py-md-4 rounded-pill d-flex align-items-center gap-2"
-                                                    href="portfolio.html">
+                                                <Link className="p-btn n11-color bg1-color fw-medium n1-color px-3 px-md-6 py-2 py-md-4 rounded-pill d-flex align-items-center gap-2"
+                                                    href="/portfolio">
                                                     <svg stroke="currentColor" fill="currentColor" strokeWidth="0"
                                                          viewBox="0 0 256 256" height="1em" width="1em"
                                                          xmlns="http://www.w3.org/2000/svg">
                                                         <path
                                                             d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
                                                     </svg>
-                                                    View Portfolio</a><a
+                                                    View Portfolio</Link>
+                                                <Link
                                                 className="p-btn n11-color bgn51-color fw-medium n1-color px-3 px-md-6 py-2 py-md-4 rounded-pill d-flex align-items-center gap-2"
-                                                href="resume.html">
+                                                href="/resume">
                                                 <Image
                                                     alt="Resume Icon"
                                                     loading="lazy"
@@ -77,7 +100,7 @@ export default function Home() {
                                                     decoding="async"
                                                     style={{color: 'transparent'}}
                                                     src={resumeIcon}
-                                                />View Resume</a>
+                                                />View Resume</Link>
 
                                             </div>
                                         </div>
@@ -100,18 +123,18 @@ export default function Home() {
                                     <div
                                         className="banner-counter d-flex flex-wrap flex-xl-nowrap align-items-center gap-3 gap-md-6 mt-10 mt-md-17">
                                         <div className="d-flex align-items-center gap-2 gap-xl-4"><h2
-                                            className="display-two fw-semibold p1-color"><span></span></h2>
+                                            className="display-two fw-semibold p1-color"><span>5</span></h2>
                                             <div className="line"></div>
                                             <span className="n5-color">Years of Experience</span></div>
                                         <div className="d-flex align-items-center gap-2 gap-xl-4"><h2
-                                            className="display-two fw-semibold p1-color"><span></span></h2>
+                                            className="display-two fw-semibold p1-color"><span>80</span></h2>
                                             <div className="line"></div>
-                                            <span className="n5-color">Projects Completed</span></div>
+                                            <span className="n5-color">More than Projects Completed</span></div>
                                         <div className="d-flex align-items-center gap-2 gap-xl-4"><h2
-                                            className="display-two fw-semibold p1-color d-flex gap-1"><span></span>k
+                                            className="display-two fw-semibold p1-color d-flex gap-1"><span>60</span>
                                         </h2>
                                             <div className="line"></div>
-                                            <span className="n5-color">Clients Worldwide</span></div>
+                                            <span className="n5-color">More than Clients worked worldwide</span></div>
                                     </div>
                                 </div>
                             </section>
@@ -125,25 +148,21 @@ export default function Home() {
                                                     <div className="title-line"></div>
                                                     <h2 className="display-four n5-color fw-semibold">What I do</h2>
                                                 </div>
-                                                <p className="fs-seven n4-color mt-2 mt-md-4">I have more than 10
-                                                    years experience
-                                                    building software for clients all over the world. Below is a
-                                                    quick overview
-                                                    of my main technical skill sets and technologies I use. Want to
+                                                <p className="fs-seven n4-color mt-2 mt-md-4">I’m a Full Stack Developer with 5 years of experience creating web and mobile apps that are not just functional but also secure and easy to scale. I’ve spent most of my time working with Laravel and Vue.js, and more recently with React.js and React Native. I enjoy building clean APIs, managing databases like MySQL and MongoDB, and connecting apps with third-party tools. I’m passionate about solving real problems through code and delivering work that makes a difference for clients around the world. Want to
                                                     find out
-                                                    more about my experience? Check out my <a className="p1-color"
-                                                                                              href="resume.html">online
-                                                        resume</a> and<a className="p1-color" href="portfolio.html">project
-                                                        portfolio</a>.</p></div>
-                                            <a className="p-btn bg1-color fw-medium n11-color px-3 px-md-6 py-2 py-md-4 rounded-pill d-flex align-items-center gap-2 h-100 text-nowrap"
-                                               href="price.html">
+                                                    more about my experience? Check out my <Link className="p1-color"
+                                                                                              href="/resume">online
+                                                        resume</Link> and <Link className="p1-color" href="/portfolio">project
+                                                        portfolio</Link>.</p></div>
+                                            <Link className="p-btn bg1-color fw-medium n11-color px-3 px-md-6 py-2 py-md-4 rounded-pill d-flex align-items-center gap-2 h-100 text-nowrap"
+                                               href="/contact">
                                                 <svg stroke="currentColor" fill="currentColor" strokeWidth="0"
                                                      viewBox="0 0 256 256" height="1em" width="1em"
                                                      xmlns="http://www.w3.org/2000/svg">
                                                     <path
                                                         d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
                                                 </svg>
-                                                Services &amp; Pricing</a></div>
+                                                Let's talk</Link></div>
                                     </div>
                                     <div className="row g-3 g-md-6 pt-60">
                                         <div className="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3">
@@ -152,23 +171,36 @@ export default function Home() {
                                                     <div className="d-flex align-items-center gap-3">
                                                         <div>
                                                             <Image
-                                                                alt="JavaScript Icon"
+                                                                alt="html"
                                                                 loading="lazy"
                                                                 width={28}
                                                                 height={28}
                                                                 decoding="async"
                                                                 className="service-icon"
                                                                 style={{color: 'transparent'}}
-                                                                src={jsIcon}
+                                                                src={htmlIcon}
                                                             />
-
+                                                        </div>
+                                                        <div>
+                                                            <Image
+                                                                alt="css"
+                                                                loading="lazy"
+                                                                width={28}
+                                                                height={28}
+                                                                decoding="async"
+                                                                className="service-icon"
+                                                                style={{color: 'transparent'}}
+                                                                src={cssIcon}
+                                                            />
                                                         </div>
                                                     </div>
-                                                    <h4 className="fs-six n5-color fw-medium mt-3 mt-md-6 mb-2 mb-md-3">Vanilla
-                                                        JavaScript</h4>
-                                                    <p className="fs-seven n4-color">List skills and technologies
-                                                        here. Customize as
-                                                        needed. Built on HTML5, Sass, and Bootstrap 5.</p></div>
+                                                    <h4 className="fs-six n5-color fw-medium mt-3 mt-md-6 mb-2 mb-md-3">HTML &amp;
+                                                        CSS</h4>
+                                                    <p className="fs-seven n4-color">
+                                                        Experienced in creating responsive, Converting figma mockups to pixel-perfect UIs using HTML5, CSS3, Sass, and Bootstrap.
+                                                    </p>
+
+                                                </div>
                                             </div>
                                         </div>
                                         <div className="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3">
@@ -177,31 +209,105 @@ export default function Home() {
                                                     <div className="d-flex align-items-center gap-3">
                                                         <div>
                                                             <Image
-                                                                alt="Angular"
+                                                                alt="tailwind"
                                                                 loading="lazy"
                                                                 width={28}
                                                                 height={28}
                                                                 decoding="async"
                                                                 className="service-icon"
                                                                 style={{color: 'transparent'}}
-                                                                src={angularIcon}
+                                                                src={tailwindIcon}
                                                             />
                                                         </div>
                                                         <div>
                                                             <Image
-                                                                alt="React"
+                                                                alt="bootstrap"
                                                                 loading="lazy"
                                                                 width={28}
                                                                 height={28}
                                                                 decoding="async"
                                                                 className="service-icon"
                                                                 style={{color: 'transparent'}}
-                                                                src={reactIcon}
+                                                                src={bootstrapIcon}
                                                             />
                                                         </div>
                                                         <div>
                                                             <Image
-                                                                alt="Vue"
+                                                                alt="vuetify"
+                                                                loading="lazy"
+                                                                width={28}
+                                                                height={28}
+                                                                decoding="async"
+                                                                className="service-icon"
+                                                                style={{color: 'transparent'}}
+                                                                src={vuetifyIcon}
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                    <h4 className="fs-six n5-color fw-medium mt-3 mt-md-6 mb-2 mb-md-3">Tailwind css, Bootstrap &amp;
+                                                        Vuetify</h4>
+                                                    <p className="fs-seven n4-color">
+                                                        Skilled in modern UI frameworks like Tailwind CSS, Bootstrap 5, and Vuetify for sleek, scalable designs.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3">
+                                            <div>
+                                                <div className="service-card px-4 px-lg-8 py-5 py-lg-10">
+                                                    <div className="d-flex align-items-center gap-3">
+                                                        <div>
+                                                            <Image
+                                                                alt="jquery"
+                                                                loading="lazy"
+                                                                width={28}
+                                                                height={28}
+                                                                decoding="async"
+                                                                className="service-icon"
+                                                                style={{color: 'transparent'}}
+                                                                src={jqueryIcon}
+                                                            />
+                                                        </div>
+                                                        <div>
+                                                            <Image
+                                                                alt="javascript"
+                                                                loading="lazy"
+                                                                width={28}
+                                                                height={28}
+                                                                decoding="async"
+                                                                className="service-icon"
+                                                                style={{color: 'transparent'}}
+                                                                src={javascriptIcon}
+                                                            />
+                                                        </div>
+                                                        <div>
+                                                            <Image
+                                                                alt="typescript"
+                                                                loading="lazy"
+                                                                width={28}
+                                                                height={28}
+                                                                decoding="async"
+                                                                className="service-icon"
+                                                                style={{color: 'transparent'}}
+                                                                src={typescriptIcon}
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                    <h4 className="fs-six n5-color fw-medium mt-3 mt-md-6 mb-2 mb-md-3">Jquery, Javascript &amp;
+                                                        Typescript</h4>
+                                                    <p className="fs-seven n4-color">
+                                                        Proficient in interactive web development using JavaScript, TypeScript, and legacy support with jQuery.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3">
+                                            <div>
+                                                <div className="service-card px-4 px-lg-8 py-5 py-lg-10">
+                                                    <div className="d-flex align-items-center gap-3">
+                                                        <div>
+                                                            <Image
+                                                                alt="vue"
                                                                 loading="lazy"
                                                                 width={28}
                                                                 height={28}
@@ -211,59 +317,25 @@ export default function Home() {
                                                                 src={vueIcon}
                                                             />
                                                         </div>
-                                                    </div>
-                                                    <h4 className="fs-six n5-color fw-medium mt-3 mt-md-6 mb-2 mb-md-3">Angular,
-                                                        React &amp; Vue</h4>
-                                                    <p className="fs-seven n4-color">List skills and technologies
-                                                        here. Customize as
-                                                        needed. Built on HTML5, Sass, and Bootstrap 5.</p></div>
-                                            </div>
-                                        </div>
-                                        <div className="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3">
-                                            <div>
-                                                <div className="service-card px-4 px-lg-8 py-5 py-lg-10">
-                                                    <div className="d-flex align-items-center gap-3">
                                                         <div>
                                                             <Image
-                                                                alt="Node.js"
-                                                                loading="lazy"
-                                                                width={26}
-                                                                height={28}
-                                                                decoding="async"
-                                                                className="service-icon"
-                                                                style={{color: 'transparent'}}
-                                                                src={nodeIcon}
-                                                            />
-                                                        </div>
-                                                    </div>
-                                                    <h4 className="fs-six n5-color fw-medium mt-3 mt-md-6 mb-2 mb-md-3">Node.js</h4>
-                                                    <p className="fs-seven n4-color">List skills and technologies
-                                                        here. Customize as
-                                                        needed. Built on HTML5, Sass, and Bootstrap 5.</p></div>
-                                            </div>
-                                        </div>
-                                        <div className="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3">
-                                            <div>
-                                                <div className="service-card px-4 px-lg-8 py-5 py-lg-10">
-                                                    <div className="d-flex align-items-center gap-3">
-                                                        <div>
-                                                            <Image
-                                                                alt="Python"
+                                                                alt="react"
                                                                 loading="lazy"
                                                                 width={28}
                                                                 height={28}
                                                                 decoding="async"
                                                                 className="service-icon"
                                                                 style={{color: 'transparent'}}
-                                                                src={pythonIcon}
+                                                                src={reactIcon}
                                                             />
                                                         </div>
                                                     </div>
-                                                    <h4 className="fs-six n5-color fw-medium mt-3 mt-md-6 mb-2 mb-md-3">Python &amp;
-                                                        Django</h4>
-                                                    <p className="fs-seven n4-color">List skills and technologies
-                                                        here. Customize as
-                                                        needed. Built on HTML5, Sass, and Bootstrap 5.</p></div>
+                                                    <h4 className="fs-six n5-color fw-medium mt-3 mt-md-6 mb-2 mb-md-3">Vue, React &amp;
+                                                        React Native</h4>
+                                                    <p className="fs-seven n4-color">
+                                                        Developed dynamic web and mobile apps using Vue.js, React.js, and React Native with reusable component design and clean structure.
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
                                         <div className="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3">
@@ -272,7 +344,56 @@ export default function Home() {
                                                     <div className="d-flex align-items-center gap-3">
                                                         <div>
                                                             <Image
-                                                                alt="PHP"
+                                                                alt="redux"
+                                                                loading="lazy"
+                                                                width={28}
+                                                                height={28}
+                                                                decoding="async"
+                                                                className="service-icon"
+                                                                style={{color: 'transparent'}}
+                                                                src={reduxIcon}
+                                                            />
+                                                        </div>
+                                                        <div>
+                                                            <Image
+                                                                alt="vuex"
+                                                                loading="lazy"
+                                                                width={28}
+                                                                height={28}
+                                                                decoding="async"
+                                                                className="service-icon"
+                                                                style={{color: 'transparent'}}
+                                                                src={vuexIcon}
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                    <h4 className="fs-six n5-color fw-medium mt-3 mt-md-6 mb-2 mb-md-3">Redux, Context API &amp;
+                                                        Vuex</h4>
+                                                    <p className="fs-seven n4-color">
+                                                        Proficient in managing complex application states using Redux for React and Vuex for Vue.js. Experienced with Context API for lightweight state management, ensuring scalability, and optimized component performance.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3">
+                                            <div>
+                                                <div className="service-card px-4 px-lg-8 py-5 py-lg-10">
+                                                    <div className="d-flex align-items-center gap-3">
+                                                        <div>
+                                                            <Image
+                                                                alt="Laravel"
+                                                                loading="lazy"
+                                                                width={28}
+                                                                height={28}
+                                                                decoding="async"
+                                                                className="service-icon"
+                                                                style={{color: 'transparent'}}
+                                                                src={laravelIcon}
+                                                            />
+                                                        </div>
+                                                        <div>
+                                                            <Image
+                                                                alt="php"
                                                                 loading="lazy"
                                                                 width={28}
                                                                 height={28}
@@ -283,10 +404,12 @@ export default function Home() {
                                                             />
                                                         </div>
                                                     </div>
-                                                    <h4 className="fs-six n5-color fw-medium mt-3 mt-md-6 mb-2 mb-md-3">PHP</h4>
-                                                    <p className="fs-seven n4-color">List skills and technologies
-                                                        here. Customize as
-                                                        needed. Built on HTML5, Sass, and Bootstrap 5.</p></div>
+                                                    <h4 className="fs-six n5-color fw-medium mt-3 mt-md-6 mb-2 mb-md-3">PHP
+                                                        &amp; Laravel</h4>
+                                                    <p className="fs-seven n4-color">
+                                                        Expert in backend development with PHP and Laravel, focusing on building RESTful APIs, authentication systems, and scalable web applications. Familiar with Eloquent ORM, queues, event broadcasting, and Laravel Reverb for real-time features.
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
                                         <div className="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3">
@@ -295,34 +418,47 @@ export default function Home() {
                                                     <div className="d-flex align-items-center gap-3">
                                                         <div>
                                                             <Image
-                                                                alt="html"
+                                                                alt="git"
                                                                 loading="lazy"
                                                                 width={28}
                                                                 height={28}
                                                                 decoding="async"
                                                                 className="service-icon"
                                                                 style={{color: 'transparent'}}
-                                                                src={htmlIcon}
+                                                                src={gitIcon}
                                                             />
                                                         </div>
                                                         <div>
                                                             <Image
-                                                                alt="css"
+                                                                alt="postman"
                                                                 loading="lazy"
                                                                 width={28}
                                                                 height={28}
                                                                 decoding="async"
                                                                 className="service-icon"
                                                                 style={{color: 'transparent'}}
-                                                                src={cssIcon}
+                                                                src={postmanIcon}
+                                                            />
+                                                        </div>
+                                                        <div>
+                                                            <Image
+                                                                alt="firebase"
+                                                                loading="lazy"
+                                                                width={28}
+                                                                height={28}
+                                                                decoding="async"
+                                                                className="service-icon"
+                                                                style={{color: 'transparent'}}
+                                                                src={firebaseIcon}
                                                             />
                                                         </div>
                                                     </div>
-                                                    <h4 className="fs-six n5-color fw-medium mt-3 mt-md-6 mb-2 mb-md-3">HTML &amp;
-                                                        CSS</h4>
-                                                    <p className="fs-seven n4-color">List skills and technologies
-                                                        here. Customize as
-                                                        needed. Built on HTML5, Sass, and Bootstrap 5.</p></div>
+                                                    <h4 className="fs-six n5-color fw-medium mt-3 mt-md-6 mb-2 mb-md-3">Git,
+                                                        Postman &amp; Firebase</h4>
+                                                    <p className="fs-seven n4-color">
+                                                        Experienced in version control using Git for collaborative development. Skilled in API testing and documentation with Postman. Hands-on with Firebase for authentication, Firestore, push notifications, and real-time data handling in mobile apps.
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
                                         <div className="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3">
@@ -331,70 +467,47 @@ export default function Home() {
                                                     <div className="d-flex align-items-center gap-3">
                                                         <div>
                                                             <Image
-                                                                alt="html"
+                                                                alt="miro"
                                                                 loading="lazy"
                                                                 width={28}
                                                                 height={28}
                                                                 decoding="async"
                                                                 className="service-icon"
                                                                 style={{color: 'transparent'}}
-                                                                src={htmlIcon}
+                                                                src={miroIcon}
                                                             />
                                                         </div>
                                                         <div>
                                                             <Image
-                                                                alt="css"
+                                                                alt="basecamp"
                                                                 loading="lazy"
                                                                 width={28}
                                                                 height={28}
                                                                 decoding="async"
                                                                 className="service-icon"
                                                                 style={{color: 'transparent'}}
-                                                                src={cssIcon}
+                                                                src={basecampIcon}
+                                                            />
+                                                        </div>
+                                                        <div>
+                                                            <Image
+                                                                alt="jira"
+                                                                loading="lazy"
+                                                                width={28}
+                                                                height={28}
+                                                                decoding="async"
+                                                                className="service-icon"
+                                                                style={{color: 'transparent'}}
+                                                                src={jiraIcon}
                                                             />
                                                         </div>
                                                     </div>
-                                                    <h4 className="fs-six n5-color fw-medium mt-3 mt-md-6 mb-2 mb-md-3">HTML &amp;
-                                                        CSS</h4>
-                                                    <p className="fs-seven n4-color">List skills and technologies
-                                                        here. Customize as
-                                                        needed. Built on HTML5, Sass, and Bootstrap 5.</p></div>
-                                            </div>
-                                        </div>
-                                        <div className="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3">
-                                            <div>
-                                                <div className="service-card px-4 px-lg-8 py-5 py-lg-10">
-                                                    <div className="d-flex align-items-center gap-3">
-                                                        <div>
-                                                            <Image
-                                                                alt="npmIcon"
-                                                                loading="lazy"
-                                                                width={28}
-                                                                height={28}
-                                                                decoding="async"
-                                                                className="service-icon"
-                                                                style={{color: 'transparent'}}
-                                                                src={npmIcon}
-                                                            />
-                                                        </div>
-                                                        <div>
-                                                            <Image
-                                                                alt="gulpIcon"
-                                                                loading="lazy"
-                                                                width={28}
-                                                                height={28}
-                                                                decoding="async"
-                                                                className="service-icon"
-                                                                style={{color: 'transparent'}}
-                                                                src={gulpIcon}
-                                                            />
-                                                        </div>
-                                                    </div>
-                                                    <h4 className="fs-six n5-color fw-medium mt-3 mt-md-6 mb-2 mb-md-3">Npm &amp;
-                                                        Gup</h4>
-                                                    <p className="fs-seven n4-color">List skills and technologies
-                                                        here. Customize as
-                                                        needed. Built on HTML5, Sass, and Bootstrap 5.</p></div>
+                                                    <h4 className="fs-six n5-color fw-medium mt-3 mt-md-6 mb-2 mb-md-3">Miro,Basecamp &amp;
+                                                        Jira</h4>
+                                                    <p className="fs-seven n4-color">
+                                                        Familiar with agile tools like Miro for brainstorming and product design, Basecamp for team collaboration, and Jira for sprint planning, task tracking, and effective project management in cross-functional teams and google meet for team meetings.
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -405,21 +518,17 @@ export default function Home() {
                                     <div
                                         className="container d-flex gap-3 gap-md-6 flex-wrap justify-content-between align-items-center">
                                         <div className="next-project-content"><h3
-                                            className="display-four n11-color fw-semibold mb-2 mb-md-4">Let’s Work
-                                            together on
-                                            your next Project</h3>
-                                            <p className="fs-seven n11-color">I am available for freelance projects.
-                                                Hire me and get
-                                                your project done.</p></div>
-                                        <a className="p-btn bg1-color fw-medium n11-color px-3 px-md-6 py-2 py-md-4 rounded-pill d-flex align-items-center gap-2 h-100"
-                                           href="contact.html">
+                                            className="display-four n11-color fw-semibold mb-2 mb-md-4">Your Project Deserves the Right Developer</h3>
+                                            <p className="fs-seven n11-color">Whether it’s freelance or full-time, I’m ready to contribute. Let’s make your next product a success.</p></div>
+                                        <Link className="p-btn bg1-color fw-medium n11-color px-3 px-md-6 py-2 py-md-4 rounded-pill d-flex align-items-center gap-2 h-100"
+                                           href="/contact">
                                             <svg stroke="currentColor" fill="currentColor" strokeWidth="0"
                                                  viewBox="0 0 256 256" height="1em" width="1em"
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
                                             </svg>
-                                            Let’s get in touch</a></div>
+                                            Let’s get in touch</Link></div>
                                 </div>
                             </section>
                             <section className="pt-120 pb-120 br-bottom-n3">
@@ -432,269 +541,104 @@ export default function Home() {
                                                     <div className="title-line"></div>
                                                     <h2 className="display-four n5-color fw-semibold">Featured
                                                         Projects</h2></div>
-                                                <p className="fs-seven n4-color mt-2 mt-md-4">My step-by-step guide
-                                                    ensures a smooth
-                                                    project journey, from the initial consultation to the final
-                                                    delivery. I take
-                                                    care of every detail, allowing you to focus on what you do
-                                                    best.</p></div>
-                                            <a className="p-btn bg1-color fw-medium n11-color px-3 px-md-6 py-2 py-md-4 rounded-pill d-flex align-items-center gap-2 h-100 text-nowrap"
-                                               href="portfolio.html">
+                                                <p className="fs-seven n4-color mt-2 mt-md-4">Every project you see here was crafted with care, built to solve real-world challenges, and designed to leave a lasting impression. I treat each line of code as a step toward helping clients grow and innovate.</p></div>
+                                            <Link className="p-btn bg1-color fw-medium n11-color px-3 px-md-6 py-2 py-md-4 rounded-pill d-flex align-items-center gap-2 h-100 text-nowrap"
+                                               href="/portfolio">
                                                 <svg stroke="currentColor" fill="currentColor" strokeWidth="0"
                                                      viewBox="0 0 256 256" height="1em" width="1em"
                                                      xmlns="http://www.w3.org/2000/svg">
                                                     <path
                                                         d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
                                                 </svg>
-                                                View Portfolio</a></div>
+                                                View Portfolio</Link></div>
                                     </div>
                                     <div className="row g-6 g-md-10 ">
-                                        <div className="col-xl-6">
-                                            <div>
-                                                <div className="project-card"><a className="thumb d-block"
-                                                                                 href="portfolio_details.html">
-                                                    <div className="post-thumb">
-                                                        <div className="post-thumb-inner">
-                                                            <Image
-                                                                alt="project"
-                                                                loading="lazy"
-                                                                width={620}
-                                                                height={357}
-                                                                decoding="async"
-                                                                className="w-100 p-2"
-                                                                style={{color: 'transparent'}}
-                                                                src={project1}
-                                                            />
-                                                        </div>
-                                                    </div>
-                                                    <div className="post-thumb">
-                                                        <div className="post-thumb-inner">
-                                                            <Image
-                                                                alt="project"
-                                                                loading="lazy"
-                                                                width={620}
-                                                                height={357}
-                                                                decoding="async"
-                                                                className="w-100 p-2"
-                                                                style={{color: 'transparent'}}
-                                                                src={project1}
-                                                            />
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                    <div
-                                                        className="d-flex justify-content-between gap-2 align-items-center pt-4 pt-md-8 px-3 px-md-6">
-                                                        <div>
-                                                            <div
-                                                                className="d-flex flex-wrap gap-1 gap-sm-2 align-items-center">
+                                        {featuredProjects.map(project => (
+                                            <div className="col-xl-6" key={project.id}>
+                                                <div>
+                                                    <div className="project-card">
+                                                        <a className="thumb d-block" href={`/projects/${project.slug}`}
+                                                           style={{
+                                                               height,
+                                                               display: 'block',
+                                                               color: 'transparent',
+                                                               width: '100%',
+                                                               objectFit: 'cover',
+                                                           }}
+                                                        >
+                                                            <div className="post-thumb">
+                                                                <div className="post-thumb-inner">
+                                                                    <Image
+                                                                        alt={project.title}
+                                                                        loading="lazy"
+                                                                        width={620}
+                                                                        height={357}
+                                                                        decoding="async"
+                                                                        className="w-100 p-2"
+                                                                        style={{ color: 'transparent' }}
+                                                                        src={project.thumbnail}
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                            <div className="post-thumb">
+                                                                <div className="post-thumb-inner">
+                                                                    <Image
+                                                                        alt={project.title}
+                                                                        loading="lazy"
+                                                                        width={620}
+                                                                        height={357}
+                                                                        decoding="async"
+                                                                        className="w-100 p-2"
+                                                                        style={{ color: 'transparent' }}
+                                                                        src={project.thumbnail}
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                        <div className="d-flex justify-content-between gap-2 align-items-center pt-4 pt-md-8 px-3 px-md-6">
+                                                            <div>
+                                                                <div className="d-flex flex-wrap gap-1 gap-sm-2 align-items-center">
+                                                                    {project.techStack.map((tech, index) => (
+                                                                        <a
+                                                                            key={index}
+                                                                            className="n5-color fs-nine px-2 px-md-4 py-1 py-md-2 brn3 rounded-pill fw-medium"
+                                                                            href="#"
+                                                                        >
+                                                                            {tech}
+                                                                        </a>
+                                                                    ))}
+                                                                </div>
                                                                 <a
-                                                                    className="n5-color fs-nine px-2 px-md-4 py-1 py-md-2 brn3 rounded-pill fw-medium"
-                                                                    href="#">React Js</a><a
-                                                                className="n5-color fs-nine px-2 px-md-4 py-1 py-md-2 brn3 rounded-pill fw-medium"
-                                                                href="#">gsap</a><a
-                                                                className="n5-color fs-nine px-2 px-md-4 py-1 py-md-2 brn3 rounded-pill fw-medium"
-                                                                href="#">Web Development</a></div>
-                                                            <a className="project-title fs-five fw-semibold n5-color mt-3 mt-md-5 d-block"
-                                                               href="portfolio_details.html">Crypto Website
-                                                                Development for DeFi
-                                                                X</a></div>
-                                                        <a className="project-link d-flex align-items-center justify-content-center flex-shrink-0"
-                                                           href="portfolio_details.html"><i className="n5-color">
-                                                            <svg stroke="currentColor" fill="currentColor"
-                                                                 strokeWidth="0"
-                                                                 viewBox="0 0 256 256" height="1em" width="1em"
-                                                                 xmlns="http://www.w3.org/2000/svg">
-                                                                <path
-                                                                    d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"></path>
-                                                            </svg>
-                                                        </i></a></div>
+                                                                    className="project-title fs-five fw-semibold n5-color mt-3 mt-md-5 d-block"
+                                                                    href={`/projects/${project.slug}`}
+                                                                >
+                                                                    {project.title}
+                                                                </a>
+                                                            </div>
+                                                            <a
+                                                                className="project-link d-flex align-items-center justify-content-center flex-shrink-0"
+                                                                href={`/projects/${project.slug}`}
+                                                            >
+                                                                <i className="n5-color">
+                                                                    <svg
+                                                                        stroke="currentColor"
+                                                                        fill="currentColor"
+                                                                        strokeWidth="0"
+                                                                        viewBox="0 0 256 256"
+                                                                        height="1em"
+                                                                        width="1em"
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                    >
+                                                                        <path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z" />
+                                                                    </svg>
+                                                                </i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div className="col-xl-6">
-                                            <div>
-                                                <div className="project-card"><a className="thumb d-block"
-                                                                                 href="portfolio_details.html">
-                                                    <div className="post-thumb">
-                                                        <div className="post-thumb-inner">
-                                                            <Image
-                                                                alt="project"
-                                                                loading="lazy"
-                                                                width={620}
-                                                                height={357}
-                                                                decoding="async"
-                                                                className="w-100 p-2"
-                                                                style={{color: 'transparent'}}
-                                                                src={project2}
-                                                            />
-                                                        </div>
-                                                    </div>
-                                                    <div className="post-thumb">
-                                                        <div className="post-thumb-inner">
-                                                            <Image
-                                                                alt="project"
-                                                                loading="lazy"
-                                                                width={620}
-                                                                height={357}
-                                                                decoding="async"
-                                                                className="w-100 p-2"
-                                                                style={{color: 'transparent'}}
-                                                                src={project2}
-                                                            />
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                    <div
-                                                        className="d-flex justify-content-between gap-2 align-items-center pt-4 pt-md-8 px-3 px-md-6">
-                                                        <div>
-                                                            <div
-                                                                className="d-flex flex-wrap gap-1 gap-sm-2 align-items-center">
-                                                                <a
-                                                                    className="n5-color fs-nine px-2 px-md-4 py-1 py-md-2 brn3 rounded-pill fw-medium"
-                                                                    href="#">React Js</a><a
-                                                                className="n5-color fs-nine px-2 px-md-4 py-1 py-md-2 brn3 rounded-pill fw-medium"
-                                                                href="#">gsap</a><a
-                                                                className="n5-color fs-nine px-2 px-md-4 py-1 py-md-2 brn3 rounded-pill fw-medium"
-                                                                href="#">Web Development</a></div>
-                                                            <a className="project-title fs-five fw-semibold n5-color mt-3 mt-md-5 d-block"
-                                                               href="portfolio_details.html">Salesforce CRM -
-                                                                Invoice
-                                                                Management </a></div>
-                                                        <a className="project-link d-flex align-items-center justify-content-center flex-shrink-0"
-                                                           href="portfolio_details.html"><i className="n5-color">
-                                                            <svg stroke="currentColor" fill="currentColor"
-                                                                 strokeWidth="0"
-                                                                 viewBox="0 0 256 256" height="1em" width="1em"
-                                                                 xmlns="http://www.w3.org/2000/svg">
-                                                                <path
-                                                                    d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"></path>
-                                                            </svg>
-                                                        </i></a></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-xl-6">
-                                            <div>
-                                                <div className="project-card"><a className="thumb d-block"
-                                                                                 href="portfolio_details.html">
-                                                    <div className="post-thumb">
-                                                        <div className="post-thumb-inner">
-                                                            <Image
-                                                                alt="project"
-                                                                loading="lazy"
-                                                                width={620}
-                                                                height={357}
-                                                                decoding="async"
-                                                                className="w-100 p-2"
-                                                                style={{color: 'transparent'}}
-                                                                src={project3}
-                                                            />
-                                                        </div>
-                                                    </div>
-                                                    <div className="post-thumb">
-                                                        <div className="post-thumb-inner">
-                                                            <Image
-                                                                alt="project"
-                                                                loading="lazy"
-                                                                width={620}
-                                                                height={357}
-                                                                decoding="async"
-                                                                className="w-100 p-2"
-                                                                style={{color: 'transparent'}}
-                                                                src={project3}
-                                                            />
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                    <div
-                                                        className="d-flex justify-content-between gap-2 align-items-center pt-4 pt-md-8 px-3 px-md-6">
-                                                        <div>
-                                                            <div
-                                                                className="d-flex flex-wrap gap-1 gap-sm-2 align-items-center">
-                                                                <a
-                                                                    className="n5-color fs-nine px-2 px-md-4 py-1 py-md-2 brn3 rounded-pill fw-medium"
-                                                                    href="#">React Js</a><a
-                                                                className="n5-color fs-nine px-2 px-md-4 py-1 py-md-2 brn3 rounded-pill fw-medium"
-                                                                href="#">gsap</a><a
-                                                                className="n5-color fs-nine px-2 px-md-4 py-1 py-md-2 brn3 rounded-pill fw-medium"
-                                                                href="#">Web Development</a></div>
-                                                            <a className="project-title fs-five fw-semibold n5-color mt-3 mt-md-5 d-block"
-                                                               href="portfolio_details.html">Car Rental App</a>
-                                                        </div>
-                                                        <a className="project-link d-flex align-items-center justify-content-center flex-shrink-0"
-                                                           href="portfolio_details.html"><i className="n5-color">
-                                                            <svg stroke="currentColor" fill="currentColor"
-                                                                 strokeWidth="0"
-                                                                 viewBox="0 0 256 256" height="1em" width="1em"
-                                                                 xmlns="http://www.w3.org/2000/svg">
-                                                                <path
-                                                                    d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"></path>
-                                                            </svg>
-                                                        </i></a></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-xl-6">
-                                            <div>
-                                                <div className="project-card"><a className="thumb d-block"
-                                                                                 href="portfolio_details.html">
-                                                    <div className="post-thumb">
-                                                        <div className="post-thumb-inner">
-                                                            <Image
-                                                                alt="project"
-                                                                loading="lazy"
-                                                                width={620}
-                                                                height={357}
-                                                                decoding="async"
-                                                                className="w-100 p-2"
-                                                                style={{color: 'transparent'}}
-                                                                src={project4}
-                                                            />
-                                                        </div>
-                                                    </div>
-                                                    <div className="post-thumb">
-                                                        <div className="post-thumb-inner">
-                                                            <Image
-                                                                alt="project"
-                                                                loading="lazy"
-                                                                width={620}
-                                                                height={357}
-                                                                decoding="async"
-                                                                className="w-100 p-2"
-                                                                style={{color: 'transparent'}}
-                                                                src={project4}
-                                                            />
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                    <div
-                                                        className="d-flex justify-content-between gap-2 align-items-center pt-4 pt-md-8 px-3 px-md-6">
-                                                        <div>
-                                                            <div
-                                                                className="d-flex flex-wrap gap-1 gap-sm-2 align-items-center">
-                                                                <a
-                                                                    className="n5-color fs-nine px-2 px-md-4 py-1 py-md-2 brn3 rounded-pill fw-medium"
-                                                                    href="#">React Js</a><a
-                                                                className="n5-color fs-nine px-2 px-md-4 py-1 py-md-2 brn3 rounded-pill fw-medium"
-                                                                href="#">gsap</a><a
-                                                                className="n5-color fs-nine px-2 px-md-4 py-1 py-md-2 brn3 rounded-pill fw-medium"
-                                                                href="#">Web Development</a></div>
-                                                            <a className="project-title fs-five fw-semibold n5-color mt-3 mt-md-5 d-block"
-                                                               href="portfolio_details.html">Financial
-                                                                management</a></div>
-                                                        <a className="project-link d-flex align-items-center justify-content-center flex-shrink-0"
-                                                           href="portfolio_details.html"><i className="n5-color">
-                                                            <svg stroke="currentColor" fill="currentColor"
-                                                                 strokeWidth="0"
-                                                                 viewBox="0 0 256 256" height="1em" width="1em"
-                                                                 xmlns="http://www.w3.org/2000/svg">
-                                                                <path
-                                                                    d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"></path>
-                                                            </svg>
-                                                        </i></a></div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        ))}
+
                                     </div>
                                 </div>
                             </section>
@@ -893,6 +837,38 @@ export default function Home() {
                         </div>
                     </main>
                 </div>
+            <style global jsx>{`
+  .project-thumb {
+    height: 220px !important;
+    display: block;
+  }
+
+  @media (min-width: 576px) {
+    .project-thumb {
+      height: 300px !important;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .project-thumb {
+      height: 360px !important;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .project-thumb {
+      height: 417px !important;
+    }
+  }
+
+  .w-100 {
+    width: 100% !important;
+    object-fit: cover !important;
+  }
+`}</style>
         </>
+
     );
+
 }
+

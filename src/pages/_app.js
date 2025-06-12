@@ -10,6 +10,7 @@ import "../assets/_next/static/media/bg.224f10fc.png"
 import Layout from '../components/Layout';
 
 
+
 export default function App({ Component, pageProps }) {
 
   return (
