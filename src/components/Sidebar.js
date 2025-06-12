@@ -3,6 +3,7 @@ import React, {useEffect, useState} from 'react';
 import userPic from '@/assets/_next/user-side.jpg';
 import Image from "next/image";
 import Link from 'next/link';
+import projects from "@/enums/projects";
 
 const Sidebar = () => {
     const [theme, setTheme] = useState('light');
@@ -189,7 +190,7 @@ const Sidebar = () => {
                                                     </svg>
                                                     Portfolio
                                                 </div>
-                                                <span className="n5-color bg2-color fs-ten px-1 pt-1 rounded-2 me-3">16</span>
+                                                <span className="n5-color bg2-color fs-ten px-1 pt-1 rounded-2 me-3">{projects?.length}</span>
                                             </Link>
                                         </li>
 

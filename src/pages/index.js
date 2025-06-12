@@ -31,7 +31,9 @@ import cssIcon from '@/assets/_next/css.png';
 import buyer1 from '@/assets/_next/buyer1.png';
 import projects from '@/enums/projects';
 import useResponsiveHeight from '@/hooks/useResponsiveHeight';
-
+import ProjectCard from '@/components/ProjectCard';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination,Navigation } from 'swiper/modules';
 
 export default function Home() {
     const featuredProjects = projects.filter(project => project.featured);
@@ -554,283 +556,59 @@ export default function Home() {
                                     </div>
                                     <div className="row g-6 g-md-10 ">
                                         {featuredProjects.map(project => (
-                                            <div className="col-xl-6" key={project.id}>
-                                                <div>
-                                                    <div className="project-card">
-                                                        <a className="thumb d-block" href={`/projects/${project.slug}`}
-                                                           style={{
-                                                               height,
-                                                               display: 'block',
-                                                               color: 'transparent',
-                                                               width: '100%',
-                                                               objectFit: 'cover',
-                                                           }}
-                                                        >
-                                                            <div className="post-thumb">
-                                                                <div className="post-thumb-inner">
-                                                                    <Image
-                                                                        alt={project.title}
-                                                                        loading="lazy"
-                                                                        width={620}
-                                                                        height={357}
-                                                                        decoding="async"
-                                                                        className="w-100 p-2"
-                                                                        style={{ color: 'transparent' }}
-                                                                        src={project.thumbnail}
-                                                                    />
-                                                                </div>
-                                                            </div>
-                                                            <div className="post-thumb">
-                                                                <div className="post-thumb-inner">
-                                                                    <Image
-                                                                        alt={project.title}
-                                                                        loading="lazy"
-                                                                        width={620}
-                                                                        height={357}
-                                                                        decoding="async"
-                                                                        className="w-100 p-2"
-                                                                        style={{ color: 'transparent' }}
-                                                                        src={project.thumbnail}
-                                                                    />
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                        <div className="d-flex justify-content-between gap-2 align-items-center pt-4 pt-md-8 px-3 px-md-6">
-                                                            <div>
-                                                                <div className="d-flex flex-wrap gap-1 gap-sm-2 align-items-center">
-                                                                    {project.techStack.map((tech, index) => (
-                                                                        <a
-                                                                            key={index}
-                                                                            className="n5-color fs-nine px-2 px-md-4 py-1 py-md-2 brn3 rounded-pill fw-medium"
-                                                                            href="#"
-                                                                        >
-                                                                            {tech}
-                                                                        </a>
-                                                                    ))}
-                                                                </div>
-                                                                <a
-                                                                    className="project-title fs-five fw-semibold n5-color mt-3 mt-md-5 d-block"
-                                                                    href={`/projects/${project.slug}`}
-                                                                >
-                                                                    {project.title}
-                                                                </a>
-                                                            </div>
-                                                            <a
-                                                                className="project-link d-flex align-items-center justify-content-center flex-shrink-0"
-                                                                href={`/projects/${project.slug}`}
-                                                            >
-                                                                <i className="n5-color">
-                                                                    <svg
-                                                                        stroke="currentColor"
-                                                                        fill="currentColor"
-                                                                        strokeWidth="0"
-                                                                        viewBox="0 0 256 256"
-                                                                        height="1em"
-                                                                        width="1em"
-                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                    >
-                                                                        <path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z" />
-                                                                    </svg>
-                                                                </i>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <ProjectCard key={project.id} project={project} height={height} />
                                         ))}
-
                                     </div>
                                 </div>
                             </section>
                             <section className="pt-120 pb-120 br-bottom-n3">
                                 <div className="container">
-                                    <div>
-                                        <div className="section-heading">
-                                            <div className="d-flex align-items-center gap-2">
-                                                <div className="title-line"></div>
-                                                <h2 className="display-four n5-color fw-semibold">Testimonials</h2>
-                                            </div>
-                                            <p className="fs-seven n4-color mt-2 mt-md-4">See how I&#x27;ve helped
-                                                our clients
-                                                succeed. IT’s a highly Customizable,creative, modern, visually
-                                                stunning and
-                                                Bootstrap5 HTML5 Template.</p></div>
-                                    </div>
-                                    <div className="mt-8 mt-md-15 overflow-x-hidden">
-                                        <div className="swiper">
-                                            <div className="swiper-wrapper">
-                                                <div className="swiper-slide">
-                                                    <div
-                                                        className="px-3 px-md-6 py-5 py-md-10 bgn2-color box-shadow1 br-left-p1">
-                                                        <div className="d-flex gap-1 mb-2 mb-md-3"><i
-                                                            className="ph-fill ph-star y1-color fs-six"></i><i
-                                                            className="ph-fill ph-star y1-color fs-six"></i><i
-                                                            className="ph-fill ph-star y1-color fs-six"></i><i
-                                                            className="ph-fill ph-star y1-color fs-six"></i><i
-                                                            className="ph-fill ph-star y1-color fs-six"></i></div>
-                                                        <p className="n4-color fs-six">I highly recommend Portfolify
-                                                            to anyone
-                                                            looking for a high-quality and responsive Bootstrap
-                                                            theme.</p>
-                                                        <div
-                                                            className="d-flex gap-3 align-items-center mt-4 mt-md-7">
-                                                            <Image
-                                                                alt="testimonial"
-                                                                loading="lazy"
-                                                                width={40}
-                                                                height={40}
-                                                                decoding="async"
-                                                                className="testimonial_img"
-                                                                style={{color: 'transparent'}}
-                                                                src={buyer1}
-                                                            />
-                                                            <div><span
-                                                                className="fs-eight d-block n5-color">Esther Howard</span><span
-                                                                className="fs-nine d-block n5-color">Australia</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="swiper-slide">
-                                                    <div
-                                                        className="px-3 px-md-6 py-5 py-md-10 bgn2-color box-shadow1 br-left-p1">
-                                                        <div className="d-flex gap-1 mb-2 mb-md-3"><i
-                                                            className="ph-fill ph-star y1-color fs-six"></i><i
-                                                            className="ph-fill ph-star y1-color fs-six"></i><i
-                                                            className="ph-fill ph-star y1-color fs-six"></i><i
-                                                            className="ph-fill ph-star y1-color fs-six"></i><i
-                                                            className="ph-fill ph-star y1-color fs-six"></i></div>
-                                                        <p className="n4-color fs-six">Portfolify is the perfect
-                                                            theme for
-                                                            businesses that want to create a stylish and functional
-                                                            website.</p>
-                                                        <div
-                                                            className="d-flex gap-3 align-items-center mt-4 mt-md-7">
-                                                            import Image from 'next/image';
-
-                                                            <Image
-                                                                alt="testimonial"
-                                                                src="/images/buyer2.png"
-                                                                width={40}
-                                                                height={40}
-                                                                className="testimonial_img"
-                                                                style={{color: 'transparent'}}
-                                                                loading="lazy"
-                                                                decoding="async"
-                                                            />
-
-                                                            <div><span
-                                                                className="fs-eight d-block n5-color">Robert Fox</span><span
-                                                                className="fs-nine d-block n5-color">Canada</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="swiper-slide">
-                                                    <div
-                                                        className="px-3 px-md-6 py-5 py-md-10 bgn2-color box-shadow1 br-left-p1">
-                                                        <div className="d-flex gap-1 mb-2 mb-md-3"><i
-                                                            className="ph-fill ph-star y1-color fs-six"></i><i
-                                                            className="ph-fill ph-star y1-color fs-six"></i><i
-                                                            className="ph-fill ph-star y1-color fs-six"></i><i
-                                                            className="ph-fill ph-star y1-color fs-six"></i><i
-                                                            className="ph-fill ph-star y1-color fs-six"></i></div>
-                                                        <p className="n4-color fs-six">Portfolify helped us create a
-                                                            stunning and
-                                                            clear website that reflects our brand perfectly.</p>
-                                                        <div
-                                                            className="d-flex gap-3 align-items-center mt-4 mt-md-7">
-                                                            <Image
-                                                                alt="testimonial"
-                                                                loading="lazy"
-                                                                width={40}
-                                                                height={40}
-                                                                decoding="async"
-                                                                className="testimonial_img"
-                                                                style={{color: 'transparent'}}
-                                                                src={buyer1}
-                                                            />
-                                                            <div><span
-                                                                className="fs-eight d-block n5-color">Cameron Williamson</span><span
-                                                                className="fs-nine d-block n5-color">China</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="swiper-slide">
-                                                    <div
-                                                        className="px-3 px-md-6 py-5 py-md-10 bgn2-color box-shadow1 br-left-p1">
-                                                        <div className="d-flex gap-1 mb-2 mb-md-3"><i
-                                                            className="ph-fill ph-star y1-color fs-six"></i><i
-                                                            className="ph-fill ph-star y1-color fs-six"></i><i
-                                                            className="ph-fill ph-star y1-color fs-six"></i><i
-                                                            className="ph-fill ph-star y1-color fs-six"></i><i
-                                                            className="ph-fill ph-star y1-color fs-six"></i></div>
-                                                        <p className="n4-color fs-six">Best Bootstrap template ever:
-                                                            easy to
-                                                            customize, feature-rich, responsive and meets all our
-                                                            needs.</p>
-                                                        <div
-                                                            className="d-flex gap-3 align-items-center mt-4 mt-md-7">
-                                                            <Image
-                                                                alt="testimonial"
-                                                                loading="lazy"
-                                                                width={40}
-                                                                height={40}
-                                                                decoding="async"
-                                                                className="testimonial_img"
-                                                                style={{color: 'transparent'}}
-                                                                src={buyer1}
-                                                            />
-                                                            <div><span
-                                                                className="fs-eight d-block n5-color">Jenny Wilson</span><span
-                                                                className="fs-nine d-block n5-color">USA</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="swiper-slide">
-                                                    <div
-                                                        className="px-3 px-md-6 py-5 py-md-10 bgn2-color box-shadow1 br-left-p1">
-                                                        <div className="d-flex gap-1 mb-2 mb-md-3"><i
-                                                            className="ph-fill ph-star y1-color fs-six"></i><i
-                                                            className="ph-fill ph-star y1-color fs-six"></i><i
-                                                            className="ph-fill ph-star y1-color fs-six"></i><i
-                                                            className="ph-fill ph-star y1-color fs-six"></i><i
-                                                            className="ph-fill ph-star y1-color fs-six"></i></div>
-                                                        <p className="n4-color fs-six">Portfolify is the perfect
-                                                            theme for
-                                                            businesses that want to create a stylish and functional
-                                                            website.</p>
-                                                        <div
-                                                            className="d-flex gap-3 align-items-center mt-4 mt-md-7">
-                                                            <Image
-                                                                alt="testimonial"
-                                                                loading="lazy"
-                                                                width={40}
-                                                                height={40}
-                                                                decoding="async"
-                                                                className="testimonial_img"
-                                                                style={{color: 'transparent'}}
-                                                                src={buyer1}
-                                                            />
-                                                            <div><span
-                                                                className="fs-eight d-block n5-color">Robert Fox</span><span
-                                                                className="fs-nine d-block n5-color">India</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="relative mt-15">
-                                                <div
-                                                    className="swiper-pagination d-flex allign-items-center justify-content-center gap-2"></div>
-                                            </div>
-                                            <div className="relative mt-15">
-                                                <div
-                                                    className="swiper-pagination d-flex allign-items-center justify-content-center gap-2"></div>
-                                            </div>
+                                    <div className="section-heading">
+                                        <div className="d-flex align-items-center gap-2">
+                                            <div className="title-line"></div>
+                                            <h2 className="display-four n5-color fw-semibold">Testimonials</h2>
                                         </div>
+                                        <p className="fs-seven n4-color mt-2 mt-md-4">See how I've helped our clients succeed...</p>
+                                    </div>
+
+                                    <div className="mt-8 mt-md-15 overflow-x-hidden">
+                                        <Swiper
+                                            modules={[Pagination,Navigation]}
+                                            pagination={{ clickable: true }}
+                                            spaceBetween={30}
+                                            slidesPerView={1}
+                                            breakpoints={{
+                                                768: { slidesPerView: 2 },
+                                                1024: { slidesPerView: 3 },
+                                            }}
+                                        >
+                                            {[1, 2, 3, 4, 5].map((_, idx) => (
+                                                <SwiperSlide key={idx}>
+                                                    <div className="px-3 px-md-6 py-5 py-md-10 bgn2-color box-shadow1 br-left-p1">
+                                                        <div className="d-flex gap-1 mb-2 mb-md-3">
+                                                            {[...Array(5)].map((_, i) => (
+                                                                <i key={i} className="ph-fill ph-star y1-color fs-six"></i>
+                                                            ))}
+                                                        </div>
+                                                        <p className="n4-color fs-six">Sample testimonial text here...</p>
+                                                        <div className="d-flex gap-3 align-items-center mt-4 mt-md-7">
+                                                            <Image
+                                                                alt="testimonial"
+                                                                src={buyer1}
+                                                                width={40}
+                                                                height={40}
+                                                                className="testimonial_img"
+                                                                style={{ color: 'transparent' }}
+                                                            />
+                                                            <div>
+                                                                <span className="fs-eight d-block n5-color">Name</span>
+                                                                <span className="fs-nine d-block n5-color">Location</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </SwiperSlide>
+                                            ))}
+                                        </Swiper>
                                     </div>
                                 </div>
                             </section>

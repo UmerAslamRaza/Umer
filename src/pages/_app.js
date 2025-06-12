@@ -8,6 +8,9 @@ import "../assets/_next/static/media/a3bfe233e5f7c725-s.woff2.woff2"
 import "../assets/_next/static/media/4c472ffaefe8ebfa-s.p.woff2.woff2"
 import "../assets/_next/static/media/bg.224f10fc.png"
 import Layout from '../components/Layout';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 
 
