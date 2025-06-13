@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  devIndicators: {
-    buildActivity: false,
-  },
   reactStrictMode: false,
+  images: {
+    unoptimized: true,
+  },
   output: 'export',
 };
 
