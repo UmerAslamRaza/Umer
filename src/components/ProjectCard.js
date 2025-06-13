@@ -9,7 +9,7 @@ export default function ProjectCard({project, height}) {
                     <Link
                         className="thumb d-block"
                         href={{
-                            pathname: `/portfolioDetail/${project.slug}`,
+                            pathname: `/portfolio/${project.slug}`,
                             query: {data: JSON.stringify(project)},
                         }}
                         style={{
@@ -66,7 +66,7 @@ export default function ProjectCard({project, height}) {
                             <Link
                                 className="project-title fs-five fw-semibold n5-color mt-3 mt-md-5 d-block"
                                 href={{
-                                    pathname: `/portfolioDetail/${project.slug}`,
+                                    pathname: `/portfolio/${project.slug}`,
                                     query: {data: JSON.stringify(project)},
                                 }}
                             >
@@ -76,7 +76,7 @@ export default function ProjectCard({project, height}) {
                         <Link
                             className="project-link d-flex align-items-center justify-content-center flex-shrink-0"
                             href={{
-                                pathname: `/portfolioDetail/${project.slug}`,
+                                pathname: `/portfolio/${project.slug}`,
                                 query: {data: JSON.stringify(project)},
                             }}
                         >

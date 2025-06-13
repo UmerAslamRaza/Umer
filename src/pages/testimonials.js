@@ -5,6 +5,8 @@ import Link from "next/link";
 import React from 'react';
 
 import { TESTIMONIALS } from "@/enums/testimonials";
+import {Swiper, SwiperSlide} from "swiper/react";
+import {Autoplay, Navigation, Pagination} from "swiper/modules";
 
 export default function Testimonials() {
 
@@ -22,7 +24,7 @@ export default function Testimonials() {
             <div className="main-content w-100">
                 <main>
                     <div className="overflow-hidden">
-                        <section className="pt-120 pb-120 br-bottom-n3">
+                        <section className="pt-120 pb-120 br-bottom-n3 mt-10 mt-lg-0">
                             <div className="container">
                                 <div>
                                     <div className="d-flex gap-3 flex-wrap flex-xxl-nowrap justify-content-between align-items-end mb-8 mb-md-15">
@@ -44,6 +46,44 @@ export default function Testimonials() {
                                             </svg>
                                             View Portfolio
                                         </Link>
+                                    </div>
+                                </div>
+
+                                <div className="mt-8 mt-md-15 overflow-x-hidden">
+                                    <Swiper
+                                        modules={[Pagination, Navigation, Autoplay]}
+                                        navigation
+                                        pagination={{ clickable: true }}
+                                        spaceBetween={30}
+                                        slidesPerView={1}
+                                        autoplay={{
+                                            delay: 1000,
+                                            disableOnInteraction: true,
+                                        }}
+                                    >
+                                        {TESTIMONIALS.map((testimonial, idx) => (
+                                            <SwiperSlide key={idx}>
+                                                <div className="px-5 px-md-10 py-6 py-md-12 bgn2-color box-shadow1 br-left-p1 position-relative mx-2 mx-md-4">
+
+                                                    <p className="n4-color fs-six">{testimonial?.text}</p>
+                                                    <div className="d-flex gap-3 align-items-center mt-4 mt-md-7">
+                                                        <div>
+                                                            <span className="fs-eight d-block n5-color">{testimonial?.name}</span>
+                                                            <span className="fs-nine d-block n5-color">{testimonial?.location}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </SwiperSlide>
+                                        ))}
+                                    </Swiper>
+                                </div>
+
+                                <div className="d-flex gap-3 flex-wrap flex-xxl-nowrap justify-content-between align-items-end mb-8 mt-8 mb-md-15">
+                                    <div className="section-heading">
+                                        <div className="d-flex align-items-center gap-2">
+                                            <div className="title-line"></div>
+                                            <h2 className="display-four n5-color fw-semibold">Screenshots</h2>
+                                        </div>
                                     </div>
                                 </div>
 

@@ -66,7 +66,7 @@ export default function Home() {
                                             </h2>
                                             <p className="fs-seven n4-color mt-2 mt-md-4">
                                                 I help businesses and individuals turn ideas into fast, functional, and modern web or mobile apps. Whether it's a portfolio site, an e-commerce platform, or a custom dashboard I build solutions that are scalable, user-friendly, and tailored to your needs.
-                                                With hands-on experience in both frontend and backend technologies like React, Node.js, and MongoDB, I ensure smooth performance and a seamless user experience.
+                                                With hands-on experience in both frontend and backend technologies like React, and MongoDB, I ensure smooth performance and a seamless user experience.
                                                 <br/>
                                             </p>
                                                 <ul className="fs-seven n4-color mt-2 mt-md-4">

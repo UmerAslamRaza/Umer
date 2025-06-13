@@ -4,9 +4,12 @@ import userPic from '@/assets/_next/user-side.jpg';
 import Image from "next/image";
 import Link from 'next/link';
 import projects from "@/enums/projects";
+import {usePathname} from 'next/navigation';
+import {TESTIMONIALS} from "@/enums/testimonials";
 
 const Sidebar = () => {
     const [theme, setTheme] = useState('light');
+    const pathname = usePathname();
 
     useEffect(() => {
         const savedTheme = localStorage.getItem('theme') || 'light';
@@ -79,16 +82,19 @@ const Sidebar = () => {
                                     <div className="side-icon bg1-color">
                                         <div className="d-flex align-items-center gap-2">
                                             <button>
-                                                <span className="dark_btn d-flex justify-content-center align-items-center n11-color">
+                                                <span
+                                                    className="dark_btn d-flex justify-content-center align-items-center n11-color">
                                                   {theme === 'light' ? (
-                                                      <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 256 256" height="1em"
+                                                      <svg stroke="currentColor" fill="currentColor" strokeWidth="0"
+                                                           viewBox="0 0 256 256" height="1em"
                                                            width="1em" xmlns="http://www.w3.org/2000/svg">
                                                           <path
                                                               d="M235.54,150.21a104.84,104.84,0,0,1-37,52.91A104,104,0,0,1,32,120,103.09,103.09,0,0,1,52.88,57.48a104.84,104.84,0,0,1,52.91-37,8,8,0,0,1,10,10,88.08,88.08,0,0,0,109.8,109.8,8,8,0,0,1,10,10Z"></path>
                                                       </svg>
 
                                                   ) : (
-                                                      <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 256 256" height="1em"
+                                                      <svg stroke="currentColor" fill="currentColor" strokeWidth="0"
+                                                           viewBox="0 0 256 256" height="1em"
                                                            width="1em" xmlns="http://www.w3.org/2000/svg">
                                                           <path
                                                               d="M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm8,24a64,64,0,1,0,64,64A64.07,64.07,0,0,0,128,64ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z"></path>
@@ -125,7 +131,7 @@ const Sidebar = () => {
                                     <h4 className="n5-color fw-semibold fs-five mt-2 text-center">Umer
                                         Aslam</h4><span className="n5-color fs-nine d-block text-center">Full Stack Developer</span>
                                     <div className="d-flex justify-content-center gap-2 align-items-center mt-4">
-                                        {/* LinkedIn */}
+
                                         <a
                                             className="social-icon"
                                             href="https://www.linkedin.com/in/umer-aslam-raza-/"
@@ -137,12 +143,12 @@ const Sidebar = () => {
                                                 <svg stroke="currentColor" fill="currentColor" strokeWidth="0"
                                                      viewBox="0 0 256 256" height="1em" width="1em"
                                                      xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"></path>
+                                                    <path
+                                                        d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"></path>
                                                 </svg>
                                             </i>
                                         </a>
 
-                                        {/* GitHub */}
                                         <a
                                             className="social-icon"
                                             href="https://github.com/UmerAslamRaza"
@@ -154,7 +160,8 @@ const Sidebar = () => {
                                                 <svg stroke="currentColor" fill="currentColor" strokeWidth="0"
                                                      viewBox="0 0 256 256" height="1em" width="1em"
                                                      xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"></path>
+                                                    <path
+                                                        d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"></path>
                                                 </svg>
                                             </i>
                                         </a>
@@ -165,20 +172,25 @@ const Sidebar = () => {
                                 <div className="menu-list">
                                     <ul className="d-flex flex-column gap-3">
                                         <li className="rounded-3">
-                                            <Link className="d-flex justify-content-between align-items-center rounded-3 false" href="/">
-                                            <div className="menu-item d-flex align-items-center gap-2 n5-color fs-eight px-3 py-2 ">
-                                                <svg stroke="currentColor" fill="currentColor"
-                                                     strokeWidth="0" viewBox="0 0 256 256" height="1em"
-                                                     width="1em" xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"></path>
-                                                </svg>
-                                                About Us
-                                            </div>
-                                        </Link></li>
+                                            <a className={`d-flex justify-content-between align-items-center rounded-3 ${
+                                                pathname === '/' ? 'active' : ''
+                                            }`} href="/">
+                                                <div
+                                                    className="menu-item d-flex align-items-center gap-2 n5-color fs-eight px-3 py-2 ">
+                                                    <svg stroke="currentColor" fill="currentColor"
+                                                         strokeWidth="0" viewBox="0 0 256 256" height="1em"
+                                                         width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"></path>
+                                                    </svg>
+                                                    About Us
+                                                </div>
+                                            </a></li>
                                         <li className="rounded-3">
-                                            <Link
-                                                className="d-flex justify-content-between align-items-center rounded-3 false"
+                                            <a
+                                                className={`d-flex justify-content-between align-items-center rounded-3 ${
+                                                    pathname === '/portfolio' ? 'active' : ''
+                                                }`}
                                                 href="/portfolio">
                                                 <div
                                                     className="menu-item d-flex align-items-center gap-2 n5-color fs-eight px-3 py-2 ">
@@ -190,12 +202,15 @@ const Sidebar = () => {
                                                     </svg>
                                                     Portfolio
                                                 </div>
-                                                <span className="n5-color bg2-color fs-ten px-1 pt-1 rounded-2 me-3">{projects?.length}</span>
-                                            </Link>
+                                                <span
+                                                    className="n5-color bg2-color fs-ten px-1 pt-1 rounded-2 me-3">{projects?.length}</span>
+                                            </a>
                                         </li>
 
                                         <li className="rounded-3"><a
-                                            className="d-flex justify-content-between align-items-center rounded-3 false"
+                                            className={`d-flex justify-content-between align-items-center rounded-3 ${
+                                                pathname === '/resume' ? 'active' : ''
+                                            }`}
                                             href="/resume">
                                             <div
                                                 className="menu-item d-flex align-items-center gap-2 n5-color fs-eight px-3 py-2 ">
@@ -209,8 +224,30 @@ const Sidebar = () => {
                                             </div>
                                         </a></li>
 
+                                        <li className="rounded-3">
+                                            <a className={`d-flex justify-content-between align-items-center rounded-3 ${
+                                                pathname === '/testimonials' ? 'active' : ''
+                                            }`} href="/testimonials">
+                                                <div
+                                                    className="menu-item d-flex align-items-center gap-2 n5-color fs-eight px-3 py-2">
+                                                    <svg stroke="currentColor" fill="currentColor" strokeWidth="0"
+                                                         viewBox="0 0 256 256" height="1em" width="1em"
+                                                         xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M184,112a8,8,0,0,1-8,8H112a8,8,0,0,1,0-16h64A8,8,0,0,1,184,112Zm-8,24H112a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16Zm48-88V208a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V48A16,16,0,0,1,48,32H208A16,16,0,0,1,224,48ZM48,208H72V48H48Zm160,0V48H88V208H208Z"></path>
+                                                    </svg>
+                                                    Testimonials
+                                                </div>
+                                                <span
+                                                    className="n5-color bg2-color fs-ten px-1 pt-1 rounded-2 me-3">{TESTIMONIALS?.length}</span>
+                                            </a>
+                                        </li>
+
+
                                         <li className="rounded-3"><a
-                                            className="d-flex justify-content-between align-items-center rounded-3 false"
+                                            className={`d-flex justify-content-between align-items-center rounded-3 ${
+                                                pathname === '/contact' ? 'active' : ''
+                                            }`}
                                             href="/contact">
                                             <div
                                                 className="menu-item d-flex align-items-center gap-2 n5-color fs-eight px-3 py-2 ">
@@ -316,21 +353,22 @@ const Sidebar = () => {
                 className="w-100 bgn1-color p-3 position-fixed z-3 bottom-0 d-block d-lg-none br-top-n5 box-shadow1">
                 <div className="header-bottom-menu w-full">
                     <ul className="d-flex gap-1 align-items-center justify-content-between">
-                        <li className="rounded-3 bg1-color"><Link
-                            className="d-flex justify-content-between align-items-center"
-                            href="/">
-                            <div className="d-flex align-items-center gap-2 fs-eight p-2 n11-color"><span
+                        <li className={`${pathname === '/' ? 'rounded-3 bg1-color' : 'false'}`}>
+                            <a className="d-flex justify-content-between align-items-center" href="/">
+                                <div className={`d-flex align-items-center gap-2 fs-eight p-2 ${pathname === '/' ? 'n11-color' : 'n5-color'}`}>
+                                <span
                                 className="fs-five d-flex align-items-center justify-content-center"><svg
                                 stroke="currentColor" fill="currentColor" strokeWidth="0"
                                 viewBox="0 0 256 256"
                                 height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path
                                 d="M230.93,220a8,8,0,0,1-6.93,4H32a8,8,0,0,1-6.92-12c15.23-26.33,38.7-45.21,66.09-54.16a72,72,0,1,1,73.66,0c27.39,8.95,50.86,27.83,66.09,54.16A8,8,0,0,1,230.93,220Z"></path></svg></span><span
                                 className="d-none d-md-block">About Us</span></div>
-                        </Link></li>
-                        <li className="false"><Link
-                            className="d-flex justify-content-between align-items-center"
+                        </a></li>
+                        <li className={`${pathname === '/portfolio' ? 'rounded-3 bg1-color' : 'false'}`}>
+                            <a className="d-flex justify-content-between align-items-center"
                             href="/portfolio">
-                            <div className="d-flex align-items-center gap-2 fs-eight p-2 n5-color"><span
+                                <div className={`d-flex align-items-center gap-2 fs-eight p-2 ${pathname === '/portfolio' ? 'n11-color' : 'n5-color'}`}>
+                                <span
                                 className="fs-five d-flex align-items-center justify-content-center"><svg
                                 stroke="currentColor" fill="currentColor" strokeWidth="0"
                                 viewBox="0 0 256 256"
@@ -338,33 +376,51 @@ const Sidebar = () => {
                                 d="M200,40H168a16,16,0,0,0-16-16H32A16,16,0,0,0,16,40v80a16,16,0,0,0,16,16h8v64a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40ZM106.34,61.66a8,8,0,0,1,11.32-11.32l24,24a8,8,0,0,1,0,11.32l-24,24a8,8,0,0,1-11.32-11.32L124.69,80Zm-64,24a8,8,0,0,1,0-11.32l24-24A8,8,0,0,1,77.66,61.66L59.31,80,77.66,98.34a8,8,0,0,1-11.32,11.32ZM200,200H56V136h96a16,16,0,0,0,16-16V56h32Z"></path></svg></span><span
                                 className="d-none d-md-block">Portfolio</span></div>
                             <span
-                                className="n5-color bg2-color fs-ten px-1 pt-1 rounded-2 me-3 d-none d-md-block">16</span></Link>
+                                className="n5-color bg2-color fs-ten px-1 pt-1 rounded-2 me-3 d-none d-md-block">16</span></a>
                         </li>
 
-                        <li className="false"><Link
-                            className="d-flex justify-content-between align-items-center"
+                        <li className={`${pathname === '/resume' ? 'rounded-3 bg1-color' : 'false'}`}>
+                            <a className="d-flex justify-content-between align-items-center"
                             href="/resume">
-                            <div className="d-flex align-items-center gap-2 fs-eight p-2 n5-color"><span
+                                <div className={`d-flex align-items-center gap-2 fs-eight p-2 ${pathname === '/resume' ? 'n11-color' : 'n5-color'}`}>
+                                <span
                                 className="fs-five d-flex align-items-center justify-content-center"><svg
                                 stroke="currentColor" fill="currentColor" strokeWidth="0"
                                 viewBox="0 0 256 256"
                                 height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path
                                 d="M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM80,208H48V48H80Zm96-56H112a8,8,0,0,1,0-16h64a8,8,0,0,1,0,16Zm0-32H112a8,8,0,0,1,0-16h64a8,8,0,0,1,0,16Z"></path></svg></span><span
                                 className="d-none d-md-block">Resume</span></div>
-                        </Link></li>
+                        </a></li>
 
-
-                        <li className="false"><Link
+                        <li className={`${pathname === '/testimonials' ? 'rounded-3 bg1-color' : 'false'}`}>
+                            <a
                             className="d-flex justify-content-between align-items-center"
-                            href="/contact">
-                            <div className="d-flex align-items-center gap-2 fs-eight p-2 n5-color"><span
+                            href="/testimonials">
+                                <div className={`d-flex align-items-center gap-2 fs-eight p-2 ${pathname === '/testimonials' ? 'n11-color' : 'n5-color'}`}>
+                                <span
+                                className="fs-five d-flex align-items-center justify-content-center">
+
+                                <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 256 256"
+                                     height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M184,112a8,8,0,0,1-8,8H112a8,8,0,0,1,0-16h64A8,8,0,0,1,184,112Zm-8,24H112a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16Zm48-88V208a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V48A16,16,0,0,1,48,32H208A16,16,0,0,1,224,48ZM48,208H72V48H48Zm160,0V48H88V208H208Z"></path>
+                                                    </svg>
+                            </span><span
+                                className="d-none d-md-block">Testimonials</span></div>
+                        </a></li>
+
+                        <li className={`${pathname === '/contact' ? 'rounded-3 bg1-color' : 'false'}`}>
+                            <a
+                            className="d-flex justify-content-between align-items-center" href="/contact">
+                                <div className={`d-flex align-items-center gap-2 fs-eight p-2 ${pathname === '/contact' ? 'n11-color' : 'n5-color'}`}>
+                                <span
                                 className="fs-five d-flex align-items-center justify-content-center"><svg
                                 stroke="currentColor" fill="currentColor" strokeWidth="0"
                                 viewBox="0 0 256 256"
                                 height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path
                                 d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,0l12-11.05,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z"></path></svg></span><span
                                 className="d-none d-md-block">Contact</span></div>
-                        </Link></li>
+                        </a></li>
                     </ul>
                 </div>
             </div>
