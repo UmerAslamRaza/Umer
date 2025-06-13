@@ -3,7 +3,8 @@ const nextConfig = {
   devIndicators: {
     buildActivity: false,
   },
-  reactStrictMode: false, // Optional: can help in some error spam
+  reactStrictMode: false,
+  output: 'export',
 };
 
 export default nextConfig;
