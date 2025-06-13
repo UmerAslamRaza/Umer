@@ -33,7 +33,8 @@ import projects from '@/enums/projects';
 import useResponsiveHeight from '@/hooks/useResponsiveHeight';
 import ProjectCard from '@/components/ProjectCard';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination,Navigation } from 'swiper/modules';
+import { Autoplay,Pagination,Navigation } from 'swiper/modules';
+import { TESTIMONIALS } from "@/enums/testimonials";
 
 export default function Home() {
     const featuredProjects = projects.filter(project => project.featured);
@@ -536,13 +537,14 @@ export default function Home() {
                             <section className="pt-120 pb-120 br-bottom-n3">
                                 <div className="container">
                                     <div>
-                                        <div
-                                            className="d-flex gap-3 flex-wrap flex-xxl-nowrap justify-content-between align-items-end mb-8 mb-md-15">
+                                        <div className="d-flex gap-3 flex-wrap flex-xxl-nowrap justify-content-between align-items-end mb-8 mb-md-15">
                                             <div className="section-heading">
                                                 <div className="d-flex align-items-center gap-2">
                                                     <div className="title-line"></div>
                                                     <h2 className="display-four n5-color fw-semibold">Featured
-                                                        Projects</h2></div>
+                                                        Projects
+                                                    </h2>
+                                                </div>
                                                 <p className="fs-seven n4-color mt-2 mt-md-4">Every project you see here was crafted with care, built to solve real-world challenges, and designed to leave a lasting impression. I treat each line of code as a step toward helping clients grow and innovate.</p></div>
                                             <Link className="p-btn bg1-color fw-medium n11-color px-3 px-md-6 py-2 py-md-4 rounded-pill d-flex align-items-center gap-2 h-100 text-nowrap"
                                                href="/portfolio">
@@ -552,7 +554,9 @@ export default function Home() {
                                                     <path
                                                         d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
                                                 </svg>
-                                                View Portfolio</Link></div>
+                                                View Portfolio
+                                            </Link>
+                                        </div>
                                     </div>
                                     <div className="row g-6 g-md-10 ">
                                         {featuredProjects.map(project => (
@@ -563,46 +567,50 @@ export default function Home() {
                             </section>
                             <section className="pt-120 pb-120 br-bottom-n3">
                                 <div className="container">
+                                    <div>
+                                    <div className="d-flex gap-3 flex-wrap flex-xxl-nowrap justify-content-between align-items-end mb-8 mb-md-15">
                                     <div className="section-heading">
                                         <div className="d-flex align-items-center gap-2">
                                             <div className="title-line"></div>
                                             <h2 className="display-four n5-color fw-semibold">Testimonials</h2>
                                         </div>
-                                        <p className="fs-seven n4-color mt-2 mt-md-4">See how I've helped our clients succeed...</p>
+                                        <p className="fs-seven n4-color mt-2 mt-md-4">Hear What My Clients Have to Say</p>
+
+                                    </div>
+                                    <Link className="p-btn bg1-color fw-medium n11-color px-3 px-md-6 py-2 py-md-4 rounded-pill d-flex align-items-center gap-2 h-100 text-nowrap"
+                                          href="/testimonials">
+                                        <svg stroke="currentColor" fill="currentColor" strokeWidth="0"
+                                             viewBox="0 0 256 256" height="1em" width="1em"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
+                                        </svg>
+                                        View Screenshots
+                                    </Link>
+                                    </div>
                                     </div>
 
                                     <div className="mt-8 mt-md-15 overflow-x-hidden">
                                         <Swiper
-                                            modules={[Pagination,Navigation]}
+                                            modules={[Pagination, Navigation, Autoplay]}
+                                            navigation
                                             pagination={{ clickable: true }}
                                             spaceBetween={30}
                                             slidesPerView={1}
-                                            breakpoints={{
-                                                768: { slidesPerView: 2 },
-                                                1024: { slidesPerView: 3 },
+                                            autoplay={{
+                                                delay: 1000,
+                                                disableOnInteraction: true,
                                             }}
                                         >
-                                            {[1, 2, 3, 4, 5].map((_, idx) => (
+                                            {TESTIMONIALS.map((testimonial, idx) => (
                                                 <SwiperSlide key={idx}>
-                                                    <div className="px-3 px-md-6 py-5 py-md-10 bgn2-color box-shadow1 br-left-p1">
-                                                        <div className="d-flex gap-1 mb-2 mb-md-3">
-                                                            {[...Array(5)].map((_, i) => (
-                                                                <i key={i} className="ph-fill ph-star y1-color fs-six"></i>
-                                                            ))}
-                                                        </div>
-                                                        <p className="n4-color fs-six">Sample testimonial text here...</p>
+                                                    <div className="px-5 px-md-10 py-6 py-md-12 bgn2-color box-shadow1 br-left-p1 position-relative mx-2 mx-md-4">
+
+                                                    <p className="n4-color fs-six">{testimonial?.text}</p>
                                                         <div className="d-flex gap-3 align-items-center mt-4 mt-md-7">
-                                                            <Image
-                                                                alt="testimonial"
-                                                                src={buyer1}
-                                                                width={40}
-                                                                height={40}
-                                                                className="testimonial_img"
-                                                                style={{ color: 'transparent' }}
-                                                            />
                                                             <div>
-                                                                <span className="fs-eight d-block n5-color">Name</span>
-                                                                <span className="fs-nine d-block n5-color">Location</span>
+                                                                <span className="fs-eight d-block n5-color">{testimonial?.name}</span>
+                                                                <span className="fs-nine d-block n5-color">{testimonial?.location}</span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -610,6 +618,7 @@ export default function Home() {
                                             ))}
                                         </Swiper>
                                     </div>
+
                                 </div>
                             </section>
                         </div>

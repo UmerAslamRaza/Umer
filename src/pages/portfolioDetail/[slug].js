@@ -9,7 +9,7 @@ import project2 from '@/assets/_next/project2.png';
 import project3 from '@/assets/_next/project3.png';
 
 import {Swiper, SwiperSlide} from 'swiper/react';
-import {Navigation} from 'swiper/modules';
+import {Autoplay, Navigation} from 'swiper/modules';
 import Link from "next/link";
 import useResponsiveSizeForSwiper from "@/hooks/useResponsiveSizeForSwiper";
 import useResponsiveDescription from "@/hooks/useResponsiveDescription";
@@ -79,12 +79,16 @@ export default function PortfolioDetail() {
                                         <div>
                                             <div className="overflow-hidden">
                                                 <Swiper
-                                                    modules={[Navigation]}
+                                                    modules={[Navigation,Autoplay]}
                                                     pagination={{ clickable: true }}
                                                     navigation
                                                     spaceBetween={20}
                                                     slidesPerView={1}
                                                     className="portfolio-swiper my-5"
+                                                    autoplay={{
+                                                        delay: 1000,
+                                                        disableOnInteraction: true,
+                                                    }}
                                                 >
                                                     {project?.galleryImages.map((image, index) => (
 
