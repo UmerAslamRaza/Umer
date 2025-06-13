@@ -1,6 +1,4 @@
 /** @type {import('next').NextConfig} */
-import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
-
 const isProd = process.env.NODE_ENV === 'production';
 const repo = 'Umer';
 
@@ -11,6 +9,7 @@ const nextConfig = {
   },
   output: 'export',
   basePath: isProd ? `/${repo}` : '',
+  assetPrefix: isProd ? `/${repo}/` : '',
 };
 
 export default nextConfig;
