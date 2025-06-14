@@ -220,7 +220,7 @@ const ProjectGalleries = {
     SpringringAdminWeb: [
         "/images/springringadminweb/user-profile/edit---student-&-one-parent---groups-dropdown.png",
         "/images/springringadminweb/user-profile/edit---admin.png",
-        "/images/springringadminweb/dashboard.png",
+        "/images/springringadminweb/dashboard-image.jpg",
         "/images/springringadminweb/school-calendar---month.png",
         "/images/springringadminweb/manage-users---add-user-admin.png",
         "/images/springringadminweb/manage-boards---archives.png",
