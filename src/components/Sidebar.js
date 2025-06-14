@@ -10,9 +10,10 @@ import {withBasePath} from "@/utils/basePath";
 const Sidebar = () => {
     const [theme, setTheme] = useState('light');
     const pathname = usePathname();
+    console.log(pathname);
+
     const userPic = "/images/user-side.jpg";
     const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
-
     useEffect(() => {
         const savedTheme = localStorage.getItem('theme') || 'light';
         setTheme(savedTheme);
@@ -191,7 +192,7 @@ const Sidebar = () => {
                                         <li className="rounded-3">
                                             <a
                                                 className={`d-flex justify-content-between align-items-center rounded-3 ${
-                                                    pathname === `${basePath}/portfolio` ? 'active' : ''
+                                                    pathname === `${basePath}/portfolio/` ? 'active' : ''
                                                 }`}
                                                 href={`${basePath}/portfolio`}>
                                                 <div
@@ -211,7 +212,7 @@ const Sidebar = () => {
 
                                         <li className="rounded-3"><a
                                             className={`d-flex justify-content-between align-items-center rounded-3 ${
-                                                pathname === `${basePath}/resume` ? 'active' : ''
+                                                pathname === `${basePath}/resume/` ? 'active' : ''
                                             }`}
                                             href={`${basePath}/resume`}>
                                             <div
@@ -228,7 +229,7 @@ const Sidebar = () => {
 
                                         <li className="rounded-3">
                                             <a className={`d-flex justify-content-between align-items-center rounded-3 ${
-                                                pathname === `${basePath}/testimonials` ? 'active' : ''
+                                                pathname === `${basePath}/testimonials/` ? 'active' : ''
                                             }`} href={`${basePath}/testimonials`}>
                                                 <div
                                                     className="menu-item d-flex align-items-center gap-2 n5-color fs-eight px-3 py-2">
@@ -248,7 +249,7 @@ const Sidebar = () => {
 
                                         <li className="rounded-3"><a
                                             className={`d-flex justify-content-between align-items-center rounded-3 ${
-                                                pathname === `${basePath}/contact` ? 'active' : ''
+                                                pathname === `${basePath}/contact/` ? 'active' : ''
                                             }`}
                                             href={`${basePath}/contact`}>
                                             <div
@@ -365,10 +366,10 @@ const Sidebar = () => {
                                 d="M230.93,220a8,8,0,0,1-6.93,4H32a8,8,0,0,1-6.92-12c15.23-26.33,38.7-45.21,66.09-54.16a72,72,0,1,1,73.66,0c27.39,8.95,50.86,27.83,66.09,54.16A8,8,0,0,1,230.93,220Z"></path></svg></span><span
                                 className="d-none d-md-block">About Us</span></div>
                         </a></li>
-                        <li className={`${pathname === `${basePath}/portfolio` ? 'rounded-3 bg1-color' : 'false'}`}>
+                        <li className={`${pathname === `${basePath}/portfolio/` ? 'rounded-3 bg1-color' : 'false'}`}>
                             <a className="d-flex justify-content-between align-items-center"
                             href={`${basePath}/portfolio`}>
-                                <div className={`d-flex align-items-center gap-2 fs-eight p-2 ${pathname === `${basePath}/portfolio` ? 'n11-color' : 'n5-color'}`}>
+                                <div className={`d-flex align-items-center gap-2 fs-eight p-2 ${pathname === `${basePath}/portfolio/` ? 'n11-color' : 'n5-color'}`}>
                                 <span
                                 className="fs-five d-flex align-items-center justify-content-center"><svg
                                 stroke="currentColor" fill="currentColor" strokeWidth="0"
@@ -381,10 +382,10 @@ const Sidebar = () => {
                         </li>
                         
 
-                        <li className={`${pathname === `${basePath}/resume` ? 'rounded-3 bg1-color' : 'false'}`}>
+                        <li className={`${pathname == `${basePath}/resume/` ? 'rounded-3 bg1-color' : 'false'}`}>
                             <a className="d-flex justify-content-between align-items-center"
                             href={`${basePath}/resume`}>
-                                <div className={`d-flex align-items-center gap-2 fs-eight p-2 ${pathname === `${basePath}/resume` ? 'n11-color' : 'n5-color'}`}>
+                                <div className={`d-flex align-items-center gap-2 fs-eight p-2 ${pathname == `${basePath}/resume/` ? 'n11-color' : 'n5-color'}`}>
                                 <span
                                 className="fs-five d-flex align-items-center justify-content-center"><svg
                                 stroke="currentColor" fill="currentColor" strokeWidth="0"
@@ -395,11 +396,11 @@ const Sidebar = () => {
                                 </div>
                         </a></li>
 
-                        <li className={`${pathname === `${basePath}/testimonials` ? 'rounded-3 bg1-color' : 'false'}`}>
+                        <li className={`${pathname === `${basePath}/testimonials/` ? 'rounded-3 bg1-color' : 'false'}`}>
                             <a
                             className="d-flex justify-content-between align-items-center"
                             href={`${basePath}/testimonials`}>
-                                <div className={`d-flex align-items-center gap-2 fs-eight p-2 ${pathname === `${basePath}/testimonials` ? 'n11-color' : 'n5-color'}`}>
+                                <div className={`d-flex align-items-center gap-2 fs-eight p-2 ${pathname === `${basePath}/testimonials/` ? 'n11-color' : 'n5-color'}`}>
                                 <span
                                 className="fs-five d-flex align-items-center justify-content-center">
 
@@ -412,10 +413,10 @@ const Sidebar = () => {
                                 className="d-none d-md-block">Testimonials</span></div>
                         </a></li>
 
-                        <li className={`${pathname === `${basePath}/contact` ? 'rounded-3 bg1-color' : 'false'}`}>
+                        <li className={`${pathname === `${basePath}/contact/` ? 'rounded-3 bg1-color' : 'false'}`}>
                             <a
                             className="d-flex justify-content-between align-items-center" href={`${basePath}/contact`}>
-                                <div className={`d-flex align-items-center gap-2 fs-eight p-2 ${pathname === `${basePath}/contact` ? 'n11-color' : 'n5-color'}`}>
+                                <div className={`d-flex align-items-center gap-2 fs-eight p-2 ${pathname === `${basePath}/contact/` ? 'n11-color' : 'n5-color'}`}>
                                 <span
                                 className="fs-five d-flex align-items-center justify-content-center"><svg
                                 stroke="currentColor" fill="currentColor" strokeWidth="0"
