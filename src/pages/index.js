@@ -3,32 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import React from 'react';
-import userPic from '../../public/images/user.jpg';
-import laravelIcon from '../../public/images/laravel.svg';
-import resumeIcon from '../../public/images/resume-icon.png';
-import reactIcon from '../../public/images/react.png';
-import vueIcon from '../../public/images/vue.png';
 
-import tailwindIcon from '../../public/images/tailwind-css.svg';
-import bootstrapIcon from '../../public/images/bootstrap.svg';
-import vuetifyIcon from '../../public/images/vuetify.svg';
-import javascriptIcon from '../../public/images/javascript-js.svg';
-import typescriptIcon from '../../public/images/typescript.svg';
-import jqueryIcon from '../../public/images/jquery-plain-wordmark.svg';
-import reduxIcon from '../../public/images/redux-original.svg';
-import vuexIcon from '../../public/images/vue-dot-js.svg';
-import gitIcon from '../../public/images/github.svg';
-import postmanIcon from '../../public/images/postman.svg';
-import firebaseIcon from '../../public/images/file-type-firebase.svg';
-import miroIcon from '../../public/images/miro.svg';
-import basecampIcon from '../../public/images/basecamp.svg';
-import jiraIcon from '../../public/images/jira.svg';
-
-import phpIcon from '../../public/images/php.png';
-import htmlIcon from '../../public/images/html.png';
-import cssIcon from '../../public/images/css.png';
-
-import buyer1 from '../../public/images/buyer1.png';
 import projects from '@/enums/projects';
 import useResponsiveHeight from '@/hooks/useResponsiveHeight';
 import ProjectCard from '@/components/ProjectCard';
@@ -38,8 +13,33 @@ import { TESTIMONIALS } from "@/enums/testimonials";
 import { withBasePath } from '@/utils/basePath';
 
 export default function Home() {
+
+    const userPic = "/images/user.jpg";
+    const laravelIcon = "/images/laravel.svg";
+    const resumeIcon = "/images/resume-icon.png";
+    const reactIcon = "/images/react.png";
+    const vueIcon = "/images/vue.png";
+    const tailwindIcon = "/images/tailwind-css.svg";
+    const bootstrapIcon = "/images/bootstrap.svg";
+    const vuetifyIcon = "/images/vuetify.svg";
+    const javascriptIcon = "/images/javascript-js.svg";
+    const typescriptIcon = "/images/typescript.svg";
+    const jqueryIcon = "/images/jquery-plain-wordmark.svg";
+    const reduxIcon = "/images/redux-original.svg";
+    const vuexIcon = "/images/vue-dot-js.svg";
+    const gitIcon = "/images/github.svg";
+    const postmanIcon = "/images/postman.svg";
+    const firebaseIcon = "/images/file-type-firebase.svg";
+    const miroIcon = "/images/miro.svg";
+    const basecampIcon = "/images/basecamp.svg";
+    const jiraIcon = "/images/jira.svg";
+    const phpIcon = "/images/php.png";
+    const htmlIcon = "/images/html.png";
+    const cssIcon = "/images/css.png";
+
     const featuredProjects = projects.filter(project => project.featured);
     const height = useResponsiveHeight();
+
     return (
 
         <>
