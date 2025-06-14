@@ -6,9 +6,11 @@ import React from 'react';
 import {useState} from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import {basePath} from "@/utils/config";
 
 export default function Contact() {
     const [formStatus, setFormStatus] = useState("");
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
     const handleSubmit = async (e) => {
         e.preventDefault();
         const form = e.target;

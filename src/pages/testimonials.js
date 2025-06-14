@@ -10,7 +10,7 @@ import {Autoplay, Navigation, Pagination} from "swiper/modules";
 import {withBasePath} from "@/utils/basePath";
 
 export default function Testimonials() {
-
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
     return (
 
         <>

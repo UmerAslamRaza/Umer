@@ -19,6 +19,7 @@ export default function PortfolioDetail() {
     const project = query?.data ? JSON.parse(query.data) : null;
     const { width, height } = useResponsiveSizeForSwiper();
     const { width: widthDescription, height: heightDescription } = useResponsiveDescription();
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 
 

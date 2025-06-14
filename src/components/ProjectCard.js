@@ -3,6 +3,7 @@ import Link from 'next/link';
 import {withBasePath} from "@/utils/basePath";
 
 export default function ProjectCard({project, height}) {
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
     return (
         <div className="col-xl-6" key={project.id}>
             <div>

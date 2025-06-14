@@ -11,6 +11,7 @@ const Sidebar = () => {
     const [theme, setTheme] = useState('light');
     const pathname = usePathname();
     const userPic = "/images/user-side.jpg";
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
     useEffect(() => {
         const savedTheme = localStorage.getItem('theme') || 'light';

@@ -6,6 +6,7 @@ import Link from "next/link";
 import {withBasePath} from "@/utils/basePath";
 export default function Resume() {
     const userPic = "/images/user-side.jpg";
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
     return (
 
         <>

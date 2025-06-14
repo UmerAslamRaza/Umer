@@ -7,11 +7,12 @@ import projects from "@/enums/projects";
 import { useState } from "react";
 import useResponsiveHeight from '@/hooks/useResponsiveHeight';
 import ProjectCard from '@/components/ProjectCard';
+import {basePath} from "@/utils/config";
 
 
 export default function Portfolio() {
     const height = useResponsiveHeight();
-
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
     return (
 
         <>
