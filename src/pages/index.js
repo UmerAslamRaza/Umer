@@ -104,6 +104,7 @@ export default function Home() {
                                                     decoding="async"
                                                     style={{color: 'transparent'}}
                                                     src={withBasePath(resumeIcon)}
+
                                                 />View Resume</Link>
 
                                             </div>
@@ -119,7 +120,8 @@ export default function Home() {
                                                     decoding="async"
                                                     className="user-img"
                                                     style={{color: 'transparent'}}
-                                                    src={withBasePath(userPic)}
+                                                    src={withBasePath(withBasePath(userPic))}
+
                                                 />
                                             </div>
                                         </div>
@@ -182,7 +184,8 @@ export default function Home() {
                                                                 decoding="async"
                                                                 className="service-icon"
                                                                 style={{color: 'transparent'}}
-                                                                src={htmlIcon}
+                                                                src={withBasePath(htmlIcon)}
+
                                                             />
                                                         </div>
                                                         <div>
@@ -194,7 +197,8 @@ export default function Home() {
                                                                 decoding="async"
                                                                 className="service-icon"
                                                                 style={{color: 'transparent'}}
-                                                                src={cssIcon}
+                                                                src={withBasePath(cssIcon)}
+
                                                             />
                                                         </div>
                                                     </div>
@@ -220,7 +224,8 @@ export default function Home() {
                                                                 decoding="async"
                                                                 className="service-icon"
                                                                 style={{color: 'transparent'}}
-                                                                src={tailwindIcon}
+                                                                src={withBasePath(tailwindIcon)}
+
                                                             />
                                                         </div>
                                                         <div>
@@ -232,7 +237,8 @@ export default function Home() {
                                                                 decoding="async"
                                                                 className="service-icon"
                                                                 style={{color: 'transparent'}}
-                                                                src={bootstrapIcon}
+                                                                src={withBasePath(bootstrapIcon)}
+
                                                             />
                                                         </div>
                                                         <div>
@@ -244,7 +250,8 @@ export default function Home() {
                                                                 decoding="async"
                                                                 className="service-icon"
                                                                 style={{color: 'transparent'}}
-                                                                src={vuetifyIcon}
+                                                                src={withBasePath(vuetifyIcon)}
+
                                                             />
                                                         </div>
                                                     </div>
@@ -269,7 +276,8 @@ export default function Home() {
                                                                 decoding="async"
                                                                 className="service-icon"
                                                                 style={{color: 'transparent'}}
-                                                                src={jqueryIcon}
+                                                                src={withBasePath(jqueryIcon)}
+
                                                             />
                                                         </div>
                                                         <div>
@@ -281,7 +289,8 @@ export default function Home() {
                                                                 decoding="async"
                                                                 className="service-icon"
                                                                 style={{color: 'transparent'}}
-                                                                src={javascriptIcon}
+                                                                src={withBasePath(javascriptIcon)}
+
                                                             />
                                                         </div>
                                                         <div>
@@ -293,7 +302,8 @@ export default function Home() {
                                                                 decoding="async"
                                                                 className="service-icon"
                                                                 style={{color: 'transparent'}}
-                                                                src={typescriptIcon}
+                                                                src={withBasePath(typescriptIcon)}
+
                                                             />
                                                         </div>
                                                     </div>
@@ -318,7 +328,8 @@ export default function Home() {
                                                                 decoding="async"
                                                                 className="service-icon"
                                                                 style={{color: 'transparent'}}
-                                                                src={vueIcon}
+                                                                src={withBasePath(vueIcon)}
+
                                                             />
                                                         </div>
                                                         <div>
@@ -330,7 +341,8 @@ export default function Home() {
                                                                 decoding="async"
                                                                 className="service-icon"
                                                                 style={{color: 'transparent'}}
-                                                                src={reactIcon}
+                                                                src={withBasePath(reactIcon)}
+
                                                             />
                                                         </div>
                                                     </div>
@@ -355,7 +367,8 @@ export default function Home() {
                                                                 decoding="async"
                                                                 className="service-icon"
                                                                 style={{color: 'transparent'}}
-                                                                src={reduxIcon}
+                                                                src={withBasePath(reduxIcon)}
+
                                                             />
                                                         </div>
                                                         <div>
@@ -367,7 +380,8 @@ export default function Home() {
                                                                 decoding="async"
                                                                 className="service-icon"
                                                                 style={{color: 'transparent'}}
-                                                                src={vuexIcon}
+                                                                src={withBasePath(vuexIcon)}
+
                                                             />
                                                         </div>
                                                     </div>
@@ -392,7 +406,8 @@ export default function Home() {
                                                                 decoding="async"
                                                                 className="service-icon"
                                                                 style={{color: 'transparent'}}
-                                                                src={laravelIcon}
+                                                                src={withBasePath(laravelIcon)}
+
                                                             />
                                                         </div>
                                                         <div>
@@ -404,7 +419,8 @@ export default function Home() {
                                                                 decoding="async"
                                                                 className="service-icon"
                                                                 style={{color: 'transparent'}}
-                                                                src={phpIcon}
+                                                                src={withBasePath(phpIcon)}
+
                                                             />
                                                         </div>
                                                     </div>
@@ -429,7 +445,8 @@ export default function Home() {
                                                                 decoding="async"
                                                                 className="service-icon"
                                                                 style={{color: 'transparent'}}
-                                                                src={gitIcon}
+                                                                src={withBasePath(gitIcon)}
+
                                                             />
                                                         </div>
                                                         <div>
@@ -441,7 +458,8 @@ export default function Home() {
                                                                 decoding="async"
                                                                 className="service-icon"
                                                                 style={{color: 'transparent'}}
-                                                                src={postmanIcon}
+                                                                src={withBasePath(postmanIcon)}
+
                                                             />
                                                         </div>
                                                         <div>
@@ -453,7 +471,8 @@ export default function Home() {
                                                                 decoding="async"
                                                                 className="service-icon"
                                                                 style={{color: 'transparent'}}
-                                                                src={firebaseIcon}
+                                                                src={withBasePath(firebaseIcon)}
+
                                                             />
                                                         </div>
                                                     </div>
@@ -478,7 +497,8 @@ export default function Home() {
                                                                 decoding="async"
                                                                 className="service-icon"
                                                                 style={{color: 'transparent'}}
-                                                                src={miroIcon}
+                                                                src={withBasePath(miroIcon)}
+
                                                             />
                                                         </div>
                                                         <div>
@@ -490,7 +510,8 @@ export default function Home() {
                                                                 decoding="async"
                                                                 className="service-icon"
                                                                 style={{color: 'transparent'}}
-                                                                src={basecampIcon}
+                                                                src={withBasePath(basecampIcon)}
+
                                                             />
                                                         </div>
                                                         <div>
@@ -502,7 +523,8 @@ export default function Home() {
                                                                 decoding="async"
                                                                 className="service-icon"
                                                                 style={{color: 'transparent'}}
-                                                                src={jiraIcon}
+                                                                src={withBasePath(jiraIcon)}
+
                                                             />
                                                         </div>
                                                     </div>

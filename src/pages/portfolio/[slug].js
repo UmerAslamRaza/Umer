@@ -14,6 +14,7 @@ import Link from "next/link";
 import useResponsiveSizeForSwiper from "@/hooks/useResponsiveSizeForSwiper";
 import useResponsiveDescription from "@/hooks/useResponsiveDescription";
 import Markdown from 'markdown-to-jsx';
+import {withBasePath} from "@/utils/basePath";
 
 export default function PortfolioDetail() {
     const {query} = useRouter();
@@ -108,7 +109,7 @@ export default function PortfolioDetail() {
                                                                     alt={`project-${index + 1}`}
                                                                     loading="lazy"
                                                                     decoding="async"
-                                                                    src={image}
+                                                                    src={withBasePath(image)}
                                                                     width={width}
                                                                     height={height}
                                                                     style={{
@@ -136,7 +137,7 @@ export default function PortfolioDetail() {
                                                             {section.images.map((imgSrc, imgIndex) => (
                                                                 <div className="col-sm-6 overflow-hidden" key={imgIndex}>
                                                                     <Image
-                                                                        src={imgSrc}
+                                                                        src={withBasePath(imgSrc)}
                                                                         alt={`project-section-${index + 1}-image-${imgIndex + 1}`}
                                                                         width={widthDescription}
                                                                         height={heightDescription}

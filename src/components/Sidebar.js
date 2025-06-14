@@ -6,6 +6,7 @@ import Link from 'next/link';
 import projects from "@/enums/projects";
 import {usePathname} from 'next/navigation';
 import {TESTIMONIALS} from "@/enums/testimonials";
+import {withBasePath} from "@/utils/basePath";
 
 const Sidebar = () => {
     const [theme, setTheme] = useState('light');
@@ -124,7 +125,7 @@ const Sidebar = () => {
                                                 decoding="async"
                                                 className="user"
                                                 style={{color: 'transparent'}}
-                                                src={userPic}
+                                                src={withBasePath(userPic)}
                                             />
                                         </div>
                                         <span className="thumb">👋</span></div>

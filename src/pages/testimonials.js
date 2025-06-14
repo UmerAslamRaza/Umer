@@ -7,6 +7,7 @@ import React from 'react';
 import { TESTIMONIALS } from "@/enums/testimonials";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Autoplay, Navigation, Pagination} from "swiper/modules";
+import {withBasePath} from "@/utils/basePath";
 
 export default function Testimonials() {
 
@@ -101,7 +102,7 @@ export default function Testimonials() {
                                                 decoding="async"
                                                 className="w-100 p-2"
                                                 style={{ color: 'transparent' }}
-                                                src={testimonial.image}
+                                                src={withBasePath(testimonial.image)}
                                             />
                                             <div className="d-flex gap-3 align-items-center mt-3 mt-md-5">
                                                 <div>

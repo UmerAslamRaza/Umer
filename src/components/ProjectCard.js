@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import {withBasePath} from "@/utils/basePath";
 
 export default function ProjectCard({project, height}) {
     return (
@@ -30,7 +31,7 @@ export default function ProjectCard({project, height}) {
                                     decoding="async"
                                     className="w-100 p-2"
                                     style={{color: 'transparent'}}
-                                    src={project.thumbnail}
+                                    src={withBasePath(project.thumbnail)}
                                 />
                             </div>
                         </div>
@@ -45,7 +46,7 @@ export default function ProjectCard({project, height}) {
                                     decoding="async"
                                     className="w-100 p-2"
                                     style={{color: 'transparent'}}
-                                    src={project.thumbnail}
+                                    src={withBasePath(project.thumbnail)}
                                 />
                             </div>
                         </div>

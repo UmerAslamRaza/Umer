@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from 'react';
 import Link from "next/link";
 import userPic from '@/assets/_next/user-side.jpg';
+import {withBasePath} from "@/utils/basePath";
 export default function Resume() {
 
     return (
@@ -86,7 +87,7 @@ export default function Resume() {
                                                 decoding="async"
                                                 className="object-fit-cover"
                                                 style={{color: 'transparent'}}
-                                                src={userPic}
+                                                src={withBasePath(userPic)}
                                             />
 
                                         </div>
