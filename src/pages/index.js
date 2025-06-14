@@ -48,19 +48,16 @@ export default function Home() {
                 <title>Umer</title>
                 <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="11x15"/>
                 <meta name="next-size-adjust"/>
-                <!-- Basic Meta -->
 
                 <title>Umer Aslam Raza – Full Stack Developer Portfolio</title>
                 <meta name="description" content="Explore Umer Aslam Raza's portfolio showcasing full-stack projects, client testimonials, and contact information." />
 
-                <!-- Open Graph (for Facebook, LinkedIn, WhatsApp, etc.) -->
                 <meta property="og:title" content="Umer Aslam Raza – Full Stack Developer Portfolio" />
                 <meta property="og:description" content="Showcasing modern web and mobile development projects, with client testimonials from across the globe." />
                 <meta property="og:image" content={withBasePath(userPic)} />
                 <meta property="og:url" content="https://umeraslamraza.github.io/umer/" />
                 <meta property="og:type" content="website" />
-
-                <!-- Twitter Card -->
+                
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Umer Aslam Raza – Full Stack Developer" />
                 <meta name="twitter:description" content="Explore projects, testimonials, and contact details." />
