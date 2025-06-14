@@ -1,10 +1,19 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import {withBasePath} from "@/utils/basePath";
+import {router} from "next/client";
 
 export default function ProjectCard({project, height}) {
+    const handleClick = (e) => {
+        if (e.ctrlKey || e.metaKey || e.button === 1) {
+            // Prevent open in new tab via Ctrl+Click / Middle Click
+            e.preventDefault();
+            return;
+        }
+        router.push(`/portfolio/${project.id}`);
+    };
     return (
-        <div className="col-xl-6" key={project.id}>
+        <div className="col-xl-6" key={project.id} onClick={handleClick}>
             <div>
                 <div className="project-card">
                     <Link
