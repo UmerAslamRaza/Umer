@@ -83,6 +83,53 @@ export default function Testimonials() {
                                     <div className="section-heading">
                                         <div className="d-flex align-items-center gap-2">
                                             <div className="title-line"></div>
+                                            <h2 className="display-four n5-color fw-semibold">Video Testimonials</h2>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Video Testimonials Section */}
+                                <div className="mt-8 mt-md-15 overflow-x-hidden">
+                                    <Swiper
+                                        modules={[Pagination, Navigation, Autoplay]}
+                                        navigation
+                                        pagination={{ clickable: true }}
+                                        spaceBetween={30}
+                                        slidesPerView={1}
+                                        autoplay={{
+                                            delay: 3000,
+                                            disableOnInteraction: true,
+                                        }}
+                                    >
+                                        {TESTIMONIALS.filter(t => t.isVideo).map((testimonial, idx) => (
+                                            <SwiperSlide key={`video-${idx}`}>
+                                                <div className="px-5 px-md-10 py-6 py-md-12 bgn2-color box-shadow1 br-left-p1 position-relative mx-2 mx-md-4">
+                                                    <video
+                                                        controls
+                                                        width="70%"
+                                                        className="w-100 rounded-3"
+                                                        style={{ maxHeight: '450px'}}
+                                                    >
+                                                        <source src={withBasePath(testimonial.video)} type="video/mp4" />
+                                                        Your browser does not support the video tag.
+                                                    </video>
+                                                    <div className="d-flex gap-3 align-items-center mt-4 mt-md-7">
+                                                        <div>
+                                                            <span className="fs-eight d-block n5-color">{testimonial?.name}</span>
+                                                            <span className="fs-nine d-block n5-color">{testimonial?.location}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </SwiperSlide>
+                                        ))}
+                                    </Swiper>
+                                </div>
+
+
+                                <div className="d-flex gap-3 flex-wrap flex-xxl-nowrap justify-content-between align-items-end mb-8 mt-8 mb-md-15">
+                                    <div className="section-heading">
+                                        <div className="d-flex align-items-center gap-2">
+                                            <div className="title-line"></div>
                                             <h2 className="display-four n5-color fw-semibold">Screenshots</h2>
                                         </div>
                                     </div>
