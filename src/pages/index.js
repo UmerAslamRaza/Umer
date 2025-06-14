@@ -53,14 +53,14 @@ export default function Home() {
 
                 <meta property="og:title" content="Umer Aslam Raza – Full Stack Developer Portfolio" />
                 <meta property="og:description" content="Showcasing modern web and mobile development projects, with client testimonials from across the globe." />
-                <meta property="og:image" content="https://umeraslamraza.github.io/umer/images/user.jpg" />
+                <meta property="og:image" content="https://umeraslamraza.github.io/umer/images/user-side.jpg" />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://umeraslamraza.github.io/umer/" />
 
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Umer Aslam Raza – Full Stack Developer" />
                 <meta name="twitter:description" content="Explore projects, testimonials, and contact details." />
-                <meta name="twitter:image" content="https://umeraslamraza.github.io/umer/images/user.jpg" />
+                <meta name="twitter:image" content="https://umeraslamraza.github.io/umer/images/user-side.jpg" />
 
             </Head>
 
