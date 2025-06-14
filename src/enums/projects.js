@@ -513,8 +513,8 @@ In today’s digital landscape, schools and businesses rely on multiple cloud ap
 The **Springring Web Admin Dashboard** is a centralized communication management platform designed for school administrators. It enables them to efficiently manage users, content, and settings within their institution. From user permissions and communication boards to events and school-wide configurations, everything is accessible through a single web interface—streamlining operations and improving institutional communication.
     `.trim(),
                 images: [
-                    "/images/springringadminweb/dashboard-image.jpg",
-                    "/images/springringadminweb/school-calendar---month.png"
+                    "/images/springringadminwebproject/dashboard.jpg",
+                    "/images/springringadminwebproject/school-calendar---month.png"
                 ]
             },
             {
@@ -541,14 +541,15 @@ The **Springring Web Admin Dashboard** is a centralized communication management
 This admin-only web tool prioritizes security, clarity, and streamlined communication across the school ecosystem.
     `.trim(),
                 images: [
-                    "/images/springringadminweb/manage-groups.png",
-                    "/images/springringadminweb/dashboard-2.png"
+                    "/images/springringadminwebproject/manage-groups.png",
+                    "/images/springringadminwebproject/dashboard-2.png"
                 ]
+
             }
         ]
         ,
         techStack: ["React", "Redux"],
-        thumbnail: "/images/springringadminweb/dashboard-image.jpg",
+        thumbnail: "/images/springringadminwebproject/dashboard.jpg",
         galleryImages: projectGalleries.SpringringAdminWeb,
         type: "web",
         domain: "frontend",
