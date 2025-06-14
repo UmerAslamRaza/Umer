@@ -5,8 +5,8 @@ import {useRouter} from 'next/router';
 
 import React from "react";
 import Image from "next/image";
-import project2 from '@/assets/_next/project2.png';
-import project3 from '@/assets/_next/project3.png';
+import project2 from '../../../public/images/project2.png';
+import project3 from '../../../public/images/project3.png';
 
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {Autoplay, Navigation} from 'swiper/modules';

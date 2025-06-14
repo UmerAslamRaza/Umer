@@ -1,6 +1,6 @@
 'use client';
 import React, {useEffect, useState} from 'react';
-import userPic from '@/assets/_next/user-side.jpg';
+import userPic from '../../public/images/user-side.jpg';
 import Image from "next/image";
 import Link from 'next/link';
 import projects from "@/enums/projects";
