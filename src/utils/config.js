@@ -1,1 +1,1 @@
-export const basePath = process.env.NODE_ENV === 'production' ? '/Umer' : '';
+export const basePath = process.env.NODE_ENV === 'production' ? '/umer' : '';
