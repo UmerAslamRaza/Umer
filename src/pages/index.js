@@ -78,14 +78,14 @@ export default function Home() {
                                                 <br/>
                                             <p className="fs-seven n4-color mt-2 mt-md-4">
                                                 Let’s talk, I’m currently available for freelance or full-time roles and would love to hear what you're working on. Explore my
-                                                <Link className="p1-color" href="/portfolio"> project portfolio </Link>and
-                                                <Link className="p1-color" href="/resume"> online resume</Link>.
+                                                <Link className="p1-color" href={`${basePath}/portfolio`}> project portfolio </Link>and
+                                                <Link className="p1-color" href={`${basePath}/resume`}> online resume</Link>.
                                             </p>
 
                                             <div
                                                 className="d-flex flex-wrap align-itmes-center gap-3 gap-md-6 mt-4 mt-md-8">
                                                 <Link className="p-btn n11-color bg1-color fw-medium n1-color px-3 px-md-6 py-2 py-md-4 rounded-pill d-flex align-items-center gap-2"
-                                                    href="/portfolio">
+                                                    href={`${basePath}/portfolio`}>
                                                     <svg stroke="currentColor" fill="currentColor" strokeWidth="0"
                                                          viewBox="0 0 256 256" height="1em" width="1em"
                                                          xmlns="http://www.w3.org/2000/svg">
@@ -95,7 +95,7 @@ export default function Home() {
                                                     View Portfolio</Link>
                                                 <Link
                                                 className="p-btn n11-color bgn51-color fw-medium n1-color px-3 px-md-6 py-2 py-md-4 rounded-pill d-flex align-items-center gap-2"
-                                                href="/resume">
+                                                href={`${basePath}/resume`}>
                                                 <Image
                                                     alt="Resume Icon"
                                                     loading="lazy"
@@ -157,11 +157,11 @@ export default function Home() {
                                                 <p className="fs-seven n4-color mt-2 mt-md-4">I’m a Full Stack Developer with 5 years of experience creating web and mobile apps that are not just functional but also secure and easy to scale. I’ve spent most of my time working with Laravel and Vue.js, and more recently with React.js and React Native. I enjoy building clean APIs, managing databases like MySQL and MongoDB, and connecting apps with third-party tools. I’m passionate about solving real problems through code and delivering work that makes a difference for clients around the world. Want to
                                                     find out
                                                     more about my experience? Check out my <Link className="p1-color"
-                                                                                              href="/resume">online
-                                                        resume</Link> and <Link className="p1-color" href="/portfolio">project
+                                                                                              href={`${basePath}/resume`}>online
+                                                        resume</Link> and <Link className="p1-color" href={`${basePath}/portfolio`}>project
                                                         portfolio</Link>.</p></div>
                                             <Link className="p-btn bg1-color fw-medium n11-color px-3 px-md-6 py-2 py-md-4 rounded-pill d-flex align-items-center gap-2 h-100 text-nowrap"
-                                               href="/contact">
+                                               href={`${basePath}/contact`}>
                                                 <svg stroke="currentColor" fill="currentColor" strokeWidth="0"
                                                      viewBox="0 0 256 256" height="1em" width="1em"
                                                      xmlns="http://www.w3.org/2000/svg">
@@ -547,7 +547,7 @@ export default function Home() {
                                             className="display-four n11-color fw-semibold mb-2 mb-md-4">Your Project Deserves the Right Developer</h3>
                                             <p className="fs-seven n11-color">Whether it’s freelance or full-time, I’m ready to contribute. Let’s make your next product a success.</p></div>
                                         <Link className="p-btn bg1-color fw-medium n11-color px-3 px-md-6 py-2 py-md-4 rounded-pill d-flex align-items-center gap-2 h-100"
-                                           href="/contact">
+                                           href={`${basePath}/contact`}>
                                             <svg stroke="currentColor" fill="currentColor" strokeWidth="0"
                                                  viewBox="0 0 256 256" height="1em" width="1em"
                                                  xmlns="http://www.w3.org/2000/svg">
@@ -570,7 +570,7 @@ export default function Home() {
                                                 </div>
                                                 <p className="fs-seven n4-color mt-2 mt-md-4">Every project you see here was crafted with care, built to solve real-world challenges, and designed to leave a lasting impression. I treat each line of code as a step toward helping clients grow and innovate.</p></div>
                                             <Link className="p-btn bg1-color fw-medium n11-color px-3 px-md-6 py-2 py-md-4 rounded-pill d-flex align-items-center gap-2 h-100 text-nowrap"
-                                               href="/portfolio">
+                                               href={`${basePath}/portfolio`}>
                                                 <svg stroke="currentColor" fill="currentColor" strokeWidth="0"
                                                      viewBox="0 0 256 256" height="1em" width="1em"
                                                      xmlns="http://www.w3.org/2000/svg">
@@ -601,7 +601,7 @@ export default function Home() {
 
                                     </div>
                                     <Link className="p-btn bg1-color fw-medium n11-color px-3 px-md-6 py-2 py-md-4 rounded-pill d-flex align-items-center gap-2 h-100 text-nowrap"
-                                          href="/testimonials">
+                                          href={`${basePath}/testimonials`}>
                                         <svg stroke="currentColor" fill="currentColor" strokeWidth="0"
                                              viewBox="0 0 256 256" height="1em" width="1em"
                                              xmlns="http://www.w3.org/2000/svg">

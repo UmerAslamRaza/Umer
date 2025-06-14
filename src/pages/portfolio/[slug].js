@@ -42,7 +42,7 @@ export default function PortfolioDetail() {
                                     {project?.title}</h3>
                                     <p className="fs-seven n5-color mb-4 mb-md-8 text-center"><Markdown>{project?.projectSummary}</Markdown></p><Link
                                         className="w-max p-btn bg1-color fw-medium n11-color px-3 px-md-6 py-2 py-md-4 rounded-pill d-flex align-items-center gap-2 mx-auto"
-                                        href="/contact">
+                                        href={`${basePath}/contact`}>
                                         <svg fill="currentColor" height="1em" stroke="currentColor"
                                              strokeWidth="0" viewBox="0 0 256 256" width="1em"
                                              xmlns="http://www.w3.org/2000/svg">
@@ -173,7 +173,7 @@ export default function PortfolioDetail() {
                                             and get
                                             your project done.</p></div>
                                     <Link className="p-btn bg1-color fw-medium n11-color px-3 px-md-6 py-2 py-md-4 rounded-pill d-flex align-items-center gap-2 h-100"
-                                       href="/contact">
+                                       href={`${basePath}/contact`}>
                                         <svg fill="currentColor" height="1em" stroke="currentColor"
                                              strokeWidth="0" viewBox="0 0 256 256" width="1em"
                                              xmlns="http://www.w3.org/2000/svg">

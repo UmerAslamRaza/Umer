@@ -38,7 +38,7 @@ export default function Testimonials() {
 
                                         </div>
                                         <Link className="p-btn bg1-color fw-medium n11-color px-3 px-md-6 py-2 py-md-4 rounded-pill d-flex align-items-center gap-2 h-100 text-nowrap"
-                                              href="/portfolio">
+                                              href={`${basePath}/portfolio`}>
                                             <svg stroke="currentColor" fill="currentColor" strokeWidth="0"
                                                  viewBox="0 0 256 256" height="1em" width="1em"
                                                  xmlns="http://www.w3.org/2000/svg">
