@@ -387,7 +387,7 @@ export default function Home() {
                                                     <h4 className="fs-six n5-color fw-medium mt-3 mt-md-6 mb-2 mb-md-3">Redux, Context API &amp;
                                                         Vuex</h4>
                                                     <p className="fs-seven n4-color">
-                                                        Proficient in managing complex application states using Redux for React and Vuex for Vue.js. Experienced with Context API for lightweight state management, ensuring scalability, and optimized component performance.
+                                                        Proficient in managing complex application states using Redux for React and Vuex for Vue.js. Experienced with Context API for lightweight state management, ensuring scalability, optimized component performance and stability.
                                                     </p>
                                                 </div>
                                             </div>
