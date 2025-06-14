@@ -120,7 +120,7 @@ export default function Home() {
                                                     decoding="async"
                                                     className="user-img"
                                                     style={{color: 'transparent'}}
-                                                    src={withBasePath(withBasePath(userPic))}
+                                                    src={withBasePath(userPic)}
 
                                                 />
                                             </div>
