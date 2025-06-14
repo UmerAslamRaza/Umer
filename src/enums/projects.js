@@ -19,8 +19,8 @@ The **KidConnect Admin Dashboard** is a robust backend platform built with **Lar
 This dashboard plays a pivotal role in maintaining **data integrity**, managing **user access levels**, and enabling seamless system operations for a **multi-user ecosystem** involving parents, vendors, and school administrators.
             `.trim(),
             images: [
-                "/images/chilllupbackend/Vendors%203.png",
-                "/images/chilllupbackend/Vendors%204.png"
+                "/images/chilllupbackend/vendors-3.png",
+                "/images/chilllupbackend/vendors-4.png"
             ]
         },
         {
@@ -42,8 +42,8 @@ I built a scalable architecture to handle large datasets such as:
 Additionally, I implemented **JWT-based authentication**, secure login workflows, and **user permission logic** for super admins vs content moderators.
             `.trim(),
             images: [
-                "/images/chilllupbackend/Vendor%20Ads%202.png",
-                "/images/chilllupbackend/Vendor%20Ads%201.png"
+                "/images/chilllupbackend/vendor-ads-2.png",
+                "/images/chilllupbackend/vendor-ads-1.png",
             ]
         },
         {
@@ -60,13 +60,13 @@ Additionally, I implemented **JWT-based authentication**, secure login workflows
 - **Activity Templates**: Let vendors reuse events with default fields to save setup time.
             `.trim(),
             images: [
-                "/images/chilllupbackend/Trends%202.png",
-                "/images/chilllupbackend/Trends%203.png"
+                "/images/chilllupbackend/trends-2.png",
+                "/images/chilllupbackend/trends-3.png"
             ]
         }
     ],
     techStack: ["Laravel", "MySQL", "FilamentPHP", "JWT Authentication"],
-    thumbnail: "/images/chilllupbackend/Notifications%201.png",
+    thumbnail: "/images/chilllupbackend/notifications-1.png",
     galleryImages: projectGalleries.ChillupBackend,
     type: "web",
     domain: "Backend",
@@ -74,7 +74,7 @@ Additionally, I implemented **JWT-based authentication**, secure login workflows
     projectSummary: "I developed a powerful admin dashboard using Laravel and FilamentPHP for managing the entire KidConnect ecosystem, which spans across vendors, parents, and schools. This platform provides full CRUD capabilities, advanced user roles, event and content management, and a built-in email marketing engine. I also implemented secure JWT authentication, dynamic analytics dashboards, and seamless integration with Google Calendar to automate scheduling and improve admin efficiency. The system offers granular permission levels and serves as the central hub for managing Chillup’s operational and engagement flows.",
     role: "Full Stack Developer"
 }
-,
+    ,
 
     {
         id: "2",
@@ -95,8 +95,8 @@ The dashboard allows vendors to:
 - Monitor performance through analytics
       `.trim(),
                 images: [
-                    "/images/chillupwebdashboard/Products%201.png",
-                    "/images/chillupwebdashboard/Transactions.png"
+                    "/images/chillupwebdashboard/products-1.png",
+                    "/images/chillupwebdashboard/transactions.png"
                 ]
             },
             {
@@ -111,13 +111,13 @@ The dashboard allows vendors to:
 - **Real-time Notifications**: Integrated **Firebase** to send instant updates to vendors
       `.trim(),
                 images: [
-                    "/images/chillupwebdashboard/Create_%20New%20Class%207.png",
-                    "/images/chillupwebdashboard/Dashboard%202.png"
+                    "/images/chillupwebdashboard/create_-new-class-7.png",
+                    "/images/chillupwebdashboard/dashboard-2.png"
                 ]
             }
         ],
         techStack: ["Vue.js", "TypeScript", "REST APIs (Laravel)", "Firebase"],
-        thumbnail: "/images/chillupwebdashboard/Dashboard%202.png",
+        thumbnail: "/images/chillupwebdashboard/dashboard-2.png",
         galleryImages: projectGalleries.Chillupwebdashboard,
         type: "web",
         domain: "frontend",
@@ -125,7 +125,7 @@ The dashboard allows vendors to:
         projectSummary: "I developed a comprehensive vendor dashboard using Vue 3 and TypeScript, integrated with Laravel REST APIs, to help activity providers manage their offerings on the Chillup platform. Vendors can create and publish events, manage availability, set filters such as age or interest, and monitor bookings with real-time performance analytics. The system supports tiered vendor packages for enhanced visibility, such as newsletter placement and featured listings. I also implemented Firebase notifications to deliver instant updates and ensure seamless user communication. This dashboard provides a powerful and intuitive interface for vendors to run their operations efficiently and grow user engagement.",
         role: "Full Stack Developer"
     }
-,
+    ,
 
     {
         id: "3",
@@ -142,8 +142,8 @@ The public-facing website for **KidConnect** serves as the primary **marketing c
 - **Mobile responsiveness**
             `.trim(),
                 images: [
-                    "/images/chilluppublicwebsite/Vendor.png",
-                    "/images/chilluppublicwebsite/Parent.png"
+                    "/images/chilluppublicwebsite/vendor.png",
+                    "/images/chilluppublicwebsite/parent.png"
                 ]
             },
             {
@@ -159,8 +159,8 @@ The public-facing website for **KidConnect** serves as the primary **marketing c
 - **Google Analytics** setup for performance tracking
             `.trim(),
                 images: [
-                    "/images/chilluppublicwebsite/About.png",
-                    "/images/chilluppublicwebsite/Legal%20Info.png"
+                    "/images/chilluppublicwebsite/about.png",
+                    "/images/chilluppublicwebsite/legal-info.png"
                 ]
             }
         ],
@@ -185,8 +185,8 @@ The public-facing website for **KidConnect** serves as the primary **marketing c
 The **St Chris Directory** is a comprehensive contact management platform designed to streamline internal communication within the **St Chris educational community**. It is tightly integrated with **Google Contacts** and **iSAMS**, ensuring accurate, real-time synchronization of contact details and staff photographs.
             `.trim(),
                 images: [
-                    "/images/directory/Login.png",
-                    "/images/directory/Groups%20Details%20-%20User%20Profile.png"
+                    "/images/directory/login.png",
+                    "/images/directory/groups-details---user-profile.png"
                 ]
             },
             {
@@ -216,14 +216,14 @@ Syncs with Google Contacts and pulls dynamic photos from iSAMS
 All contact changes are routed via a support email for controlled updates
 `.trim(),
                 images: [
-                    "/images/directory/Groups%20Details.png",
-                    "/images/directory/Staff.png"
+                    "/images/directory/groups-details.png",
+                    "/images/directory/staff.png"
                 ]
             }
 
         ],
         techStack: ["Vue.js", "Vuex", "iSAMS Integration"],
-        thumbnail: "/images/directory/Groups%20Details%20-%20User%20Profile.png",
+        thumbnail: "/images/directory/groups-details---user-profile.png",
         galleryImages: projectGalleries.Directory,
         type: "web",
         domain: "frontend",
@@ -231,7 +231,7 @@ All contact changes are routed via a support email for controlled updates
         projectSummary: "I developed the St Chris Directory, a robust contact and staff management platform for the St Chris educational community. Integrated with Google Contacts and iSAMS, it offers advanced search, school/site-based filtering, detailed profiles, email integration, and bulk outreach functionality. Users can manage staff and groups efficiently, with real-time data synchronization ensuring up-to-date information and seamless communication workflows. This tool significantly enhances organizational communication while maintaining professional presentation and accuracy.",
         role: "Full Stack Developer"
     }
-,
+    ,
 
     {
         id: "4",
@@ -244,8 +244,8 @@ All contact changes are routed via a support email for controlled updates
 **Awal Private Terminal** is a high-end digital booking platform developed for **Bahrain International Airport's** exclusive terminal. It streamlines both **B2C (Elite Services)** and **B2B (General Aviation)** workflows, while providing a robust **admin dashboard** for operational oversight and content management.
             `.trim(),
                 images: [
-                    "/images/awalterminal/Payment%202@1x.svg",
-                    "/images/awalterminal/General%20Aviation%20Form_5@1x.svg"
+                    "/images/awalterminal/payment-2@1x.svg",
+                    "/images/awalterminal/general-aviation-form_5@1x.svg"
                 ]
             },
             {
@@ -264,8 +264,8 @@ Aimed at aviation operators to request landing/takeoff services, subject to admi
 Captures general inquiries for follow-up
 `.trim(),
                 images: [
-                    "/images/awalterminal/General%20Aviation%20Form_1@1x.svg",
-                    "/images/awalterminal/Elite%20Form_2@1x.svg"
+                    "/images/awalterminal/general-aviation-form_1@1x.svg",
+                    "/images/awalterminal/elite-form_2@1x.svg"
                 ]
             },
             {
@@ -292,8 +292,8 @@ Delete or reject B2B requests with reasons
 `.trim(),
 
                 images: [
-                    "/images/awalterminal/Elite%20Form_5@1x.svg",
-                    "/images/awalterminal/Elite%20Form_7@1x.svg"
+                    "/images/awalterminal/elite-form_5@1x.svg",
+                    "/images/awalterminal/elite-form_7@1x.svg"
                 ]
             },
             {
@@ -315,13 +315,13 @@ Integrated robust authentication, secure form handling, and granular access cont
 `.trim(),
 
                 images: [
-                    "/images/awalterminal/General%20Aviation%20Form_6@1x.svg",
-                    "/images/awalterminal/Payment%201@1x.svg"
+                    "/images/awalterminal/general-aviation-form_6@1x.svg",
+                    "/images/awalterminal/payment-1@1x.svg"
                 ]
             }
         ],
         techStack: ["Laravel", "Vue.js", "REST APIs"],
-        thumbnail: "/images/awalterminal/Elite%20Form_1@1x.svg",
+        thumbnail: "/images/awalterminal/elite-form_1@1x.svg",
         galleryImages: projectGalleries.AwalTerminal,
         type: "web",
         domain: "frontend",
@@ -342,8 +342,8 @@ Integrated robust authentication, secure form handling, and granular access cont
 The **KidConnect mobile app** is a cross-platform solution built with **React Native**, designed specifically for parents to discover, organize, and book activities for their children. The app connects to a **Laravel backend** via secure APIs and provides a seamless experience across Android and iOS devices.
             `.trim(),
                 images: [
-                    "/images/chillupmobile/Booked.png",
-                    "/images/chillupmobile/School%20Info%201.png"
+                    "/images/chillupmobile/booked.png",
+                    "/images/chillupmobile/school-info-1.png"
                 ]
             },
             {
@@ -360,13 +360,13 @@ The **KidConnect mobile app** is a cross-platform solution built with **React Na
 - **Push Notifications:** Smart alerts powered by **Firebase**
             `.trim(),
                 images: [
-                    "/images/chillupmobile/Home%20-%20Settings.png",
-                    "/images/chillupmobile/Complate%20your%20profile.png"
+                    "/images/chillupmobile/home---settings.png",
+                    "/images/chillupmobile/complate-your-profile.png"
                 ]
             }
         ],
         techStack: ["React Native", "Redux", "Firebase"],
-        thumbnail: "/images/chillupmobile/Home%20-%20School.png",
+        thumbnail: "/images/chillupmobile/home---school.png",
         galleryImages: projectGalleries.ChillupMobile,
         type: "mobile",
         domain: "frontend",
@@ -374,7 +374,7 @@ The **KidConnect mobile app** is a cross-platform solution built with **React Na
         projectSummary: "I developed a cross-platform mobile app for parents using React Native, enabling them to discover, book, and manage child-friendly activities. The app features social login, personalized onboarding, suggested vendors, calendar integration, and reminders for renewals. I integrated school events via Google Calendar and added real-time push notifications using Firebase. The platform also supports view-only spouse accounts to streamline parental coordination.",
         role: "Full Stack Developer"
     }
-,
+    ,
 
     {
         id: "6",
@@ -385,8 +385,8 @@ The **KidConnect mobile app** is a cross-platform solution built with **React Na
                 heading: "Overview",
                 description: `CazaSouq is a sleek and feature-rich React Native e-commerce mobile application designed for electronic enthusiasts and gamers. Tailored for both Android and iOS, the app provides a seamless shopping experience where users can explore and purchase a wide range of gadgets—from gaming accessories to PlayStations, headphones, computer components, and even ergonomic gaming chairs.`,
                 images: [
-                    "/images/cazasouq/Checkout%20-%20Finished.png",
-                    "/images/cazasouq/Onboarding%201.png"
+                    "/images/cazasouq/checkout---finished.png",
+                    "/images/cazasouq/onboarding-1.png"
                 ]
             },
             {
@@ -409,8 +409,8 @@ The **KidConnect mobile app** is a cross-platform solution built with **React Na
 **Push Notifications:** Get real-time alerts for sales, restocks, and coupon availability.
     `.trim(),
                 images: [
-                    "/images/cazasouq/Login%20or%20Create%20Account.png",
-                    "/images/cazasouq/Checkout%20-%20Preview.png"
+                    "/images/cazasouq/login-or-create-account.png",
+                    "/images/cazasouq/checkout---preview.png"
                 ]
             },
             {
@@ -425,14 +425,14 @@ As a **React Native Developer**, I led the mobile development and integration:
 **Testing & Optimization:** Conducted unit and UI testing across Android and iOS devices. Focused on performance optimization for fast load times and smooth interactions.
     `.trim(),
                 images: [
-                    "/images/cazasouq/Categories.png",
-                    "/images/cazasouq/Order%20Details%204.png"
+                    "/images/cazasouq/categories.png",
+                    "/images/cazasouq/order-details-4.png"
                 ]
             }
         ]
-,
+        ,
         techStack: ["React Native", "Redux", "React Navigation"],
-        thumbnail: "/images/cazasouq/Search%20Results.png",
+        thumbnail: "/images/cazasouq/search-results.png",
         galleryImages: projectGalleries.Cazasouq,
         type: "mobile",
         domain: "frontend",
@@ -452,8 +452,8 @@ As a **React Native Developer**, I led the mobile development and integration:
 In today’s digital landscape, schools and businesses rely on multiple cloud applications, communication platforms, and online tools. Managing these resources separately can lead to scattered data, inefficient workflows, and lost productivity. To solve this challenge, **My Start Cloud** offers an innovative, fully customizable, icon-driven homepage that centralizes all cloud resources in one easy-to-use interface.
     `.trim(),
                 images: [
-                    "/images/mystartcloud/Users.png",
-                    "/images/mystartcloud/School%20Settings.png"
+                    "/images/mystartcloud/users.png",
+                    "/images/mystartcloud/school-settings.png"
                 ]
             },
             {
@@ -474,8 +474,8 @@ In today’s digital landscape, schools and businesses rely on multiple cloud ap
 **Customizable Search:** Select a preferred search engine directly from the homepage to streamline search workflows.
     `.trim(),
                 images: [
-                    "/images/mystartcloud/Announcement.png",
-                    "/images/mystartcloud/New%20Collection%20-%20Cloud%20Apps%202.png"
+                    "/images/mystartcloud/announcement.png",
+                    "/images/mystartcloud/new-collection---cloud-apps-2.png"
                 ]
             },
             {
@@ -486,14 +486,14 @@ In today’s digital landscape, schools and businesses rely on multiple cloud ap
 **For Businesses:** Offer employees a unified dashboard to manage internal tools, documents, cloud applications, and company updates—improving productivity and communication.
     `.trim(),
                 images: [
-                    "/images/mystartcloud/Billing.png",
-                    "/images/mystartcloud/SP%20-%20Private%20-%20Login.png"
+                    "/images/mystartcloud/billing.png",
+                    "/images/mystartcloud/sp---private---login.png"
                 ]
             }
         ]
-,
+        ,
         techStack: ["Laravel", "Vue.js", "Vuex"],
-        thumbnail: "/images/mystartcloud/1440px%20-%20Home.png",
+        thumbnail: "/images/mystartcloud/1440px---home.png",
         galleryImages: projectGalleries.MyStartCloud,
         type: "web",
         domain: "backend",
@@ -513,8 +513,8 @@ In today’s digital landscape, schools and businesses rely on multiple cloud ap
 The **Springring Web Admin Dashboard** is a centralized communication management platform designed for school administrators. It enables them to efficiently manage users, content, and settings within their institution. From user permissions and communication boards to events and school-wide configurations, everything is accessible through a single web interface—streamlining operations and improving institutional communication.
     `.trim(),
                 images: [
-                    "/images/springringadminweb/Dashboard.png",
-                    "/images/springringadminweb/School%20Calendar%20-%20Month.png"
+                    "/images/springringadminweb/dashboard.png",
+                    "/images/springringadminweb/school-calendar---month.png"
                 ]
             },
             {
@@ -541,14 +541,14 @@ The **Springring Web Admin Dashboard** is a centralized communication management
 This admin-only web tool prioritizes security, clarity, and streamlined communication across the school ecosystem.
     `.trim(),
                 images: [
-                    "/images/springringadminweb/Manage%20Groups.png",
-                    "/images/springringadminweb/Dashboard%202.png"
+                    "/images/springringadminweb/manage-groups.png",
+                    "/images/springringadminweb/dashboard-2.png"
                 ]
             }
         ]
-,
+        ,
         techStack: ["React", "Redux"],
-        thumbnail: "/images/springringadminweb/Dashboard.png",
+        thumbnail: "/images/springringadminweb/dashboard.png",
         galleryImages: projectGalleries.SpringringAdminWeb,
         type: "web",
         domain: "frontend",
@@ -569,8 +569,8 @@ This admin-only web tool prioritizes security, clarity, and streamlined communic
 **Bahrain.com** serves as the official tourism website for the Kingdom of Bahrain, developed under the Bahrain Tourism & Exhibitions Authority (BTEA). The platform highlights Bahrain’s rich cultural heritage, modern attractions, and essential travel information for global tourists. Built using **Laravel** and **Blade templating**, the site delivers a smooth, dynamic, and responsive experience that caters to a diverse, multilingual audience.
     `.trim(),
                 images: [
-                    "/images/bahrain/DESKTOP%20Journey%20(Culture)%201.png",
-                    "/images/bahrain/DESKTOP%20Where%20to%20stay.png"
+                    "/images/bahrain/desktop-journey-(culture)-1.png",
+                    "/images/bahrain/desktop-where-to-stay.png"
                 ]
             },
             {
@@ -591,8 +591,8 @@ As the **Lead Laravel Developer**, I was responsible for building the platform f
 **Performance Optimization:** Applied caching strategies and optimized database queries to ensure fast load times and a seamless user experience across devices.
     `.trim(),
                 images: [
-                    "/images/bahrain/DESKTOP%20Media%20-%20Press%20Releases.png",
-                    "/images/bahrain/Explore%20more%20article%202.png"
+                    "/images/bahrain/desktop-media---press-releases.png",
+                    "/images/bahrain/explore-more-article-2.png"
                 ]
             },
             {
@@ -611,14 +611,14 @@ As the **Lead Laravel Developer**, I was responsible for building the platform f
 **User Engagement Tools:** Features such as newsletter sign-ups and contact forms enhance visitor engagement and feedback collection.
     `.trim(),
                 images: [
-                    "/images/bahrain/Desktop%20Homepage.png",
-                    "/images/bahrain/DESKTOP%20My%20Itinerary.png"
+                    "/images/bahrain/desktop-homepage.png",
+                    "/images/bahrain/desktop-my-itinerary.png"
                 ]
             }
         ]
-,
+        ,
         techStack: ["Laravel", "Blade", "MySQL"],
-        thumbnail: "/images/bahrain/DESKTOP%20Media%20-%20Images.png",
+        thumbnail: "/images/bahrain/desktop-media---images.png",
         galleryImages: projectGalleries.Bahrain,
         type: "web",
         domain: "backend",
@@ -638,8 +638,8 @@ As the **Lead Laravel Developer**, I was responsible for building the platform f
 **Calender.bh** is a dedicated event-driven platform developed for the Bahrain Tourism Authority as a sister site to **Bahrain.com**. While Bahrain.com acts as a broad cultural and tourism portal, Calender.bh focuses specifically on highlighting upcoming events, national festivals, and public gatherings in Bahrain. The goal was to build a standalone website with a distinct user interface, streamlined navigation, and optimized performance, catering to both local residents and international tourists looking for engaging experiences during their stay.
     `.trim(),
                 images: [
-                    "/images/calender/Event.png",
-                    "/images/calender/Event%202.png"
+                    "/images/calender/event.png",
+                    "/images/calender/event-2.png"
                 ]
             },
             {
@@ -664,14 +664,14 @@ The UI was designed mobile-first to ensure optimal performance across all device
 The backend includes a role-based dashboard allowing admins to manage events, homepage banners, newsletters, and contact form responses. Multiple admin levels—such as event manager, content editor, and super admin—help delegate control efficiently across teams.
     `.trim(),
                 images: [
-                    "/images/calender/Homepage.png",
-                    "/images/calender/Event.png"
+                    "/images/calender/homepage.png",
+                    "/images/calender/event.png"
                 ]
             }
         ]
-,
+        ,
         techStack: ["Laravel", "Blade", "MySQL"],
-        thumbnail: "/images/calender/Homepage.png",
+        thumbnail: "/images/calender/homepage.png",
         galleryImages: projectGalleries.Calender,
         type: "web",
         domain: "backend",
@@ -693,8 +693,8 @@ The backend includes a role-based dashboard allowing admins to manage events, ho
 The core goal was to empower non-technical staff to manage products, variations, and inventory without needing to rely entirely on Shopify's native backend, which can be overwhelming for such use cases. Instead, a bespoke Laravel + Vue.js admin dashboard was developed, offering an intuitive, business-specific interface that communicates directly with Shopify’s Storefront and Admin APIs. This allowed the client’s team to create, modify, and organize product data efficiently—all from a single tailored environment.
     `.trim(),
                 images: [
-                    "/images/lokal/Admin%20-%20Pending%20Approval.png",
-                    "/images/lokal/Designer%20-%20Products.png"
+                    "/images/lokal/admin---pending-approval.png",
+                    "/images/lokal/designer---products.png"
                 ]
             },
             {
@@ -716,14 +716,14 @@ Changes made within Shopify—such as pricing adjustments or out-of-stock status
 A minimal order monitoring page provides visibility into order ID, customer details, payment status, and fulfillment progress. This data is pulled via the Shopify Orders API to keep admin users informed and responsive to customer needs.
     `.trim(),
                 images: [
-                    "/images/lokal/Designer%20-%20Add%20Product%20(Clothing).png",
-                    "/images/lokal/Super%20Admin%20-%20Orders%205.png"
+                    "/images/lokal/designer---add-product-(clothing).png",
+                    "/images/lokal/super-admin---orders-5.png"
                 ]
             }
         ]
-,
+        ,
         techStack: ["Vue.js", "Vuex"],
-        thumbnail: "/images/lokal/Super%20Admin%20-%20Orders%201.png",
+        thumbnail: "/images/lokal/super-admin---orders-1.png",
         galleryImages: projectGalleries.Lokal,
         type: "web",
         domain: "frontend",
@@ -749,8 +749,8 @@ This project is a hybrid interactive map and data visualization platform tailore
 By combining geospatial intelligence with dynamic filters and demographic overlays, the platform bridges accessibility for both end users and decision-makers.
     `.trim(),
                 images: [
-                    "/images/spea/Parent%2003.png",
-                    "/images/spea/Forecast.png"
+                    "/images/spea/parent-03.png",
+                    "/images/spea/forecast.png"
                 ]
             },
             {
@@ -786,14 +786,14 @@ Admins can upload regional datasets (CSV/Excel) which are parsed and rendered di
 The platform thus provides an all-in-one tool for both school discovery and education-sector investment strategy.
     `.trim(),
                 images: [
-                    "/images/spea/Parent%2001.png",
-                    "/images/spea/Parent%2006.png"
+                    "/images/spea/parent-01.png",
+                    "/images/spea/parent-06.png"
                 ]
             }
         ]
-,
+        ,
         techStack: ["Vue.js", "Vuex"],
-        thumbnail: "/images/spea/Parent%2003.png",
+        thumbnail: "/images/spea/parent-03.png",
         galleryImages: projectGalleries.SPEA,
         type: "web",
         domain: "frontend",
@@ -813,8 +813,8 @@ The platform thus provides an all-in-one tool for both school discovery and educ
 Springring Teacher Portal is a communication and content-sharing platform designed specifically for educators. Available as both a web and mobile application, it empowers teachers to manage announcements, class boards, posts, and event calendars—all while maintaining seamless engagement with students and parents in real time.
     `.trim(),
                 images: [
-                    "/images/springringteacherportal/Posts_%20Event.png",
-                    "/images/springringteacherportal/Whole%20School%20Details.jpg"
+                    "/images/springringteacherportal/posts_-event.png",
+                    "/images/springringteacherportal/whole-school-details.jpg"
                 ]
             },
             {
@@ -849,8 +849,8 @@ Enable or disable private chat functionality for parent-teacher interactions.
 The platform also supports onboarding via invitations or a “try-it-first” experience—allowing teachers to explore features before fully inviting others. It fosters an environment focused on transparency, real-time communication, and educational organization.
     `.trim(),
                 images: [
-                    "/images/springringteacherportal/Student%20Diary_View%20Post_Attachment.jpg",
-                    "/images/springringteacherportal/Class%20Registry%20-%20Students-1.jpg"
+                    "/images/springringteacherportal/student-diary_view-post_attachment.jpg",
+                    "/images/springringteacherportal/class-registry---students-1.jpg"
                 ]
             },
             {
@@ -859,14 +859,14 @@ The platform also supports onboarding via invitations or a “try-it-first” ex
 Developed using **Laravel** for the backend and **React Native** for the mobile app, the portal features scalable APIs, robust authentication, and a responsive, modern UI that ensures a consistent experience across devices.
     `.trim(),
                 images: [
-                    "/images/springringteacherportal/Class%20Registry%20-%20Students%20Profile.jpg",
-                    "/images/springringteacherportal/Create%20New%20Post%20-%20Appointment%20(Video)%20-%20Step%202.png",
+                    "/images/springringteacherportal/class-registry---students-profile.jpg",
+                    "/images/springringteacherportal/create-new-post---appointment-(video)---step-2.png",
                 ]
             }
         ]
-,
+        ,
         techStack: ["React", "React Native", "Redux"],
-        thumbnail: "/images/springringteacherportal/Archived%20Boards%20-%20Classes.jpg",
+        thumbnail: "/images/springringteacherportal/archived-boards---classes.jpg",
         galleryImages: projectGalleries.springringTeacherPortal,
         type: "web",
         domain: "frontend",
@@ -885,8 +885,8 @@ Developed using **Laravel** for the backend and **React Native** for the mobile 
 St. Christopher’s School’s Extra-Curricular Activities (ECA) platform supports a holistic approach to education by encouraging students to grow academically, socially, physically, and creatively. The ECA program includes a diverse range of activities designed to inspire passion, build skills, and promote teamwork and leadership among students.
     `.trim(),
                 images: [
-                    "/images/eca/Homepage%20login.png",
-                    "/images/eca/Confirmation.png"
+                    "/images/eca/homepage-login.png",
+                    "/images/eca/confirmation.png"
                 ]
             },
             {
@@ -920,14 +920,14 @@ The platform categorizes ECAs into **Free** and **Paid** programs, each offering
 This user-friendly system centralizes all extracurricular registrations, helping parents easily manage their child’s enrichment journey.
     `.trim(),
                 images: [
-                    "/images/eca/Checkout%20Free.png",
-                    "/images/eca/Profile.png"
+                    "/images/eca/checkout-free.png",
+                    "/images/eca/profile.png"
                 ]
             }
         ]
         ,
         techStack: ["Laravel", "Vue.js", "Tailwind CSS", "REST APIs", "MySQL"],
-        thumbnail: "/images/eca/Homepage%20login.png",
+        thumbnail: "/images/eca/homepage-login.png",
         galleryImages: projectGalleries.ECA,
         type: "web",
         domain: "frontend",
@@ -946,8 +946,8 @@ This user-friendly system centralizes all extracurricular registrations, helping
 St. Christopher’s School offers a comprehensive and transparent admissions process aimed at supporting families from their first inquiry through to successful enrollment. The goal is to provide a seamless and user-friendly experience, ensuring that all prospective students and parents have the guidance and tools they need throughout the journey.
     `.trim(),
                 images: [
-                    "/images/admissions/Application%203.png",
-                    "/images/admissions/Offer%201.png"
+                    "/images/admissions/application-3.png",
+                    "/images/admissions/offer-1.png"
                 ]
             },
             {
@@ -972,14 +972,14 @@ The admissions process is fully managed through a secure and centralized **Paren
 This digital admissions platform helps streamline the intake process while maintaining a high standard of communication and transparency for all users.
     `.trim(),
                 images: [
-                    "/images/admissions/EoI%20Form%205.png",
-                    "/images/admissions/EoI%20Form%206.png"
+                    "/images/admissions/eoi-form-5.png",
+                    "/images/admissions/eoi-form-6.png"
                 ]
             }
         ]
-,
+        ,
         techStack: ["Laravel", "MySQL"],
-        thumbnail: "/images/admissions/Application%201.png",
+        thumbnail: "/images/admissions/application-1.png",
         galleryImages: ProjectGalleries.Admissions,
         type: "web",
         domain: "frontend",
@@ -1004,8 +1004,8 @@ A read-only tool that allows educators to browse a comprehensive competency fram
 An interactive lesson planning module that enables teachers to collaboratively design and manage academic plans across subjects and year groups. It supports Google login, role-based permissions, and is controlled through a Super Admin backend for plan creation, sharing, and administration.
     `.trim(),
                 images: [
-                    "/images/pdpfrc/Login.png",
-                    "/images/pdpfrc/Parent%20View.png"
+                    "/images/pdpfrc/login.png",
+                    "/images/pdpfrc/parent-view.png"
                 ]
             },
             {
@@ -1024,8 +1024,8 @@ An interactive lesson planning module that enables teachers to collaboratively d
 - **Powerful Filtering**: Search by year group, subject, term, or week. Inactive subjects are flagged for easy visibility.
     `.trim(),
                 images: [
-                    "/images/pdpfrc/Analytics.png",
-                    "/images/pdpfrc/Create%20Unit%20-%20Topic.png"
+                    "/images/pdpfrc/analytics.png",
+                    "/images/pdpfrc/create-unit---topic.png"
                 ]
             },
             {
@@ -1044,14 +1044,14 @@ I led the architecture and full-stack development of the FRC system, with a focu
 The FRC system significantly streamlines lesson planning and competency tracking, fostering improved collaboration, transparency, and instructional quality across the institution.
     `.trim(),
                 images: [
-                    "/images/pdpfrc/Parent%20View%20-%20Subject%20Music.png",
-                    "/images/pdpfrc/Parent%20View%20-%20Assessment%20Modes.png"
+                    "/images/pdpfrc/parent-view---subject-music.png",
+                    "/images/pdpfrc/parent-view---assessment-modes.png"
                 ]
             }
         ]
-,
+        ,
         techStack: ["Laravel", "React", "Redux", "MySQL"],
-        thumbnail: "/images/pdpfrc/Analytics.png",
+        thumbnail: "/images/pdpfrc/analytics.png",
         galleryImages: ProjectGalleries.FRC,
         type: "web",
         domain: "frontend",
@@ -1090,8 +1090,8 @@ Each category addresses critical development areas:
 Users can track progress, upload resources, share with collaborators, comment, and move tasks through statuses — from draft to submission — supporting accountability and collaboration.
     `.trim(),
                 images: [
-                    "/images/pdp/Teacher%20Leader_Pedagogical%20focus.png",
-                    "/images/pdp/Teacher%20Leader_Strategic%20Priorities%20-%20Future%20Ready%20Curriculum.png"
+                    "/images/pdp/teacher-leader_pedagogical-focus.png",
+                    "/images/pdp/teacher-leader_strategic-priorities---future-ready-curriculum.png"
                 ]
             },
             {
@@ -1113,14 +1113,14 @@ This system required:
 Close collaboration with educators ensured the portal addressed real-world needs, ultimately improving professional growth, transparency, and communication within the institution.
     `.trim(),
                 images: [
-                    "/images/pdp/Teacher%20Leader_Home.png",
-                    "/images/pdp/Teacher%20Leader_Self%20Evaluation.png"
+                    "/images/pdp/teacher-leader_home.png",
+                    "/images/pdp/teacher-leader_self-evaluation.png"
                 ]
             }
         ]
-,
+        ,
         techStack: ["Laravel", "React", "Redux", "MySQL"],
-        thumbnail: "/images/pdp/Teacher%20Leader_Leadership%20Focus.png",
+        thumbnail: "/images/pdp/teacher-leader_leadership-focus.png",
         galleryImages: ProjectGalleries.PDP,
         type: "web",
         domain: "backend    ",
@@ -1146,8 +1146,8 @@ Built with a modern tech stack — React Native for the frontend and Laravel for
 The platform supports thousands of users with a robust infrastructure that ensures secure profile handling, subscription management, and engaging user interactions.
     `.trim(),
                 images: [
-                    "/images/naseebimobile/Your%20Connections%203.png",
-                    "/images/naseebimobile/Match%20Profile%20-%20Paid,%20Connected.png"
+                    "/images/naseebimobile/your-connections-3.png",
+                    "/images/naseebimobile/match-profile---paid,-connected.png"
                 ]
             },
             {
@@ -1179,14 +1179,14 @@ The platform supports thousands of users with a robust infrastructure that ensur
 - **Global-Ready**: Multi-language support to reach international markets.
     `.trim(),
                 images: [
-                    "/images/naseebimobile/Preferences%206.png",
-                    "/images/naseebimobile/Home%201.png"
+                    "/images/naseebimobile/preferences-6.png",
+                    "/images/naseebimobile/home-1.png"
                 ]
             }
         ]
-,
+        ,
         techStack: ["React Nativd", "Redux"],
-        thumbnail: "/images/naseebimobile/Home%201.png",
+        thumbnail: "/images/naseebimobile/home-1.png",
         galleryImages: ProjectGalleries.NaseebiMobile,
         type: "mobile",
         domain: "frontend",
@@ -1245,7 +1245,7 @@ By modernizing the healthcare transportation ecosystem, Safr Care reduces patien
                 ]
             }
         ]
-,
+        ,
         techStack: ["Laravel", "Vue.js", "Vuetify"],
         thumbnail: "/images/safercare/image_original-1.jpg",
         galleryImages: ProjectGalleries.safercare,
@@ -1271,7 +1271,7 @@ Using a proprietary cash-based data model, the system provides real-time visibil
     `.trim(),
                 images: [
                     "/images/naturallockbox/image_original_5.jpg",
-                    "/images/naturallockbox/image_original_4.JPG"
+                    "/images/naturallockbox/image_original_4.jpg"
                 ]
             },
             {
@@ -1307,14 +1307,14 @@ Using a proprietary cash-based data model, the system provides real-time visibil
   - Integrated AWS S3 and CloudFront for secure document storage and scalable media delivery.
     `.trim(),
                 images: [
-                    "/images/naturallockbox/image_original_3.JPG",
-                    "/images/naturallockbox/image_original_1.JPG"
+                    "/images/naturallockbox/image_original_3.jpg",
+                    "/images/naturallockbox/image_original_1.jpg"
                 ]
             }
         ]
-,
+        ,
         techStack: ["Laravel", "Vue.js"],
-        thumbnail: "/images/naturallockbox/image_original_4.JPG",
+        thumbnail: "/images/naturallockbox/image_original_4.jpg",
         galleryImages: projectGalleries.naturallockbox,
         type: "web",
         domain: "Backend",
