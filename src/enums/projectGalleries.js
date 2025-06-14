@@ -36,7 +36,7 @@ const ProjectGalleries = {
         "/images/Mystartcloud/New Collection - Cloud Apps 2.png",
         "/images/Mystartcloud/Collections - Edit Group.png",
         "/images/Mystartcloud/Collections.png",
-        "/images/Mystartcloud/1440px - Home.png",
+        "/images/Mystartcloud/1440px%20-%20Home.png",
         "/images/Mystartcloud/Registerations 1.png",
         "/images/Mystartcloud/1440px - Note Fullscreen.png",
         "/images/Mystartcloud/Billing.png",
@@ -97,7 +97,7 @@ const ProjectGalleries = {
         "/images/Cazasouq/Products List.png",
         "/images/Cazasouq/Categories.png",
         "/images/Cazasouq/Order Details 4.png",
-        "/images/Cazasouq/Search Results.png",
+        "/images/Cazasouq/Search%20Results.png",
         "/images/Cazasouq/Reset Password 2.png",
         "/images/Cazasouq/Order Details 1.png",
         "/images/Cazasouq/Order Details 2.png"
