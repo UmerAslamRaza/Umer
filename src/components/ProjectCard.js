@@ -9,10 +9,7 @@ export default function ProjectCard({project, height}) {
                 <div className="project-card">
                     <Link
                         className="thumb d-block"
-                        href={{
-                            pathname: `/portfolio/${project.slug}`,
-                            query: {data: JSON.stringify(project)},
-                        }}
+                        href={`/portfolio/${project.id}`}
                         style={{
                             height,
                             display: 'block',
@@ -20,7 +17,7 @@ export default function ProjectCard({project, height}) {
                             width: '100%',
                             objectFit: 'cover',
                         }}
-                    >
+                        >
                         <div className="post-thumb">
                             <div className="post-thumb-inner">
                                 <Image
@@ -66,21 +63,13 @@ export default function ProjectCard({project, height}) {
                             </div>
                             <Link
                                 className="project-title fs-five fw-semibold n5-color mt-3 mt-md-5 d-block"
-                                href={{
-                                    pathname: `/portfolio/${project.slug}`,
-                                    query: {data: JSON.stringify(project)},
-                                }}
-                            >
+                                href={`/portfolio/${project.id}`}>
                                 {project.title}
                             </Link>
                         </div>
                         <Link
                             className="project-link d-flex align-items-center justify-content-center flex-shrink-0"
-                            href={{
-                                pathname: `/portfolio/${project.slug}`,
-                                query: {data: JSON.stringify(project)},
-                            }}
-                        >
+                            href={`/portfolio/${project.id}`}>
                             <i className="n5-color">
                                 <svg
                                     stroke="currentColor"

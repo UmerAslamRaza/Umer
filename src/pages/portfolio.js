@@ -32,7 +32,7 @@ export default function Portfolio() {
                                         collection of my best projects</h3>
                                         <p className="fs-seven n5-color mb-4 mb-md-8 text-center">
                                             With years of experience in frontend and backend development, I've crafted robust, user-friendly websites and web applications using modern frameworks and tools. Here are some highlights of my work, built with performance, usability, and clean code in mind.</p>
-                                        <Link
+                                        <a
                                             className="w-max p-btn bg1-color fw-medium n11-color px-3 px-md-6 py-2 py-md-4 rounded-pill d-flex align-items-center gap-2 mx-auto"
                                             href="/contact">
                                             <svg stroke="currentColor" fill="currentColor" strokeWidth="0"
@@ -41,7 +41,7 @@ export default function Portfolio() {
                                                 <path
                                                     d="M227.32,28.68a16,16,0,0,0-15.66-4.08l-.15,0L19.57,82.84a16,16,0,0,0-2.49,29.8L102,154l41.3,84.87A15.86,15.86,0,0,0,157.74,248q.69,0,1.38-.06a15.88,15.88,0,0,0,14-11.51l58.2-191.94c0-.05,0-.1,0-.15A16,16,0,0,0,227.32,28.68ZM157.83,231.85l-.05.14,0-.07-40.06-82.3,48-48a8,8,0,0,0-11.31-11.31l-48,48L24.08,98.25l-.07,0,.14,0L216,40Z"></path>
                                             </svg>
-                                            Hire Me</Link></div>
+                                            Hire Me</a></div>
                                 </div>
                             </div>
                             <div className="container mt-8 mt-md-15">
