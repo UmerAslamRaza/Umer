@@ -48,6 +48,10 @@ export default function Home() {
                 <title>Umer</title>
                 <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="11x15"/>
                 <meta name="next-size-adjust"/>
+                <meta property="og:title" content="Umer Aslam Raza | Full Stack Developer Portfolio" />
+                <meta property="og:description" content="Explore real-world client projects, testimonials, and skills in Laravel, React, Next.js, and React Native" />
+                <meta property="og:image" content={withBasePath(userPic)} />
+                <meta property="og:url" content="https://umeraslamraza.github.io/umer/" />
             </Head>
 
             <div className="main-content w-100">
