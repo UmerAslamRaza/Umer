@@ -1,12 +1,8 @@
 'use client';
 import Head from "next/head";
 import {useRouter} from 'next/router';
-
-
 import React from "react";
 import Image from "next/image";
-
-
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {Autoplay, Navigation} from 'swiper/modules';
 import Link from "next/link";
@@ -15,13 +11,30 @@ import useResponsiveDescription from "@/hooks/useResponsiveDescription";
 import Markdown from 'markdown-to-jsx';
 import {withBasePath} from "@/utils/basePath";
 import projects from "@/enums/projects";
+import {useState,useEffect} from 'react';
 
 export default function PortfolioDetail() {
-    const {query} = useRouter();
-    const project = projects.find(p => p.id === query?.slug);
+    const { query } = useRouter();
+    const [project, setProject] = useState(null);
     const { width, height } = useResponsiveSizeForSwiper();
     const { width: widthDescription, height: heightDescription } = useResponsiveDescription();
     const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
+
+    useEffect(() => {
+        const lastSegment = new URL(window.location.href).pathname.split('/').filter(Boolean).pop();
+        console.log('Last segment:', lastSegment);
+
+        // Use slug from query if available, otherwise fallback to lastSegment
+        const slug = query?.slug || lastSegment;
+
+        if (slug) {
+            const foundProject = projects.find(p => p.id === slug);
+            setProject(foundProject);
+        }
+    }, [query.slug]);
+
+
 
     return (
         <>
