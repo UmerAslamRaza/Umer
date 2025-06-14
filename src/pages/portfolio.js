@@ -7,12 +7,11 @@ import projects from "@/enums/projects";
 import { useState } from "react";
 import useResponsiveHeight from '@/hooks/useResponsiveHeight';
 import ProjectCard from '@/components/ProjectCard';
-import {basePath} from "@/utils/config";
 
 
 export default function Portfolio() {
     const height = useResponsiveHeight();
-    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
     return (
 
         <>
@@ -35,7 +34,7 @@ export default function Portfolio() {
                                             With years of experience in frontend and backend development, I've crafted robust, user-friendly websites and web applications using modern frameworks and tools. Here are some highlights of my work, built with performance, usability, and clean code in mind.</p>
                                         <Link
                                             className="w-max p-btn bg1-color fw-medium n11-color px-3 px-md-6 py-2 py-md-4 rounded-pill d-flex align-items-center gap-2 mx-auto"
-                                            href={`${basePath}/contact`}>
+                                            href="/contact">
                                             <svg stroke="currentColor" fill="currentColor" strokeWidth="0"
                                                  viewBox="0 0 256 256" height="1em" width="1em"
                                                  xmlns="http://www.w3.org/2000/svg">
