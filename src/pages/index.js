@@ -51,14 +51,14 @@ export default function Home() {
 
                 <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="32x32" />
 
-                <meta property="og:title" content="Umer Aslam Raza – Full Stack Developer Portfolio" />
+                <meta property="og:title" content="Umer Aslam – Full Stack Developer Portfolio" />
                 <meta property="og:description" content="Showcasing modern web and mobile development projects, with client testimonials from across the globe." />
                 <meta property="og:image" content="https://umeraslamraza.github.io/umer/images/user-side.jpg" />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://umeraslamraza.github.io/umer/" />
 
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Umer Aslam Raza – Full Stack Developer" />
+                <meta name="twitter:title" content="Umer Aslam – Full Stack Developer" />
                 <meta name="twitter:description" content="Explore projects, testimonials, and contact details." />
                 <meta name="twitter:image" content="https://umeraslamraza.github.io/umer/images/user-side.jpg" />
 
