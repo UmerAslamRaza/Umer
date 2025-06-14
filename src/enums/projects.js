@@ -142,8 +142,8 @@ The public-facing website for **KidConnect** serves as the primary **marketing c
 - **Mobile responsiveness**
             `.trim(),
                 images: [
-                    "/images/chilluppublicwebsite/vendor.png",
-                    "/images/chilluppublicwebsite/parent.png"
+                    "/images/chilluppublicwebsiteProject/vendor.png",
+                    "/images/chilluppublicwebsiteProject/parent.png"
                 ]
             },
             {
@@ -159,13 +159,13 @@ The public-facing website for **KidConnect** serves as the primary **marketing c
 - **Google Analytics** setup for performance tracking
             `.trim(),
                 images: [
-                    "/images/chilluppublicwebsite/about.png",
-                    "/images/chilluppublicwebsite/legal-info.png"
+                    "/images/chilluppublicwebsiteProject/about.png",
+                    "/images/chilluppublicwebsiteProject/legal-info.png"
                 ]
             }
         ],
         techStack: ["React.js", "React Router", "Redux"],
-        thumbnail: "/images/chilluppublicwebsite/vendor.png",
+        thumbnail: "/images/chilluppublicwebsiteProject/vendor.png",
         galleryImages: projectGalleries.chillupPublicWebsite,
         type: "web",
         domain: "frontend",
@@ -544,7 +544,6 @@ This admin-only web tool prioritizes security, clarity, and streamlined communic
                     "/images/springringadminwebproject/manage-groups.png",
                     "/images/springringadminwebproject/dashboard-2.png"
                 ]
-
             }
         ]
         ,
@@ -639,8 +638,8 @@ As the **Lead Laravel Developer**, I was responsible for building the platform f
 **Calender.bh** is a dedicated event-driven platform developed for the Bahrain Tourism Authority as a sister site to **Bahrain.com**. While Bahrain.com acts as a broad cultural and tourism portal, Calender.bh focuses specifically on highlighting upcoming events, national festivals, and public gatherings in Bahrain. The goal was to build a standalone website with a distinct user interface, streamlined navigation, and optimized performance, catering to both local residents and international tourists looking for engaging experiences during their stay.
     `.trim(),
                 images: [
-                    "/images/calender/event.png",
-                    "/images/calender/event-2.png"
+                    "/images/calenderproject/event.png",
+                    "/images/calenderproject/event-2.png"
                 ]
             },
             {
@@ -665,14 +664,14 @@ The UI was designed mobile-first to ensure optimal performance across all device
 The backend includes a role-based dashboard allowing admins to manage events, homepage banners, newsletters, and contact form responses. Multiple admin levels—such as event manager, content editor, and super admin—help delegate control efficiently across teams.
     `.trim(),
                 images: [
-                    "/images/calender/homepage.png",
-                    "/images/calender/event.png"
+                    "/images/calenderproject/homepage.png",
+                    "/images/calenderproject/event.png"
                 ]
             }
         ]
         ,
         techStack: ["Laravel", "Blade", "MySQL"],
-        thumbnail: "/images/calender/homepage.png",
+        thumbnail: "/images/calenderproject/homepage.png",
         galleryImages: projectGalleries.Calender,
         type: "web",
         domain: "backend",
@@ -814,8 +813,8 @@ The platform thus provides an all-in-one tool for both school discovery and educ
 Springring Teacher Portal is a communication and content-sharing platform designed specifically for educators. Available as both a web and mobile application, it empowers teachers to manage announcements, class boards, posts, and event calendars—all while maintaining seamless engagement with students and parents in real time.
     `.trim(),
                 images: [
-                    "/images/springringteacherportal/posts_-event.png",
-                    "/images/springringteacherportal/whole-school-details.jpg"
+                    "/images/springringteacherportalproject/posts_-event.png",
+                    "/images/springringteacherportalproject/whole-school-details.jpg"
                 ]
             },
             {
@@ -850,8 +849,8 @@ Enable or disable private chat functionality for parent-teacher interactions.
 The platform also supports onboarding via invitations or a “try-it-first” experience—allowing teachers to explore features before fully inviting others. It fosters an environment focused on transparency, real-time communication, and educational organization.
     `.trim(),
                 images: [
-                    "/images/springringteacherportal/student-diary_view-post_attachment.jpg",
-                    "/images/springringteacherportal/class-registry---students-1.jpg"
+                    "/images/springringteacherportalproject/student-diary_view-post_attachment.jpg",
+                    "/images/springringteacherportalproject/class-registry---students-1.jpg"
                 ]
             },
             {
@@ -860,14 +859,14 @@ The platform also supports onboarding via invitations or a “try-it-first” ex
 Developed using **Laravel** for the backend and **React Native** for the mobile app, the portal features scalable APIs, robust authentication, and a responsive, modern UI that ensures a consistent experience across devices.
     `.trim(),
                 images: [
-                    "/images/springringteacherportal/class-registry---students-profile.jpg",
-                    "/images/springringteacherportal/create-new-post---appointment-(video)---step-2.png",
+                    "/images/springringteacherportalproject/class-registry---students-profile.jpg",
+                    "/images/springringteacherportalproject/create-new-post---appointment-(video)---step-2.png",
                 ]
             }
         ]
         ,
         techStack: ["React", "React Native", "Redux"],
-        thumbnail: "/images/springringteacherportal/archived-boards---classes.jpg",
+        thumbnail: "/images/springringteacherportalproject/archived-boards---classes.jpg",
         galleryImages: projectGalleries.springringTeacherPortal,
         type: "web",
         domain: "frontend",
@@ -1005,8 +1004,8 @@ A read-only tool that allows educators to browse a comprehensive competency fram
 An interactive lesson planning module that enables teachers to collaboratively design and manage academic plans across subjects and year groups. It supports Google login, role-based permissions, and is controlled through a Super Admin backend for plan creation, sharing, and administration.
     `.trim(),
                 images: [
-                    "/images/pdpfrc/login.png",
-                    "/images/pdpfrc/parent-view.png"
+                    "/images/pdpfrcproject/login.png",
+                    "/images/pdpfrcproject/parent-view.png"
                 ]
             },
             {
@@ -1025,8 +1024,8 @@ An interactive lesson planning module that enables teachers to collaboratively d
 - **Powerful Filtering**: Search by year group, subject, term, or week. Inactive subjects are flagged for easy visibility.
     `.trim(),
                 images: [
-                    "/images/pdpfrc/analytics.png",
-                    "/images/pdpfrc/create-unit---topic.png"
+                    "/images/pdpfrcproject/analytics.png",
+                    "/images/pdpfrcproject/create-unit---topic.png"
                 ]
             },
             {
@@ -1045,14 +1044,14 @@ I led the architecture and full-stack development of the FRC system, with a focu
 The FRC system significantly streamlines lesson planning and competency tracking, fostering improved collaboration, transparency, and instructional quality across the institution.
     `.trim(),
                 images: [
-                    "/images/pdpfrc/parent-view---subject-music.png",
-                    "/images/pdpfrc/parent-view---assessment-modes.png"
+                    "/images/pdpfrcproject/parent-view---subject-music.png",
+                    "/images/pdpfrcproject/parent-view---assessment-modes.png"
                 ]
             }
         ]
         ,
         techStack: ["Laravel", "React", "Redux", "MySQL"],
-        thumbnail: "/images/pdpfrc/analytics.png",
+        thumbnail: "/images/pdpfrcproject/analytics.png",
         galleryImages: ProjectGalleries.FRC,
         type: "web",
         domain: "frontend",
@@ -1271,8 +1270,8 @@ Natural Lock Box is a powerful SaaS platform designed to help Consumer Packaged 
 Using a proprietary cash-based data model, the system provides real-time visibility into deductions, checks, claims, and collections. It empowers cross-functional teams across sales, finance, and operations to make informed decisions and recover lost revenue efficiently.
     `.trim(),
                 images: [
-                    "/images/naturallockbox/image_original_5.jpg",
-                    "/images/naturallockbox/image_original_4.jpg"
+                    "/images/naturallockboxproject/image_original_5.jpg",
+                    "/images/naturallockboxproject/image_original_4.jpg"
                 ]
             },
             {
@@ -1308,14 +1307,14 @@ Using a proprietary cash-based data model, the system provides real-time visibil
   - Integrated AWS S3 and CloudFront for secure document storage and scalable media delivery.
     `.trim(),
                 images: [
-                    "/images/naturallockbox/image_original_3.jpg",
-                    "/images/naturallockbox/image_original_1.jpg"
+                    "/images/naturallockboxproject/image_original_3.jpg",
+                    "/images/naturallockboxproject/image_original_1.jpg"
                 ]
             }
         ]
         ,
         techStack: ["Laravel", "Vue.js"],
-        thumbnail: "/images/naturallockbox/image_original_4.jpg",
+        thumbnail: "/images/naturallockboxproject/image_original_4.jpg",
         galleryImages: projectGalleries.naturallockbox,
         type: "web",
         domain: "Backend",
