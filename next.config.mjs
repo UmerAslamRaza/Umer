@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const isProd = process.env.NODE_ENV === 'production';
-const repo = 'Umer';
+const repo = 'umer';
 
 const nextConfig = {
   reactStrictMode: false,
