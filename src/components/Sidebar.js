@@ -277,9 +277,8 @@ const Sidebar = () => {
                     </div>
                 </div>
             </div>
-            <div
-                className="w-100 bgn1-color p-3 position-fixed z-3 top-0 d-lg-none d-flex align-items-center justify-content-between br-bottom-n5 box-shadow1">
-                <Link className="side-icon bgn2-color brn4" href={`${basePath}/`}>
+            <div className="w-100 bgn1-color p-3 position-fixed z-3 top-0 d-lg-none d-flex align-items-center justify-content-between br-bottom-n5 box-shadow1">
+                <a className="side-icon bgn2-color brn4" href={`${basePath}/`}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="11" height="15" viewBox="0 0 11 15"
                          fill="none">
                         <g clipPath="url(#clip0_3569_435)">
@@ -308,7 +307,7 @@ const Sidebar = () => {
                             </clipPath>
                         </defs>
                     </svg>
-                </Link>
+                </a>
 
                 <div className="d-flex gap-3 align-items-center">
                     <div className="side-icon bg1-color" onClick={toggleTheme}>
