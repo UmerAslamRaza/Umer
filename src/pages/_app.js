@@ -4,9 +4,6 @@ import "../styles/53a5e31d7ed4f176.css"
 import "../styles/ef46db3751d8e999.css"
 import "../styles/bef403e4b51110e5.css"
 import "../styles/f7237eebd3af2a3f.css"
-import "../../public/fonts/a3bfe233e5f7c725-s.woff2.woff2"
-import "../../public/fonts/1f50ff87c1c2acdb-s.woff2.woff2"
-import "../../public/fonts/4c472ffaefe8ebfa-s.p.woff2.woff2"
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
