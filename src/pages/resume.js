@@ -3,10 +3,9 @@ import Head from "next/head";
 import Image from "next/image";
 import React from 'react';
 import Link from "next/link";
-import userPic from '../../public/images/user-side.jpg';
 import {withBasePath} from "@/utils/basePath";
 export default function Resume() {
-
+    const userPic = "/images/user-side.jpg";
     return (
 
         <>

@@ -2,7 +2,6 @@
 import Head from "next/head";
 import React, {useEffect} from "react";
 import Image from "next/image";
-import project1 from '../../public/images/project1.png';
 import Link from "next/link";
 import projects from "@/enums/projects";
 import { useState } from "react";

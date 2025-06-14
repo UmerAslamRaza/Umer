@@ -1,6 +1,5 @@
 'use client';
 import React, {useEffect, useState} from 'react';
-import userPic from '../../public/images/user-side.jpg';
 import Image from "next/image";
 import Link from 'next/link';
 import projects from "@/enums/projects";
@@ -11,6 +10,7 @@ import {withBasePath} from "@/utils/basePath";
 const Sidebar = () => {
     const [theme, setTheme] = useState('light');
     const pathname = usePathname();
+    const userPic = "/images/user-side.jpg";
 
     useEffect(() => {
         const savedTheme = localStorage.getItem('theme') || 'light';
