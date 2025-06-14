@@ -103,7 +103,7 @@ export default function Home() {
                                                     height={25}
                                                     decoding="async"
                                                     style={{color: 'transparent'}}
-                                                    src={resumeIcon}
+                                                    src={withBasePath(resumeIcon)}
                                                 />View Resume</Link>
 
                                             </div>
