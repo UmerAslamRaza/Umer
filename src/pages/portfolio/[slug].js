@@ -21,7 +21,7 @@ export default function PortfolioDetail() {
     const project = projects.find(p => p.id === query?.slug);
     const { width, height } = useResponsiveSizeForSwiper();
     const { width: widthDescription, height: heightDescription } = useResponsiveDescription();
-
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
     return (
         <>
             <Head>
@@ -42,7 +42,7 @@ export default function PortfolioDetail() {
                                     <p className="fs-seven n5-color mb-4 mb-md-8 text-center"><Markdown>{project?.projectSummary}</Markdown></p>
                                     <a
                                         className="w-max p-btn bg1-color fw-medium n11-color px-3 px-md-6 py-2 py-md-4 rounded-pill d-flex align-items-center gap-2 mx-auto"
-                                        href="/contact">
+                                        href={`${basePath}/contact`}>
                                         <svg fill="currentColor" height="1em" stroke="currentColor"
                                              strokeWidth="0" viewBox="0 0 256 256" width="1em"
                                              xmlns="http://www.w3.org/2000/svg">
@@ -171,15 +171,15 @@ export default function PortfolioDetail() {
                                         <p className="fs-seven n11-color">I am available for freelance projects. Hire me
                                             and get
                                             your project done.</p></div>
-                                    <Link className="p-btn bg1-color fw-medium n11-color px-3 px-md-6 py-2 py-md-4 rounded-pill d-flex align-items-center gap-2 h-100"
-                                       href="/contact">
+                                    <a className="p-btn bg1-color fw-medium n11-color px-3 px-md-6 py-2 py-md-4 rounded-pill d-flex align-items-center gap-2 h-100"
+                                       href={`${basePath}/contact`}>
                                         <svg fill="currentColor" height="1em" stroke="currentColor"
                                              strokeWidth="0" viewBox="0 0 256 256" width="1em"
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
                                         </svg>
-                                        Let’s get in touch</Link></div>
+                                        Let’s get in touch</a></div>
                             </div>
                         </section>
                     </section>
