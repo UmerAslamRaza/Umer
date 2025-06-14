@@ -39,6 +39,7 @@ export default function Home() {
 
     const featuredProjects = projects.filter(project => project.featured);
     const height = useResponsiveHeight();
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
     return (
 
